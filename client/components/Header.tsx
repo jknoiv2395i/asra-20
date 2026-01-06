@@ -9,7 +9,7 @@ export default function Header() {
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2Fea71525dd8ea470bb0c07f096721fbd7%2F9d55a1122b3a412091e385b1651a8aa3"
             alt="MPHD Group - Real Estate Consultants Nagpur Logo"
-            className="h-[132px] w-[144px] mt-3"
+            className="h-[132px] w-[144px] mt-7"
           />
         </Link>
 
