@@ -13,7 +13,7 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 pt-24 md:pt-32">
-        <div className="max-w-[631px] mx-auto text-center">
+        <div style={{ maxWidth: "631px", height: "919px", margin: "-5px auto 0", textAlign: "center" }}>
           {/* Main Heading */}
           <h1 className="font-instrument text-[48px] md:text-[72px] leading-[48px] md:leading-[72px] text-white mb-6">
             Your gateway to prestige properties
