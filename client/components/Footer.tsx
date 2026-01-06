@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#131313] py-20 px-6 md:px-20 lg:px-80">
+    <footer className="w-full bg-[#131313]" style={{ padding: "80px 0" }}>
       <div className="max-w-[1280px] mx-auto">
         {/* Logo and Description */}
         <div className="mb-14">
