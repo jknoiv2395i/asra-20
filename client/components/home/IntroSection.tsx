@@ -6,7 +6,7 @@ export default function IntroSection() {
           Experience innovative spaces where real estate meets your vision and
           turns it into reality.
         </h2>
-        <p className="text-[#5D5D5D] text-base md:text-[17px] leading-7 tracking-wide">
+        <p style={{ color: "rgb(93, 93, 93)", fontSize: "17px", fontWeight: "400", letterSpacing: "0.425px", lineHeight: "28px" }}>
           We craft inspiring spaces that blend cutting-edge design with enduring
           functionality, turning your vision into reality.
         </p>
