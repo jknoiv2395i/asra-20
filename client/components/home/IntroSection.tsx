@@ -1,8 +1,8 @@
 export default function IntroSection() {
   return (
     <section className="w-full bg-white py-16 md:py-24 px-6">
-      <div className="max-w-[811px] mx-auto text-center">
-        <h2 className="font-instrument text-[36px] md:text-[54px] leading-[36px] md:leading-[54px] text-black mb-8 tracking-tight">
+      <div style={{ maxWidth: "811px", display: "flex", flexDirection: "column", margin: "0 auto", textAlign: "center" }}>
+        <h2 style={{ width: "836px", margin: "0 auto 32px", fontFamily: '"Instrument Sans", Inter, system-ui, sans-serif', fontSize: "54px", lineHeight: "54px", letterSpacing: "-1.35px" }} className="text-black tracking-tight">
           Experience innovative spaces where real estate meets your vision and
           turns it into reality.
         </h2>
