@@ -25,7 +25,10 @@ export default function FeaturedProjects() {
   ];
 
   return (
-    <section className="w-full bg-white" style={{ marginLeft: "19px", padding: "35px 147px 96px 133px" }}>
+    <section
+      className="w-full bg-white"
+      style={{ marginLeft: "19px", padding: "35px 147px 96px 133px" }}
+    >
       <div className="max-w-[1280px] mx-auto">
         <h2 className="font-instrument text-[40px] md:text-[54px] leading-[54px] text-black text-center mb-16 tracking-tight">
           Our Featured Projects
@@ -34,7 +37,10 @@ export default function FeaturedProjects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
           {/* First Project */}
           <div className="lg:col-span-4">
-            <div className="rounded-[18px] overflow-hidden mb-6" style={{ aspectRatio: projects[0].aspectRatio }}>
+            <div
+              className="rounded-[18px] overflow-hidden mb-6"
+              style={{ aspectRatio: projects[0].aspectRatio }}
+            >
               <img
                 src={projects[0].image}
                 alt={projects[0].title}
@@ -51,7 +57,10 @@ export default function FeaturedProjects() {
 
           {/* Second Project */}
           <div className="lg:col-span-5">
-            <div className="rounded-[18px] overflow-hidden mb-6" style={{ aspectRatio: projects[1].aspectRatio }}>
+            <div
+              className="rounded-[18px] overflow-hidden mb-6"
+              style={{ aspectRatio: projects[1].aspectRatio }}
+            >
               <img
                 src={projects[1].image}
                 alt={projects[1].title}
@@ -68,7 +77,10 @@ export default function FeaturedProjects() {
 
           {/* Third Project */}
           <div className="lg:col-span-3">
-            <div className="rounded-[18px] overflow-hidden mb-6" style={{ aspectRatio: projects[2].aspectRatio }}>
+            <div
+              className="rounded-[18px] overflow-hidden mb-6"
+              style={{ aspectRatio: projects[2].aspectRatio }}
+            >
               <img
                 src={projects[2].image}
                 alt={projects[2].title}

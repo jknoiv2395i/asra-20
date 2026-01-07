@@ -14,7 +14,8 @@ export default function HeroSection() {
       {/* Gradient Overlay */}
       <div
         style={{
-          backgroundImage: "linear-gradient(to top, rgb(255, 255, 255), rgba(0, 0, 0, 0))",
+          backgroundImage:
+            "linear-gradient(to top, rgb(255, 255, 255), rgba(0, 0, 0, 0))",
           bottom: "0px",
           fontWeight: "400",
           height: "240px",
@@ -94,8 +95,8 @@ export default function HeroSection() {
                     margin: "-2px 0 8px -1px",
                   }}
                 >
-                  Bring your architectural projects to life with a template
-                  that puts your work front and center.
+                  Bring your architectural projects to life with a template that
+                  puts your work front and center.
                 </div>
 
                 {/* CTA Button */}
@@ -111,8 +112,7 @@ export default function HeroSection() {
                     gap: "8px",
                     height: "50px",
                     transitionDuration: "0.15s",
-                    transitionTimingFunction:
-                      "cubic-bezier(0.4, 0, 0.2, 1)",
+                    transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
                     width: "179.2px",
                     borderColor: "rgba(0, 0, 0, 0)",
                     margin: "-4px auto 0 0",

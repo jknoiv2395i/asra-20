@@ -1,6 +1,9 @@
 export default function ExcellenceSection() {
   return (
-    <section className="w-full bg-white" style={{ padding: "0 103px 80px 124px" }}>
+    <section
+      className="w-full bg-white"
+      style={{ padding: "0 103px 80px 124px" }}
+    >
       <div className="max-w-[1568px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div>
