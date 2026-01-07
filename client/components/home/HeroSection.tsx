@@ -1,13 +1,16 @@
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-[915px] bg-[#1E9CE8] overflow-hidden">
-      {/* Background Image */}
-      <img
-        src="https://api.builder.io/api/v1/image/assets/TEMP/ec4dbbbabe37a36b8cd44006f5f5207c0c897340?width=3840"
-        alt="Hero background - Nagpur properties"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-
+    <section
+      className="relative w-full h-[915px] overflow-hidden"
+      style={{
+        backgroundColor: "rgb(30, 156, 232)",
+        backgroundImage:
+          "url(https://cdn.builder.io/api/v1/image/assets%2Fea71525dd8ea470bb0c07f096721fbd7%2Fba9b3a6a9ab8449fb7f893e61d97ff35)",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
       {/* Gradient Overlay */}
       <div className="absolute bottom-0 left-0 w-full h-60 bg-gradient-to-t from-white to-transparent" />
 
