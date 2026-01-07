@@ -12,45 +12,198 @@ export default function HeroSection() {
       }}
     >
       {/* Gradient Overlay */}
-      <div className="absolute bottom-0 left-0 w-full h-60 bg-gradient-to-t from-white to-transparent" />
+      <div
+        style={{
+          backgroundImage: "linear-gradient(to top, rgb(255, 255, 255), rgba(0, 0, 0, 0))",
+          bottom: "0px",
+          fontWeight: "400",
+          height: "240px",
+          left: "0px",
+          position: "absolute",
+          width: "100%",
+        }}
+      />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 pt-24 md:pt-32">
-        <div style={{ maxWidth: "631px", height: "919px", margin: "-5px auto 0", textAlign: "center" }}>
-          {/* Main Heading */}
-          <h1 className="font-instrument text-[48px] md:text-[72px] leading-[48px] md:leading-[72px] text-white mb-6">
-            Your gateway to prestige properties
-          </h1>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+          fontWeight: "400",
+          height: "100%",
+          justifyContent: "center",
+          position: "relative",
+          zIndex: 10,
+          padding: "128px 24px 0",
+        }}
+      >
+        {/* Two Column Flex Container */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "20px",
+            "@media (max-width: 991px)": {
+              flexDirection: "column",
+              alignItems: "stretch",
+              gap: "0px",
+            },
+          }}
+        >
+          {/* Left Column - Text Content and CTA */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              lineHeight: "normal",
+              width: "50%",
+              marginLeft: "0px",
+              "@media (max-width: 991px)": {
+                width: "100%",
+                marginLeft: 0,
+              },
+            }}
+          >
+            {/* Main Heading */}
+            <h1
+              style={{
+                color: "rgb(255, 255, 255)",
+                width: "676px",
+                margin: "98px 0 24px -1px",
+                font: '400 72px/72px "Instrument Sans", Inter, system-ui, sans-serif',
+              }}
+            >
+              Your gateway to prestige properties
+            </h1>
 
-          {/* Subheading */}
-          <p className="text-white/90 text-base md:text-[19px] leading-7 mb-12 px-4">
-            Bring your architectural projects to life with a template that puts
-            your work front and center.
-          </p>
+            {/* Subheading */}
+            <p
+              style={{
+                color: "rgba(255, 255, 255, 0.9)",
+                fontSize: "19px",
+                fontWeight: "400",
+                lineHeight: "28px",
+                margin: "-2px 0 8px -1px",
+              }}
+            >
+              Bring your architectural projects to life with a template that
+              puts your work front and center.
+            </p>
 
-          {/* CTA Button */}
-          <button className="inline-flex items-center gap-2 px-8 py-4 bg-white rounded-full shadow-lg hover:bg-gray-50 transition-all">
-            <span className="text-[#111827] text-[15px] font-medium">
-              Get started
-            </span>
-            <div className="flex items-center justify-center w-6 h-6 bg-[#111827] rounded-full">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 14 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+            {/* CTA Button */}
+            <button
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                backgroundColor: "rgb(255, 255, 255)",
+                borderRadius: "9999px",
+                boxShadow:
+                  "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+                fontWeight: "400",
+                gap: "8px",
+                transitionDuration: "0.15s",
+                transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+                borderColor: "rgba(0, 0, 0, 0)",
+                width: "179.2px",
+                height: "50px",
+                margin: "-4px auto 0 0",
+                padding: "16px 32px",
+              }}
+            >
+              <div
+                style={{
+                  display: "block",
+                  color: "rgb(17, 24, 39)",
+                  fontSize: "15px",
+                  fontWeight: "500",
+                  lineHeight: "22.5px",
+                }}
               >
-                <path
-                  d="M2.625 7H11.375M11.375 7L7 2.625M11.375 7L7 11.375"
-                  stroke="white"
-                  strokeWidth="1.75"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-          </button>
+                Get started
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  backgroundColor: "rgb(17, 24, 39)",
+                  borderRadius: "9999px",
+                  fontWeight: "400",
+                  height: "24px",
+                  justifyContent: "center",
+                  overflowWrap: "anywhere",
+                  width: "24px",
+                  wordWrap: "anywhere",
+                }}
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style={{
+                    display: "block",
+                    fill: "none",
+                    fontWeight: "400",
+                    height: "14px",
+                    overflowClipMargin: "content-box",
+                    overflowWrap: "anywhere",
+                    overflowX: "hidden",
+                    overflowY: "hidden",
+                    width: "14px",
+                    wordWrap: "anywhere",
+                  }}
+                >
+                  <path
+                    d="M2.625 7H11.375M11.375 7L7 2.625M11.375 7L7 11.375"
+                    stroke="white"
+                    strokeWidth="1.75"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    style={{
+                      display: "inline",
+                      d: 'path("M 2.625 7 H 11.375 M 11.375 7 L 7 2.625 M 11.375 7 L 7 11.375")',
+                      fill: "none",
+                      fontWeight: "400",
+                      overflowWrap: "anywhere",
+                      stroke: "rgb(255, 255, 255)",
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round",
+                      strokeWidth: "1.75px",
+                      transformOrigin: "0px 0px",
+                      wordWrap: "anywhere",
+                    }}
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+
+          {/* Right Column - Empty placeholder */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              lineHeight: "normal",
+              width: "50%",
+              marginLeft: "20px",
+              "@media (max-width: 991px)": {
+                width: "100%",
+                marginLeft: 0,
+              },
+            }}
+          >
+            <div
+              style={{
+                fontWeight: "400",
+                height: "919px",
+                maxWidth: "631px",
+                textAlign: "center",
+                margin: "-5px auto 0",
+              }}
+            />
+          </div>
         </div>
       </div>
     </section>
