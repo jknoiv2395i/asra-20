@@ -25,7 +25,7 @@ export default function FeaturedProjects() {
   ];
 
   return (
-    <section className="w-full bg-white" style={{ marginLeft: "19px", padding: "96px 147px 96px 133px" }}>
+    <section className="w-full bg-white" style={{ marginLeft: "19px", padding: "35px 147px 96px 133px" }}>
       <div className="max-w-[1280px] mx-auto">
         <h2 className="font-instrument text-[40px] md:text-[54px] leading-[54px] text-black text-center mb-16 tracking-tight">
           Our Featured Projects
