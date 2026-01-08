@@ -107,23 +107,23 @@ export default function BenefitsSection() {
           />
           <path
             d="M10.5 16.3333L17.5 9.33325"
-            stroke="#1E9CE8"
+            stroke="#000000"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
             d="M11.0833 10.4999C11.4055 10.4999 11.6667 10.2388 11.6667 9.91659C11.6667 9.59442 11.4055 9.33325 11.0833 9.33325C10.7612 9.33325 10.5 9.59442 10.5 9.91659C10.5 10.2388 10.7612 10.4999 11.0833 10.4999Z"
-            fill="#1E9CE8"
-            stroke="#1E9CE8"
+            fill="#000000"
+            stroke="#000000"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
             d="M16.9166 16.3334C17.2388 16.3334 17.4999 16.0722 17.4999 15.7501C17.4999 15.4279 17.2388 15.1667 16.9166 15.1667C16.5944 15.1667 16.3333 15.4279 16.3333 15.7501C16.3333 16.0722 16.5944 16.3334 16.9166 16.3334Z"
-            fill="#1E9CE8"
-            stroke="#1E9CE8"
+            fill="#000000"
+            stroke="#000000"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
