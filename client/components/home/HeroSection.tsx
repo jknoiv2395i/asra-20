@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 export default function HeroSection() {
   return (
     <section
