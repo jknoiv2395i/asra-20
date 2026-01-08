@@ -47,13 +47,13 @@ export default function TestimonialsSection() {
 
   const prevTestimonial = () => {
     setCurrentIndex((prev) =>
-      prev - 2 < 0 ? Math.max(testimonials.length - 2, 0) : prev - 2
+      prev - 2 < 0 ? Math.max(testimonials.length - 2, 0) : prev - 2,
     );
   };
 
   const visibleTestimonials = testimonials.slice(
     currentIndex,
-    currentIndex + 2
+    currentIndex + 2,
   );
 
   return (
