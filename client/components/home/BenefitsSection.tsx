@@ -227,7 +227,7 @@ export default function BenefitsSection() {
           />
 
           {/* Content Overlay */}
-          <div className="absolute inset-0 p-8 md:p-10 lg:p-12 flex flex-col justify-start">
+          <div className="benefits-overlay absolute inset-0 p-8 md:p-10 lg:p-12 flex flex-col justify-start">
             <div className="max-w-xs space-y-4">
               <h2 className="font-instrument text-3xl md:text-4xl font-bold text-white leading-tight">
                 The new way to find your new home
