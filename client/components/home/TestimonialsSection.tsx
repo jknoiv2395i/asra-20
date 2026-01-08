@@ -66,18 +66,14 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-[540px] mx-auto mb-16"
         >
-          <div className="flex justify-center mb-4">
-            <div className="border py-1 px-4 rounded-lg text-sm">
-              Testimonials
-            </div>
-          </div>
-
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter mt-5 text-center text-[#020817]">
+          <h2
+            className="tracking-tighter mt-5 text-center text-[#020817]"
+            style={{
+              font: '48px/48px "Istok Web", sans-serif',
+            }}
+          >
             What our users say
           </h2>
-          <p className="text-center mt-5 opacity-75 text-[#020817]">
-            See what our customers have to say about us.
-          </p>
         </motion.div>
 
         <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
