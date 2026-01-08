@@ -1,9 +1,65 @@
 import { motion } from "motion/react";
+import { useState } from "react";
 
 export default function HeroSection() {
+  const [isHoveringButton, setIsHoveringButton] = useState(false);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.2,
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const headlineVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 1.2,
+        ease: "easeOut",
+        delay: 0.1,
+      },
+    },
+  };
+
+  const backgroundVariants = {
+    hidden: { opacity: 0, scale: 1.05 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 2,
+        ease: "easeOut",
+        delay: 0.5,
+      },
+    },
+  };
+
   return (
-    <section
+    <motion.section
       className="hero-section"
+      initial="hidden"
+      animate="visible"
+      variants={backgroundVariants}
       style={{
         position: "relative",
         width: "100%",
@@ -32,7 +88,7 @@ export default function HeroSection() {
       />
 
       {/* Centered Content Container */}
-      <div
+      <motion.div
         className="hero-content-wrapper"
         style={{
           position: "absolute",
@@ -46,13 +102,14 @@ export default function HeroSection() {
           flexDirection: "column",
           alignItems: "center",
         }}
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
       >
         {/* Main Heading */}
         <motion.h1
           className="hero-heading"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          variants={headlineVariants}
           style={{
             display: "flex",
             flexDirection: "column",
@@ -75,9 +132,7 @@ export default function HeroSection() {
         {/* Subheading */}
         <motion.p
           className="hero-subheading"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
+          variants={itemVariants}
           style={{
             display: "flex",
             flexDirection: "column",
@@ -101,9 +156,13 @@ export default function HeroSection() {
         {/* CTA Button */}
         <motion.button
           className="hero-cta-button"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          variants={itemVariants}
+          whileHover={{
+            background: "#f9fafb",
+            transition: { duration: 0.2 },
+          }}
+          onMouseEnter={() => setIsHoveringButton(true)}
+          onMouseLeave={() => setIsHoveringButton(false)}
           style={{
             display: "flex",
             padding: "8px 16px",
@@ -116,19 +175,8 @@ export default function HeroSection() {
               "0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10)",
             border: "none",
             cursor: "pointer",
-            transition: "all 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
             height: "40px",
             minWidth: "145px",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "scale(1.05)";
-            e.currentTarget.style.boxShadow =
-              "0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.15)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "scale(1)";
-            e.currentTarget.style.boxShadow =
-              "0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10)";
           }}
         >
           <span
@@ -144,7 +192,7 @@ export default function HeroSection() {
           >
             Get started
           </span>
-          <div
+          <motion.div
             style={{
               display: "flex",
               width: "24px",
@@ -155,6 +203,8 @@ export default function HeroSection() {
               borderRadius: "9999px",
               background: "#111827",
             }}
+            animate={isHoveringButton ? { scale: 1.05 } : { scale: 1 }}
+            transition={{ duration: 0.2 }}
           >
             <svg
               width="14"
@@ -171,9 +221,9 @@ export default function HeroSection() {
                 strokeLinejoin="round"
               />
             </svg>
-          </div>
+          </motion.div>
         </motion.button>
-      </div>
+      </motion.div>
 
       {/* Responsive Styles */}
       <style jsx>{`
@@ -232,6 +282,6 @@ export default function HeroSection() {
           }
         }
       `}</style>
-    </section>
+    </motion.section>
   );
 }
