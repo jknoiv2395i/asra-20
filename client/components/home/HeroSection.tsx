@@ -83,6 +83,12 @@ export default function HeroSection() {
         initial="hidden"
         animate="visible"
         variants={containerVariants}
+        style={{
+          "@media (max-width: 640px)": {
+            top: "94px",
+            width: "99%",
+          },
+        }}
       >
         {/* Main Heading */}
         <motion.h1
