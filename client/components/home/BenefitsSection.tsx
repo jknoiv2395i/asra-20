@@ -198,7 +198,12 @@ export default function BenefitsSection() {
           </g>
           <defs>
             <clipPath id="clip0_601_2913">
-              <rect width="28" height="28" fill="white" transform="translate(14 14)" />
+              <rect
+                width="28"
+                height="28"
+                fill="white"
+                transform="translate(14 14)"
+              />
             </clipPath>
           </defs>
         </svg>
@@ -220,7 +225,7 @@ export default function BenefitsSection() {
             alt="Find your new home illustration"
             className="w-full h-auto object-cover"
           />
-          
+
           {/* Content Overlay */}
           <div className="absolute inset-0 p-8 md:p-10 lg:p-12 flex flex-col justify-start">
             <div className="max-w-xs space-y-4">
@@ -241,10 +246,7 @@ export default function BenefitsSection() {
         {/* Benefits List */}
         <div className="flex flex-col gap-6 md:gap-8">
           {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="benefit-item flex items-start gap-6"
-            >
+            <div key={index} className="benefit-item flex items-start gap-6">
               {/* Icon Container */}
               <div className="relative w-14 h-14 flex-shrink-0">
                 {/* Outer circle */}
