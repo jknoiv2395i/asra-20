@@ -60,7 +60,10 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="w-full bg-white" style={{ padding: "64px 167px 64px 148px" }}>
+    <section
+      className="w-full bg-white"
+      style={{ padding: "64px 167px 64px 148px" }}
+    >
       <div className="max-w-[1280px] mx-auto">
         <h2 className="font-instrument text-2xl text-black mb-12 tracking-tight">
           OUR SERVICES
@@ -91,7 +94,7 @@ export default function ServicesSection() {
                 if (linkDiv) {
                   linkDiv.style.color = "#ffffff";
                   const paths = linkDiv.querySelectorAll("path");
-                  paths.forEach(path => {
+                  paths.forEach((path) => {
                     path.setAttribute("stroke", "#ffffff");
                   });
                 }
@@ -100,7 +103,7 @@ export default function ServicesSection() {
                 if (iconBg) {
                   iconBg.style.backgroundColor = "#ffffff";
                   const svgs = iconBg.querySelectorAll("path");
-                  svgs.forEach(svg => {
+                  svgs.forEach((svg) => {
                     svg.setAttribute("fill", "#1E9CE8");
                   });
                 }
@@ -122,7 +125,7 @@ export default function ServicesSection() {
                 if (linkDiv) {
                   linkDiv.style.color = "#131313";
                   const paths = linkDiv.querySelectorAll("path");
-                  paths.forEach(path => {
+                  paths.forEach((path) => {
                     path.setAttribute("stroke", "#131313");
                   });
                 }
@@ -131,7 +134,7 @@ export default function ServicesSection() {
                 if (iconBg) {
                   iconBg.style.backgroundColor = "#071839";
                   const svgs = iconBg.querySelectorAll("path");
-                  svgs.forEach(svg => {
+                  svgs.forEach((svg) => {
                     svg.setAttribute("fill", "white");
                   });
                 }
@@ -140,14 +143,10 @@ export default function ServicesSection() {
               <div className="icon-bg w-16 h-16 bg-[#071839] rounded-full flex items-center justify-center mb-8 transition-all duration-300">
                 {service.icon}
               </div>
-              <h3
-                className="font-instrument text-[30px] leading-9 mb-6 transition-colors duration-300"
-              >
+              <h3 className="font-instrument text-[30px] leading-9 mb-6 transition-colors duration-300">
                 {service.title}
               </h3>
-              <p
-                className="text-[17px] leading-7 mb-8 transition-colors duration-300"
-              >
+              <p className="text-[17px] leading-7 mb-8 transition-colors duration-300">
                 {service.description}
               </p>
               <div className="learn-more-link flex items-center gap-3 transition-colors duration-300">
