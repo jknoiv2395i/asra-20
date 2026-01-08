@@ -97,9 +97,13 @@ export default function HeroSection() {
           style={{
             fontFamily: "'Instrument Sans', Inter, system-ui, sans-serif",
             width: "100%",
+            "@media (max-width: 640px)": {
+              textAlign: "center",
+            },
           }}
         >
-          Your gateway to prestige properties
+          <p>Your gateway to </p>
+          <p>prestige properties</p>
         </motion.h1>
 
         {/* Subheading */}
