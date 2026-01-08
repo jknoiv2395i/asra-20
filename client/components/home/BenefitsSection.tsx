@@ -3,21 +3,21 @@ export default function BenefitsSection() {
     {
       icon: (
         <svg
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g clipPath="url(#clip0_property)">
+          <g clipPath="url(#clip0_601_2879)">
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M2.66667 16.0001H5.62956V26.3705C5.62956 27.1563 5.94173 27.9099 6.49739 28.4656C7.05305 29.0212 7.80669 29.3334 8.59252 29.3334H23.4073C24.1932 29.3334 24.9468 29.0212 25.5025 28.4656C26.0581 27.9099 26.3703 27.1563 26.3703 26.3705V16.0001H26.3704H29.3333L16 2.66675L2.66667 16.0001Z"
+              d="M2.33325 13.9999H4.92578V23.074C4.92578 23.7616 5.19893 24.421 5.68513 24.9072C6.17134 25.3934 6.83078 25.6666 7.51837 25.6666H20.4813C21.1689 25.6666 21.8284 25.3934 22.3146 24.9072C22.8008 24.421 23.0739 23.7616 23.0739 23.074V13.9999H23.074H25.6666L13.9999 2.33325L2.33325 13.9999Z"
               fill="white"
             />
             <path
-              d="M12 18.0002L14.6667 20.6668L20 15.3335"
+              d="M10.5 15.7501L12.8333 18.0834L17.5 13.4167"
               stroke="#1E9CE8"
               strokeWidth="2"
               strokeLinecap="round"
@@ -25,16 +25,16 @@ export default function BenefitsSection() {
             />
           </g>
           <defs>
-            <clipPath id="clip0_property">
-              <rect width="32" height="32" fill="white" />
+            <clipPath id="clip0_601_2879">
+              <rect width="28" height="28" fill="white" />
             </clipPath>
           </defs>
         </svg>
       ),
       badge: (
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <path
-            d="M12.36 2.78009L8.69334 1.40676C8.31333 1.26676 7.69334 1.26676 7.31333 1.40676L3.64667 2.78009C2.94 3.04676 2.36667 3.87343 2.36667 4.62676V10.0268C2.36667 10.5668 2.72 11.2801 3.15334 11.6001L6.82 14.3401C7.46667 14.8268 8.52667 14.8268 9.17334 14.3401L12.84 11.6001C13.2733 11.2734 13.6267 10.5668 13.6267 10.0268V4.62676C13.6333 3.87343 13.06 3.04676 12.36 2.78009ZM8.5 8.58009V10.3334C8.5 10.6068 8.27333 10.8334 8 10.8334C7.72667 10.8334 7.5 10.6068 7.5 10.3334V8.58009C6.82667 8.36676 6.33333 7.74009 6.33333 7.00009C6.33333 6.08009 7.08 5.33343 8 5.33343C8.92 5.33343 9.66667 6.08009 9.66667 7.00009C9.66667 7.74676 9.17333 8.36676 8.5 8.58009Z"
+            d="M10.815 2.43246L7.60663 1.23079C7.27413 1.10829 6.73163 1.10829 6.39913 1.23079L3.1908 2.43246C2.57247 2.66579 2.0708 3.38912 2.0708 4.04829V8.77329C2.0708 9.24579 2.37997 9.86996 2.75913 10.15L5.96747 12.5475C6.5333 12.9733 7.4608 12.9733 8.02663 12.5475L11.235 10.15C11.6141 9.86412 11.9233 9.24579 11.9233 8.77329V4.04829C11.9291 3.38912 11.4275 2.66579 10.815 2.43246ZM7.43747 7.50746V9.04162C7.43747 9.28079 7.23913 9.47913 6.99997 9.47913C6.7608 9.47913 6.56247 9.28079 6.56247 9.04162V7.50746C5.9733 7.32079 5.54163 6.77246 5.54163 6.12496C5.54163 5.31996 6.19497 4.66662 6.99997 4.66662C7.80497 4.66662 8.4583 5.31996 8.4583 6.12496C8.4583 6.77829 8.02663 7.32079 7.43747 7.50746Z"
             fill="white"
           />
         </svg>
@@ -46,15 +46,15 @@ export default function BenefitsSection() {
     {
       icon: (
         <svg
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g clipPath="url(#clip0_price)">
+          <g clipPath="url(#clip0_601_2897)">
             <path
-              d="M6.66663 28V6.66667C6.66663 5.95942 6.94758 5.28115 7.44767 4.78105C7.94777 4.28095 8.62605 4 9.33329 4H22.6666C23.3739 4 24.0521 4.28095 24.5522 4.78105C25.0523 5.28115 25.3333 5.95942 25.3333 6.66667V28L21.3333 25.3333L18.6666 28L16 25.3333L13.3333 28L10.6666 25.3333L6.66663 28Z"
+              d="M5.83325 24.5V5.83333C5.83325 5.21449 6.07908 4.621 6.51667 4.18342C6.95425 3.74583 7.54775 3.5 8.16659 3.5H19.8333C20.4521 3.5 21.0456 3.74583 21.4832 4.18342C21.9208 4.621 22.1666 5.21449 22.1666 5.83333V24.5L18.6666 22.1667L16.3333 24.5L13.9999 22.1667L11.6666 24.5L9.33325 22.1667L5.83325 24.5Z"
               fill="white"
               stroke="white"
               strokeWidth="2"
@@ -62,7 +62,7 @@ export default function BenefitsSection() {
               strokeLinejoin="round"
             />
             <path
-              d="M18.6667 10.6667H15.3334C14.8029 10.6667 14.2942 10.8775 13.9192 11.2525C13.5441 11.6276 13.3334 12.1363 13.3334 12.6667C13.3334 13.1972 13.5441 13.7059 13.9192 14.081C14.2942 14.456 14.8029 14.6667 15.3334 14.6667H16.6667C17.1971 14.6667 17.7058 14.8775 18.0809 15.2525C18.456 15.6276 18.6667 16.1363 18.6667 16.6667C18.6667 17.1972 18.456 17.7059 18.0809 18.081C17.7058 18.456 17.1971 18.6667 16.6667 18.6667H13.3334M16 18.6667V20.6667M16 8.66675V10.6667"
+              d="M16.3334 9.33325H13.4167C12.9526 9.33325 12.5075 9.51763 12.1793 9.84581C11.8511 10.174 11.6667 10.6191 11.6667 11.0833C11.6667 11.5474 11.8511 11.9925 12.1793 12.3207C12.5075 12.6489 12.9526 12.8333 13.4167 12.8333H14.5834C15.0475 12.8333 15.4927 13.0176 15.8209 13.3458C16.149 13.674 16.3334 14.1191 16.3334 14.5833C16.3334 15.0474 16.149 15.4925 15.8209 15.8207C15.4927 16.1489 15.0475 16.3332 14.5834 16.3332H11.6667M14.0001 16.3332V18.0832M14.0001 7.58325V9.33325"
               stroke="#1E9CE8"
               strokeWidth="2"
               strokeLinecap="round"
@@ -70,16 +70,16 @@ export default function BenefitsSection() {
             />
           </g>
           <defs>
-            <clipPath id="clip0_price">
-              <rect width="32" height="32" fill="white" />
+            <clipPath id="clip0_601_2897">
+              <rect width="28" height="28" fill="white" />
             </clipPath>
           </defs>
         </svg>
       ),
       badge: (
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <path
-            d="M8.00016 1.3335C4.32016 1.3335 1.3335 4.32016 1.3335 8.00016C1.3335 11.6802 4.32016 14.6668 8.00016 14.6668C11.6802 14.6668 14.6668 11.6802 14.6668 8.00016C14.6668 4.32016 11.6802 1.3335 8.00016 1.3335ZM5.82016 5.10683C6.36016 5.10683 6.80683 5.54683 6.80683 6.0935C6.80683 6.6335 6.36683 7.08016 5.82016 7.08016C5.28016 7.08016 4.8335 6.64016 4.8335 6.0935C4.8335 5.54683 5.2735 5.10683 5.82016 5.10683ZM5.90016 10.5335C5.80016 10.6335 5.6735 10.6802 5.54683 10.6802C5.42016 10.6802 5.2935 10.6335 5.1935 10.5335C5.00016 10.3402 5.00016 10.0202 5.1935 9.82683L9.56016 5.46016C9.7535 5.26683 10.0735 5.26683 10.2668 5.46016C10.4602 5.6535 10.4602 5.9735 10.2668 6.16683L5.90016 10.5335ZM10.1802 10.8935C9.64016 10.8935 9.1935 10.4535 9.1935 9.90683C9.1935 9.36683 9.6335 8.92016 10.1802 8.92016C10.7202 8.92016 11.1668 9.36016 11.1668 9.90683C11.1668 10.4535 10.7268 10.8935 10.1802 10.8935Z"
+            d="M7.00008 1.16675C3.78008 1.16675 1.16675 3.78008 1.16675 7.00008C1.16675 10.2201 3.78008 12.8334 7.00008 12.8334C10.2201 12.8334 12.8334 10.2201 12.8334 7.00008C12.8334 3.78008 10.2201 1.16675 7.00008 1.16675ZM5.09258 4.46841C5.56508 4.46841 5.95591 4.85342 5.95591 5.33175C5.95591 5.80425 5.57091 6.19508 5.09258 6.19508C4.62008 6.19508 4.22925 5.81008 4.22925 5.33175C4.22925 4.85342 4.61425 4.46841 5.09258 4.46841ZM5.16258 9.21675C5.07508 9.30425 4.96425 9.34508 4.85341 9.34508C4.74258 9.34508 4.63175 9.30425 4.54425 9.21675C4.37508 9.04758 4.37508 8.76758 4.54425 8.59841L8.36508 4.77758C8.53425 4.60841 8.81425 4.60841 8.98342 4.77758C9.15258 4.94675 9.15258 5.22675 8.98342 5.39592L5.16258 9.21675ZM8.90758 9.53175C8.43508 9.53175 8.04425 9.14675 8.04425 8.66842C8.04425 8.19592 8.42925 7.80508 8.90758 7.80508C9.38008 7.80508 9.77092 8.19008 9.77092 8.66842C9.77092 9.14675 9.38592 9.53175 8.90758 9.53175Z"
             fill="white"
           />
         </svg>
@@ -91,14 +91,14 @@ export default function BenefitsSection() {
     {
       icon: (
         <svg
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M16 28L29.3333 18.6667H24.0133L24 4H8V18.6667H2.66667L16 28Z"
+            d="M13.9999 24.5L25.6666 16.3333H21.0116L20.9999 3.5H6.99992V16.3333H2.33325L13.9999 24.5Z"
             fill="white"
             stroke="white"
             strokeWidth="2"
@@ -106,14 +106,14 @@ export default function BenefitsSection() {
             strokeLinejoin="round"
           />
           <path
-            d="M12 18.6667L20 10.6667"
+            d="M10.5 16.3333L17.5 9.33325"
             stroke="#1E9CE8"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M12.6667 12.0001C13.0349 12.0001 13.3333 11.7016 13.3333 11.3334C13.3333 10.9652 13.0349 10.6667 12.6667 10.6667C12.2985 10.6667 12 10.9652 12 11.3334C12 11.7016 12.2985 12.0001 12.6667 12.0001Z"
+            d="M11.0833 10.4999C11.4055 10.4999 11.6667 10.2388 11.6667 9.91659C11.6667 9.59442 11.4055 9.33325 11.0833 9.33325C10.7612 9.33325 10.5 9.59442 10.5 9.91659C10.5 10.2388 10.7612 10.4999 11.0833 10.4999Z"
             fill="#1E9CE8"
             stroke="#1E9CE8"
             strokeWidth="2"
@@ -121,7 +121,7 @@ export default function BenefitsSection() {
             strokeLinejoin="round"
           />
           <path
-            d="M19.3333 18.6666C19.7015 18.6666 20 18.3681 20 17.9999C20 17.6317 19.7015 17.3333 19.3333 17.3333C18.9651 17.3333 18.6667 17.6317 18.6667 17.9999C18.6667 18.3681 18.9651 18.6666 19.3333 18.6666Z"
+            d="M16.9166 16.3334C17.2388 16.3334 17.4999 16.0722 17.4999 15.7501C17.4999 15.4279 17.2388 15.1667 16.9166 15.1667C16.5944 15.1667 16.3333 15.4279 16.3333 15.7501C16.3333 16.0722 16.5944 16.3334 16.9166 16.3334Z"
             fill="#1E9CE8"
             stroke="#1E9CE8"
             strokeWidth="2"
@@ -131,9 +131,9 @@ export default function BenefitsSection() {
         </svg>
       ),
       badge: (
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <path
-            d="M10.7933 1.33325H5.20667C2.78 1.33325 1.33333 2.77992 1.33333 5.20659V10.7933C1.33333 13.2199 2.78 14.6666 5.20667 14.6666H10.7933C13.22 14.6666 14.6667 13.2199 14.6667 10.7933V5.20659C14.6667 2.77992 13.22 1.33325 10.7933 1.33325ZM9.50667 7.99992C10.0267 8.17992 10.72 8.55992 10.72 9.75325C10.72 10.7799 9.92 11.6133 8.93333 11.6133H8.5V11.9999C8.5 12.2733 8.27333 12.4999 8 12.4999C7.72667 12.4999 7.5 12.2733 7.5 11.9999V11.6133H7.26C6.16667 11.6133 5.28 10.6866 5.28 9.55325C5.28 9.27992 5.5 9.05325 5.78 9.05325C6.05333 9.05325 6.28 9.27992 6.28 9.55325C6.28 10.1399 6.72 10.6133 7.26 10.6133H7.5V8.35325L6.49333 7.99992C5.97333 7.81992 5.28 7.43992 5.28 6.24659C5.28 5.21992 6.08 4.38659 7.06667 4.38659H7.5V3.99992C7.5 3.72659 7.72667 3.49992 8 3.49992C8.27333 3.49992 8.5 3.72659 8.5 3.99992V4.38659H8.74C9.83333 4.38659 10.72 5.31325 10.72 6.44659C10.72 6.71992 10.5 6.94659 10.22 6.94659C9.94667 6.94659 9.72 6.71992 9.72 6.44659C9.72 5.85992 9.28 5.38659 8.74 5.38659H8.5V7.64659L9.50667 7.99992Z"
+            d="M9.44425 1.16675H4.55591C2.43258 1.16675 1.16675 2.43258 1.16675 4.55591V9.44425C1.16675 11.5676 2.43258 12.8334 4.55591 12.8334H9.44425C11.5676 12.8334 12.8334 11.5676 12.8334 9.44425V4.55591C12.8334 2.43258 11.5676 1.16675 9.44425 1.16675ZM8.31841 7.00008C8.77341 7.15758 9.38008 7.49008 9.38008 8.53425C9.38008 9.43258 8.68008 10.1617 7.81675 10.1617H7.43758V10.5001C7.43758 10.7392 7.23925 10.9376 7.00008 10.9376C6.76091 10.9376 6.56258 10.7392 6.56258 10.5001V10.1617H6.35258C5.39591 10.1617 4.62008 9.35091 4.62008 8.35925C4.62008 8.12008 4.81258 7.92175 5.05758 7.92175C5.29675 7.92175 5.49508 8.12008 5.49508 8.35925C5.49508 8.87258 5.88008 9.28675 6.35258 9.28675H6.56258V7.30925L5.68175 7.00008C5.22675 6.84258 4.62008 6.51008 4.62008 5.46591C4.62008 4.56758 5.32008 3.83841 6.18341 3.83841H6.56258V3.50008C6.56258 3.26091 6.76091 3.06258 7.00008 3.06258C7.23925 3.06258 7.43758 3.26091 7.43758 3.50008V3.83841H7.64758C8.60425 3.83841 9.38008 4.64925 9.38008 5.64091C9.38008 5.88008 9.18758 6.07841 8.94258 6.07841C8.70341 6.07841 8.50508 5.88008 8.50508 5.64091C8.50508 5.12758 8.12008 4.71341 7.64758 4.71341H7.43758V6.69091L8.31841 7.00008Z"
             fill="white"
           />
         </svg>
@@ -145,43 +145,43 @@ export default function BenefitsSection() {
     {
       icon: (
         <svg
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g clipPath="url(#clip0_control)">
+          <g clipPath="url(#clip0_601_2913)">
             <path
-              d="M21.3334 26.6666V23.9999C21.3334 23.2927 21.6143 22.6144 22.1144 22.1143C22.6145 21.6142 23.2928 21.3333 24 21.3333H26.6667"
+              d="M18.6667 23.3334V21.0001C18.6667 20.3812 18.9126 19.7878 19.3502 19.3502C19.7878 18.9126 20.3812 18.6667 21.0001 18.6667H23.3334"
               stroke="white"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M21.3334 37.3333V39.9999C21.3334 40.7072 21.6143 41.3854 22.1144 41.8855C22.6145 42.3856 23.2928 42.6666 24 42.6666H26.6667"
+              d="M18.6667 32.6667V35.0001C18.6667 35.6189 18.9126 36.2124 19.3502 36.65C19.7878 37.0876 20.3812 37.3334 21.0001 37.3334H23.3334"
               stroke="white"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M37.3334 21.3333H40C40.7073 21.3333 41.3856 21.6142 41.8857 22.1143C42.3858 22.6144 42.6667 23.2927 42.6667 23.9999V26.6666"
+              d="M32.6667 18.6667H35.0001C35.6189 18.6667 36.2124 18.9126 36.65 19.3502C37.0876 19.7878 37.3334 20.3812 37.3334 21.0001V23.3334"
               stroke="white"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M37.3334 42.6666H40C40.7073 42.6666 41.3856 42.3856 41.8857 41.8855C42.3858 41.3854 42.6667 40.7072 42.6667 39.9999V37.3333"
+              d="M32.6667 37.3334H35.0001C35.6189 37.3334 36.2124 37.0876 36.65 36.65C37.0876 36.2124 37.3334 35.6189 37.3334 35.0001V32.6667"
               stroke="white"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M32 40L27.3333 33.3333C26.8841 32.5213 26.6544 31.6062 26.6671 30.6784C26.6798 29.7505 26.9344 28.842 27.4057 28.0426C27.877 27.2433 28.5486 26.5807 29.3544 26.1204C30.1601 25.6601 31.072 25.418 32 25.418C32.9279 25.418 33.8398 25.6601 34.6455 26.1204C35.4513 26.5807 36.123 27.2433 36.5943 28.0426C37.0655 28.842 37.3201 29.7505 37.3328 30.6784C37.3455 31.6062 37.1159 32.5213 36.6666 33.3333L32 40Z"
+              d="M27.9999 35L23.9166 29.1666C23.5235 28.4562 23.3226 27.6554 23.3337 26.8436C23.3448 26.0317 23.5675 25.2367 23.9799 24.5373C24.3923 23.8379 24.98 23.2581 25.685 22.8553C26.3901 22.4526 27.188 22.2407 27.9999 22.2407C28.8119 22.2407 29.6098 22.4526 30.3148 22.8553C31.0198 23.2581 31.6075 23.8379 32.0199 24.5373C32.4323 25.2367 32.655 26.0317 32.6661 26.8436C32.6773 27.6554 32.4763 28.4562 32.0833 29.1666L27.9999 35Z"
               fill="white"
               stroke="white"
               strokeWidth="2"
@@ -189,7 +189,7 @@ export default function BenefitsSection() {
               strokeLinejoin="round"
             />
             <path
-              d="M32 30.6667V30.6801"
+              d="M28 26.8333V26.8449"
               stroke="#1E9CE8"
               strokeWidth="6"
               strokeLinecap="round"
@@ -197,8 +197,8 @@ export default function BenefitsSection() {
             />
           </g>
           <defs>
-            <clipPath id="clip0_control">
-              <rect width="32" height="32" fill="white" transform="translate(16 16)" />
+            <clipPath id="clip0_601_2913">
+              <rect width="28" height="28" fill="white" transform="translate(14 14)" />
             </clipPath>
           </defs>
         </svg>
@@ -211,85 +211,69 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className="w-full bg-white px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          {/* Left Side - Illustration and CTA */}
-          <div className="order-2 lg:order-1">
-            <div className="relative bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 md:p-10 lg:p-12 shadow-lg">
-              {/* Illustration - Using gradient colors to represent the house */}
-              <div className="mb-8 flex justify-center">
-                <div className="relative w-64 h-48">
-                  {/* Simple house illustration using CSS */}
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-48 h-32">
-                    {/* House base */}
-                    <div className="absolute bottom-0 w-full h-24 bg-gradient-to-br from-[#1E9CE8] to-[#0D6EAD] rounded-lg shadow-xl"></div>
-                    {/* Roof */}
-                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[6rem] border-r-[6rem] border-b-[3rem] border-l-transparent border-r-transparent border-b-[#1E9CE8]"></div>
-                    {/* Door */}
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 h-12 bg-white rounded-t-lg"></div>
-                    {/* Windows */}
-                    <div className="absolute bottom-12 left-6 w-6 h-6 bg-white rounded"></div>
-                    <div className="absolute bottom-12 right-6 w-6 h-6 bg-white rounded"></div>
-                  </div>
+    <section className="w-full bg-white px-6 py-12 md:px-8 lg:px-12 md:py-16 lg:py-20">
+      <div className="max-w-sm mx-auto md:max-w-2xl lg:max-w-6xl">
+        {/* Illustration Card */}
+        <div className="relative bg-gradient-to-br from-blue-50 to-purple-100 rounded-3xl overflow-hidden mb-12 md:mb-16">
+          <img
+            src="https://api.builder.io/api/v1/image/assets/TEMP/2a46bc55961699466193c6ca637b43432ae50554?width=654"
+            alt="Find your new home illustration"
+            className="w-full h-auto object-cover"
+          />
+          
+          {/* Content Overlay */}
+          <div className="absolute inset-0 p-8 md:p-10 lg:p-12 flex flex-col justify-start">
+            <div className="max-w-xs space-y-4">
+              <h2 className="font-instrument text-3xl md:text-4xl font-bold text-[#071839] leading-tight">
+                The new way to find your new home
+              </h2>
+              <p className="text-base md:text-lg text-[#071839] opacity-70 leading-relaxed">
+                Find your dream place to live in with more than 10k+ properties
+                listed.
+              </p>
+              <button className="mt-4 px-4 py-2.5 bg-[#071839] text-white text-sm font-bold rounded-lg hover:bg-[#0a1f4d] transition-colors">
+                Browse Properties
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Benefits List */}
+        <div className="flex flex-col gap-6 md:gap-8">
+          {benefits.map((benefit, index) => (
+            <div
+              key={index}
+              className="benefit-item flex items-start gap-6"
+            >
+              {/* Icon Container */}
+              <div className="relative w-14 h-14 flex-shrink-0">
+                {/* Outer circle */}
+                <div className="absolute inset-0 rounded-full border border-[#E0DEF7] bg-white"></div>
+                {/* Inner circle */}
+                <div className="absolute inset-1 rounded-full bg-[#E0DEF7]"></div>
+                {/* Icon */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  {benefit.icon}
                 </div>
+                {/* Badge */}
+                {benefit.badge && (
+                  <div className="absolute -bottom-0.5 -right-0.5 w-5 h-5 rounded-full bg-[#1E9CE8] flex items-center justify-center">
+                    {benefit.badge}
+                  </div>
+                )}
               </div>
 
-              {/* Content */}
-              <div className="space-y-4">
-                <h2 className="font-instrument text-2xl md:text-3xl lg:text-4xl font-bold text-[#071839] leading-tight">
-                  The new way to find your new home
-                </h2>
-                <p className="text-base md:text-lg text-[#071839] opacity-70 leading-relaxed">
-                  Find your dream place to live in with more than 10k+ properties
-                  listed.
+              {/* Text Content */}
+              <div className="flex-1 space-y-4">
+                <h3 className="font-instrument text-xl md:text-2xl font-bold text-[#000929] leading-tight">
+                  {benefit.title}
+                </h3>
+                <p className="text-sm md:text-base text-[#4D5461] leading-relaxed">
+                  {benefit.description}
                 </p>
-                <button className="mt-6 px-6 py-3 bg-[#071839] text-white text-sm md:text-base font-bold rounded-lg hover:bg-[#0a1f4d] transition-colors">
-                  Browse Properties
-                </button>
               </div>
             </div>
-          </div>
-
-          {/* Right Side - Benefits Grid */}
-          <div className="order-1 lg:order-2">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="benefit-card flex flex-col gap-6"
-                >
-                  {/* Icon Container */}
-                  <div className="relative w-16 h-16">
-                    {/* Outer circle */}
-                    <div className="absolute inset-0 rounded-full border border-[#E0DEF7] bg-white"></div>
-                    {/* Inner circle */}
-                    <div className="absolute inset-1 rounded-full bg-[#E0DEF7]"></div>
-                    {/* Icon */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      {benefit.icon}
-                    </div>
-                    {/* Badge */}
-                    {benefit.badge && (
-                      <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-[#1E9CE8] flex items-center justify-center">
-                        {benefit.badge}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Text Content */}
-                  <div className="space-y-4">
-                    <h3 className="font-instrument text-xl md:text-2xl font-bold text-[#000929] leading-tight">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-sm md:text-base text-[#4D5461] leading-relaxed">
-                      {benefit.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
