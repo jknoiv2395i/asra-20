@@ -59,7 +59,8 @@ export default function HeroSection() {
                 display: "flex",
                 flexDirection: "column",
                 fontWeight: "400",
-                marginTop: "84px",
+                height: "423px",
+                margin: "84px auto -3px",
                 paddingLeft: "41px",
               }}
             >
