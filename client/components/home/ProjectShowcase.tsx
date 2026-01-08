@@ -64,34 +64,7 @@ export default function ProjectShowcase() {
         {/* Header Section */}
         <div className="flex flex-col items-center mb-8 md:mb-12 lg:mb-16">
           {/* Dreamer Home Badge */}
-          <div className="flex items-center gap-2 mb-6 md:mb-8">
-            <svg
-              className="w-5 h-5 opacity-90"
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g opacity="0.9">
-                <path
-                  d="M4.11768 16.7824H16.7828V4.11722"
-                  stroke="#33A4BB"
-                  strokeWidth="3.48327"
-                  strokeMiterlimit="20"
-                  strokeLinecap="square"
-                />
-                <path
-                  d="M4.11768 4.11722L15.5167 15.5162"
-                  stroke="#33A4BB"
-                  strokeWidth="3.48327"
-                  strokeMiterlimit="20"
-                  strokeLinecap="square"
-                />
-              </g>
-            </svg>
-            <span className="text-black font-bold text-base md:text-lg lg:text-[19px] uppercase tracking-[0.12em] leading-tight">
-              Dreamer Home
-            </span>
-          </div>
+          <div className="flex items-center gap-2 mb-6 md:mb-8" />
 
           {/* Main Heading */}
           <h2 className="text-center text-[#010101] text-3xl md:text-5xl lg:text-[69px] font-normal lg:leading-[77px] tracking-tight lg:tracking-[-3.8px] capitalize max-w-4xl">
