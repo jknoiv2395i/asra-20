@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 flex-1">
           {/* Company */}
           <div>
-            <h4 className="text-white/60 text-[11px] font-semibold uppercase tracking-wide mb-4">
+            <h4 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
               Company
             </h4>
             <ul className="space-y-3">
