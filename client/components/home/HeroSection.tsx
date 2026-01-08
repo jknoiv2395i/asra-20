@@ -5,7 +5,7 @@ export default function HeroSection() {
       style={{
         position: "relative",
         width: "100%",
-        height: "915px",
+        height: "911px",
         backgroundColor: "#1E9CE8",
         backgroundImage:
           "url(https://api.builder.io/api/v1/image/assets/TEMP/ec4dbbbabe37a36b8cd44006f5f5207c0c897340?width=3840)",
@@ -35,7 +35,7 @@ export default function HeroSection() {
         style={{
           position: "absolute",
           left: "50%",
-          top: "120px",
+          top: "62px",
           transform: "translateX(-50%)",
           width: "100%",
           maxWidth: "631px",
@@ -52,8 +52,8 @@ export default function HeroSection() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            width: "100%",
-            maxWidth: "631px",
+            width: "657px",
+            alignSelf: "center",
             color: "#FFF",
             textAlign: "center",
             fontFamily: "'Instrument Sans', Inter, system-ui, sans-serif",
