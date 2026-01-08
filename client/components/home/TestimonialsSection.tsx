@@ -1,93 +1,219 @@
 "use client";
-import { TestimonialsColumn } from "@/components/ui/testimonials-columns-1";
-import { motion } from "motion/react";
+import { useState } from "react";
 
 const testimonials = [
   {
-    text: "Choosing MPHD Group Real Estates was the best decision I made for my property needs in Nagpur. Their comprehensive services, including real estate consulting and legal support, simplified the complex process. I commend their professionalism and would recommend them without hesitation.",
+    text: "I had the pleasure of working with ABC Realty to find my dream home, and I couldn't be happier with the entire experience.",
+    fullText:
+      "From the moment I walked into their office, I felt welcomed and supported by their friendly team.",
+    name: "Sarah M.",
+    role: "Property consultation",
     image:
       "https://api.builder.io/api/v1/image/assets/TEMP/e712ba1143c3cc4c9975370b692ef552547a4710?width=80",
-    name: "Ashish Francis",
-    role: "Business Owner",
+    rating: 5,
   },
   {
-    text: "The fully furnished 3 BHK in Kamal Chowk is perfect for my family. Amol made the transition easy and stress-free. Thanks Amol sir",
+    text: "Once we found the perfect home, Sarah guided me through every step of the buying process, making it feel effortless on my part. She was an excellent negotiator, and thanks to her skills, I was able to secure a fantastic deal on my new home.",
+    name: "Esther Howard",
+    role: "Property consultation",
     image:
       "https://api.builder.io/api/v1/image/assets/TEMP/9a4f23260f560598daa941dfe6d07724045e970b?width=80",
-    name: "Devendra Pandharkar",
-    role: "Software Engineer",
+    rating: 5,
   },
   {
     text: "Working with MPHD Group has been a wonderful experience. Their attention to detail and customer service is exceptional.",
-    image:
-      "https://api.builder.io/api/v1/image/assets/TEMP/14adce6b0a461ffa324a134f2741062c7cb6b979?width=80",
     name: "Shailesh Shende",
     role: "Real Estate Consultant",
+    image:
+      "https://api.builder.io/api/v1/image/assets/TEMP/14adce6b0a461ffa324a134f2741062c7cb6b979?width=80",
+    rating: 5,
   },
   {
     text: "Excellent work with proper co-ordination, helpful regards the communication must view. Best services & very good co operative nature.",
+    name: "Golu Chute",
+    role: "Marketing Manager",
     image:
       "https://api.builder.io/api/v1/image/assets/TEMP/5ad1368ab179fbbf05be0d8e1d4555d07145fed4?width=80",
-    name: "golu chute",
-    role: "Marketing Manager",
-  },
-  {
-    text: "and everyone is helpful. Staff is so cooperative...nice experience",
-    image:
-      "https://api.builder.io/api/v1/image/assets/TEMP/f3bca221cc2ab7d404f4aff1fd737c23a38703de?width=80",
-    name: "Aai Graphics",
-    role: "HR Director",
-  },
-  {
-    text: "Ankit invested significant time and effort into our deal, which is highly appreciable. I'm personally very thankful for his valuable contributions. Perhaps we could recognize his efforts appropriately.",
-    image:
-      "https://api.builder.io/api/v1/image/assets/TEMP/e9080d0280b9edf73b62c27bea675993edc516af?width=80",
-    name: "Sidharth Mendhe",
-    role: "Property Investor",
+    rating: 5,
   },
 ];
 
-const firstColumn = testimonials.slice(0, 2);
-const secondColumn = testimonials.slice(2, 4);
-const thirdColumn = testimonials.slice(4, 6);
-
 export default function TestimonialsSection() {
-  return (
-    <section className="bg-white relative py-12 md:py-16 lg:py-20 px-4 md:px-8 mb-[82px] sm:mb-0">
-      <div className="max-w-6xl z-10 mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.1,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-          viewport={{ once: true }}
-          className="flex flex-col items-center justify-center max-w-md md:max-w-xl mx-auto mb-8 md:mb-12 lg:mb-16"
-        >
-          <h2
-            className="tracking-tight text-center text-[#020817] text-[35px] sm:text-3xl md:text-4xl lg:text-5xl leading-tight w-[312px] sm:w-auto"
-            style={{
-              font: '48px/48px "Istok Web", sans-serif',
-            }}
-          >
-            What our users say
-          </h2>
-        </motion.div>
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-        <div className="flex justify-center gap-4 md:gap-6 mt-8 md:mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[400px] md:max-h-[600px] lg:max-h-[740px] overflow-hidden">
-          <TestimonialsColumn testimonials={firstColumn} duration={15} />
-          <TestimonialsColumn
-            testimonials={secondColumn}
-            className="hidden md:block"
-            duration={19}
-          />
-          <TestimonialsColumn
-            testimonials={thirdColumn}
-            className="hidden lg:block"
-            duration={17}
-          />
+  const nextTestimonial = () => {
+    setCurrentIndex((prev) => (prev + 2 >= testimonials.length ? 0 : prev + 2));
+  };
+
+  const prevTestimonial = () => {
+    setCurrentIndex((prev) =>
+      prev - 2 < 0 ? Math.max(testimonials.length - 2, 0) : prev - 2,
+    );
+  };
+
+  const visibleTestimonials = testimonials.slice(
+    currentIndex,
+    currentIndex + 2,
+  );
+
+  return (
+    <section className="testimonials-section w-full bg-white py-12 md:py-16 lg:py-20 px-4 md:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12 mb-12 md:mb-16">
+          {/* Heading */}
+          <div className="flex-1">
+            <h2 className="testimonials-heading text-black text-4xl md:text-5xl lg:text-[60px] font-normal leading-tight tracking-tight">
+              Our Customers
+              <br />
+              Think We're
+              <br />
+              The Best
+            </h2>
+          </div>
+
+          {/* Navigation Arrows */}
+          <div className="flex items-center gap-4">
+            <button
+              onClick={prevTestimonial}
+              className="nav-arrow-btn w-12 h-12 md:w-14 md:h-14 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors"
+              aria-label="Previous testimonials"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 18L9 12L15 6"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={nextTestimonial}
+              className="nav-arrow-btn w-12 h-12 md:w-14 md:h-14 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors"
+              aria-label="Next testimonials"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Testimonials Grid */}
+        <div className="testimonials-grid grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
+          {visibleTestimonials.map((testimonial, index) => (
+            <div
+              key={currentIndex + index}
+              className="testimonial-card bg-white p-6 md:p-8 lg:p-10 transition-all duration-500 ease-in-out"
+            >
+              {/* Quote Icon */}
+              <div className="quote-icon mb-6">
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 28C10 23.5817 13.5817 20 18 20V14C10.268 14 4 20.268 4 28V38H18V28H10Z"
+                    fill="#E5E7EB"
+                  />
+                  <path
+                    d="M30 28C30 23.5817 33.5817 20 38 20V14C30.268 14 24 20.268 24 28V38H38V28H30Z"
+                    fill="#E5E7EB"
+                  />
+                </svg>
+              </div>
+
+              {/* Star Rating */}
+              <div className="star-rating flex items-center gap-1 mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <svg
+                    key={i}
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z"
+                      fill="#FCD34D"
+                    />
+                  </svg>
+                ))}
+              </div>
+
+              {/* Testimonial Text */}
+              <p className="testimonial-text text-black text-base md:text-lg leading-relaxed mb-4">
+                {testimonial.text}
+              </p>
+              {testimonial.fullText && (
+                <p className="testimonial-full-text text-black text-base md:text-lg leading-relaxed mb-8">
+                  {testimonial.fullText}
+                </p>
+              )}
+
+              {/* Customer Info */}
+              <div className="customer-info flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="customer-avatar w-12 h-12 rounded-full object-cover"
+                  />
+                  <div className="customer-details">
+                    <h4 className="customer-name text-black text-base md:text-lg font-semibold">
+                      {testimonial.name}
+                    </h4>
+                    <p className="customer-role text-gray-600 text-sm md:text-base">
+                      {testimonial.role}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Verification Badge */}
+                <div className="verification-badge">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="16" cy="16" r="16" fill="#000000" />
+                    <path
+                      d="M22 12L14 20L10 16"
+                      stroke="white"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

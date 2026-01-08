@@ -1,9 +1,17 @@
 export default function IntroSection() {
   return (
     <section className="w-full bg-white py-16 md:py-24 lg:py-32 px-4 md:px-8">
+      <style>{`
+        @media (max-width: 640px) {
+          .intro-heading {
+            font-size: 24px;
+            width: 392px;
+          }
+        }
+      `}</style>
       <div className="max-w-3xl mx-auto flex flex-col text-center">
         <h2
-          className="text-[25px] sm:text-2xl md:text-4xl lg:text-5xl xl:text-[54px] text-black font-instrument font-normal leading-tight tracking-[-0.5px] sm:tracking-[-1.6px] mb-4 sm:mb-6 mx-auto"
+          className="intro-heading text-[25px] sm:text-2xl md:text-4xl lg:text-5xl xl:text-[54px] text-black font-instrument font-normal leading-tight tracking-[-0.5px] sm:tracking-[-1.6px] mb-4 sm:mb-6 mx-auto"
           style={{
             width: "395px",
             margin: "0 auto -3px",

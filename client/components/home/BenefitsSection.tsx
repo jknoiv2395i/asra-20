@@ -18,7 +18,7 @@ export default function BenefitsSection() {
             />
             <path
               d="M10.5 15.7501L12.8333 18.0834L17.5 13.4167"
-              stroke="#1E9CE8"
+              stroke="#000000"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -63,7 +63,7 @@ export default function BenefitsSection() {
             />
             <path
               d="M16.3334 9.33325H13.4167C12.9526 9.33325 12.5075 9.51763 12.1793 9.84581C11.8511 10.174 11.6667 10.6191 11.6667 11.0833C11.6667 11.5474 11.8511 11.9925 12.1793 12.3207C12.5075 12.6489 12.9526 12.8333 13.4167 12.8333H14.5834C15.0475 12.8333 15.4927 13.0176 15.8209 13.3458C16.149 13.674 16.3334 14.1191 16.3334 14.5833C16.3334 15.0474 16.149 15.4925 15.8209 15.8207C15.4927 16.1489 15.0475 16.3332 14.5834 16.3332H11.6667M14.0001 16.3332V18.0832M14.0001 7.58325V9.33325"
-              stroke="#1E9CE8"
+              stroke="#000000"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -107,23 +107,23 @@ export default function BenefitsSection() {
           />
           <path
             d="M10.5 16.3333L17.5 9.33325"
-            stroke="#1E9CE8"
+            stroke="#000000"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
             d="M11.0833 10.4999C11.4055 10.4999 11.6667 10.2388 11.6667 9.91659C11.6667 9.59442 11.4055 9.33325 11.0833 9.33325C10.7612 9.33325 10.5 9.59442 10.5 9.91659C10.5 10.2388 10.7612 10.4999 11.0833 10.4999Z"
-            fill="#1E9CE8"
-            stroke="#1E9CE8"
+            fill="#000000"
+            stroke="#000000"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
             d="M16.9166 16.3334C17.2388 16.3334 17.4999 16.0722 17.4999 15.7501C17.4999 15.4279 17.2388 15.1667 16.9166 15.1667C16.5944 15.1667 16.3333 15.4279 16.3333 15.7501C16.3333 16.0722 16.5944 16.3334 16.9166 16.3334Z"
-            fill="#1E9CE8"
-            stroke="#1E9CE8"
+            fill="#000000"
+            stroke="#000000"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -142,101 +142,30 @@ export default function BenefitsSection() {
       description:
         "You no longer have to negotiate commissions and haggle with other agents it only cost 2%!",
     },
-    {
-      icon: (
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 28 28"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g clipPath="url(#clip0_601_2913)">
-            <path
-              d="M18.6667 23.3334V21.0001C18.6667 20.3812 18.9126 19.7878 19.3502 19.3502C19.7878 18.9126 20.3812 18.6667 21.0001 18.6667H23.3334"
-              stroke="white"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M18.6667 32.6667V35.0001C18.6667 35.6189 18.9126 36.2124 19.3502 36.65C19.7878 37.0876 20.3812 37.3334 21.0001 37.3334H23.3334"
-              stroke="white"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M32.6667 18.6667H35.0001C35.6189 18.6667 36.2124 18.9126 36.65 19.3502C37.0876 19.7878 37.3334 20.3812 37.3334 21.0001V23.3334"
-              stroke="white"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M32.6667 37.3334H35.0001C35.6189 37.3334 36.2124 37.0876 36.65 36.65C37.0876 36.2124 37.3334 35.6189 37.3334 35.0001V32.6667"
-              stroke="white"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M27.9999 35L23.9166 29.1666C23.5235 28.4562 23.3226 27.6554 23.3337 26.8436C23.3448 26.0317 23.5675 25.2367 23.9799 24.5373C24.3923 23.8379 24.98 23.2581 25.685 22.8553C26.3901 22.4526 27.188 22.2407 27.9999 22.2407C28.8119 22.2407 29.6098 22.4526 30.3148 22.8553C31.0198 23.2581 31.6075 23.8379 32.0199 24.5373C32.4323 25.2367 32.655 26.0317 32.6661 26.8436C32.6773 27.6554 32.4763 28.4562 32.0833 29.1666L27.9999 35Z"
-              fill="white"
-              stroke="white"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M28 26.8333V26.8449"
-              stroke="#1E9CE8"
-              strokeWidth="6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </g>
-          <defs>
-            <clipPath id="clip0_601_2913">
-              <rect
-                width="28"
-                height="28"
-                fill="white"
-                transform="translate(14 14)"
-              />
-            </clipPath>
-          </defs>
-        </svg>
-      ),
-      badge: null,
-      title: "Overall Control",
-      description:
-        "Get a virtual tour, and schedule visits before you rent or buy any properties. You get overall control.",
-    },
   ];
 
   return (
     <section className="w-full bg-white px-6 py-12 md:px-8 lg:px-12 md:py-16 lg:py-20">
       <div className="max-w-sm mx-auto md:max-w-2xl lg:max-w-6xl">
         {/* Illustration Card */}
-        <div className="relative bg-gradient-to-br from-blue-50 to-purple-100 rounded-3xl overflow-hidden mb-12 md:mb-16">
+        <div className="relative bg-black rounded-3xl overflow-hidden mb-12 md:mb-16">
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/2a46bc55961699466193c6ca637b43432ae50554?width=654"
             alt="Find your new home illustration"
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-cover opacity-40"
           />
 
           {/* Content Overlay */}
-          <div className="absolute inset-0 p-8 md:p-10 lg:p-12 flex flex-col justify-start">
+          <div className="benefits-overlay absolute inset-0 p-8 md:p-10 lg:p-12 flex flex-col justify-start">
             <div className="max-w-xs space-y-4">
-              <h2 className="font-instrument text-3xl md:text-4xl font-bold text-[#071839] leading-tight">
+              <h2 className="font-instrument text-3xl md:text-4xl font-bold text-white leading-tight">
                 The new way to find your new home
               </h2>
-              <p className="text-base md:text-lg text-[#071839] opacity-70 leading-relaxed">
+              <p className="text-base md:text-lg text-white opacity-70 leading-relaxed">
                 Find your dream place to live in with more than 10k+ properties
                 listed.
               </p>
-              <button className="mt-4 px-4 py-2.5 bg-[#071839] text-white text-sm font-bold rounded-lg hover:bg-[#0a1f4d] transition-colors">
+              <button className="mt-4 px-4 py-2.5 bg-white text-black text-sm font-bold rounded-lg hover:bg-gray-200 transition-colors">
                 Browse Properties
               </button>
             </div>
@@ -250,16 +179,16 @@ export default function BenefitsSection() {
               {/* Icon Container */}
               <div className="relative w-14 h-14 flex-shrink-0">
                 {/* Outer circle */}
-                <div className="absolute inset-0 rounded-full border border-[#E0DEF7] bg-white"></div>
+                <div className="absolute inset-0 rounded-full border border-gray-300 bg-gray-100"></div>
                 {/* Inner circle */}
-                <div className="absolute inset-1 rounded-full bg-[#E0DEF7]"></div>
+                <div className="absolute inset-1 rounded-full bg-gray-200"></div>
                 {/* Icon */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   {benefit.icon}
                 </div>
                 {/* Badge */}
                 {benefit.badge && (
-                  <div className="absolute -bottom-0.5 -right-0.5 w-5 h-5 rounded-full bg-[#1E9CE8] flex items-center justify-center">
+                  <div className="absolute -bottom-0.5 -right-0.5 w-5 h-5 rounded-full bg-black flex items-center justify-center">
                     {benefit.badge}
                   </div>
                 )}
@@ -267,10 +196,10 @@ export default function BenefitsSection() {
 
               {/* Text Content */}
               <div className="flex-1 space-y-4">
-                <h3 className="font-instrument text-xl md:text-2xl font-bold text-[#000929] leading-tight">
+                <h3 className="font-instrument text-xl md:text-2xl font-bold text-black leading-tight">
                   {benefit.title}
                 </h3>
-                <p className="text-sm md:text-base text-[#4D5461] leading-relaxed">
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -278,6 +207,17 @@ export default function BenefitsSection() {
           ))}
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .benefits-overlay {
+            background-image: url(https://cdn.builder.io/api/v1/image/assets%2F7246dc4011f944fd97de5fc88477069e%2F24a63a841a044e0a92d49c1b485d61ad);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+          }
+        }
+      `}</style>
     </section>
   );
 }
