@@ -89,14 +89,10 @@ export default function HeroSection() {
       >
         {/* Main Heading */}
         <motion.h1
-          className="hero-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white text-center font-instrument font-normal leading-tight mb-4 sm:mb-6"
+          className="hero-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white text-center font-instrument font-normal leading-tight mb-4 sm:mb-6 w-full"
           variants={headlineVariants}
           style={{
             fontFamily: "'Instrument Sans', Inter, system-ui, sans-serif",
-            width: "100%",
-            "@media (max-width: 640px)": {
-              textAlign: "center",
-            },
           }}
         >
           <p>Your gateway to </p>
