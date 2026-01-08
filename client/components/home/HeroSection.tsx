@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 
+import { motion } from "motion/react";
+
 export default function HeroSection() {
   return (
     <section
@@ -48,8 +50,11 @@ export default function HeroSection() {
         }}
       >
         {/* Main Heading */}
-        <h1
+        <motion.h1
           className="hero-heading"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           style={{
             display: "flex",
             flexDirection: "column",
@@ -67,11 +72,14 @@ export default function HeroSection() {
           }}
         >
           Your gateway to prestige properties
-        </h1>
+        </motion.h1>
 
         {/* Subheading */}
-        <p
+        <motion.p
           className="hero-subheading"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
           style={{
             display: "flex",
             flexDirection: "column",
@@ -90,11 +98,14 @@ export default function HeroSection() {
         >
           Bring your architectural projects to life with a template that puts
           your work front and center.
-        </p>
+        </motion.p>
 
         {/* CTA Button */}
-        <button
+        <motion.button
           className="hero-cta-button"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
           style={{
             display: "flex",
             padding: "8px 16px",
@@ -163,7 +174,7 @@ export default function HeroSection() {
               />
             </svg>
           </div>
-        </button>
+        </motion.button>
       </div>
 
       {/* Responsive Styles */}
