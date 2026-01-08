@@ -53,8 +53,8 @@ const thirdColumn = testimonials.slice(4, 6);
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-white relative py-20 px-6">
-      <div className="container z-10 mx-auto">
+    <section className="bg-white relative py-12 md:py-16 lg:py-20 px-4 md:px-8">
+      <div className="max-w-6xl z-10 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -64,10 +64,10 @@ export default function TestimonialsSection() {
             ease: [0.16, 1, 0.3, 1],
           }}
           viewport={{ once: true }}
-          className="flex flex-col items-center justify-center max-w-[540px] mx-auto mb-16"
+          className="flex flex-col items-center justify-center max-w-md md:max-w-xl mx-auto mb-8 md:mb-12 lg:mb-16"
         >
           <h2
-            className="tracking-tighter mt-5 text-center text-[#020817]"
+            className="tracking-tight text-center text-[#020817] text-3xl md:text-4xl lg:text-5xl leading-tight"
             style={{
               font: '48px/48px "Istok Web", sans-serif',
             }}
@@ -76,7 +76,7 @@ export default function TestimonialsSection() {
           </h2>
         </motion.div>
 
-        <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
+        <div className="flex justify-center gap-4 md:gap-6 mt-8 md:mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[400px] md:max-h-[600px] lg:max-h-[740px] overflow-hidden">
           <TestimonialsColumn testimonials={firstColumn} duration={15} />
           <TestimonialsColumn
             testimonials={secondColumn}
