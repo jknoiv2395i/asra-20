@@ -60,7 +60,10 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="w-full bg-white" style={{ padding: "64px 167px 64px 148px" }}>
+    <section
+      className="w-full bg-white"
+      style={{ padding: "64px 167px 64px 148px" }}
+    >
       <div className="max-w-[1280px] mx-auto">
         <h2 className="font-instrument text-2xl text-black mb-12 tracking-tight">
           OUR SERVICES
@@ -70,18 +73,83 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="border border-[#C3D5F1] rounded-2xl p-8 hover:shadow-lg transition-shadow group cursor-pointer"
+              className="service-card border border-[#C3D5F1] rounded-2xl p-8 cursor-pointer transition-all duration-300"
+              style={{
+                backgroundColor: "#ffffff",
+              }}
+              onMouseEnter={(e) => {
+                const card = e.currentTarget;
+                card.style.backgroundColor = "#1E9CE8";
+                card.style.borderColor = "#1E9CE8";
+                card.style.boxShadow = "0 10px 30px rgba(30, 156, 232, 0.2)";
+
+                // Change text colors
+                const title = card.querySelector("h3");
+                if (title) title.style.color = "#ffffff";
+
+                const description = card.querySelector("p");
+                if (description) description.style.color = "#ffffff";
+
+                const linkDiv = card.querySelector(".learn-more-link");
+                if (linkDiv) {
+                  linkDiv.style.color = "#ffffff";
+                  const paths = linkDiv.querySelectorAll("path");
+                  paths.forEach((path) => {
+                    path.setAttribute("stroke", "#ffffff");
+                  });
+                }
+
+                const iconBg = card.querySelector(".icon-bg");
+                if (iconBg) {
+                  iconBg.style.backgroundColor = "#ffffff";
+                  const svgs = iconBg.querySelectorAll("path");
+                  svgs.forEach((svg) => {
+                    svg.setAttribute("fill", "#1E9CE8");
+                  });
+                }
+              }}
+              onMouseLeave={(e) => {
+                const card = e.currentTarget;
+                card.style.backgroundColor = "#ffffff";
+                card.style.borderColor = "#C3D5F1";
+                card.style.boxShadow = "none";
+
+                // Reset text colors
+                const title = card.querySelector("h3");
+                if (title) title.style.color = "#131313";
+
+                const description = card.querySelector("p");
+                if (description) description.style.color = "#5D5D5D";
+
+                const linkDiv = card.querySelector(".learn-more-link");
+                if (linkDiv) {
+                  linkDiv.style.color = "#131313";
+                  const paths = linkDiv.querySelectorAll("path");
+                  paths.forEach((path) => {
+                    path.setAttribute("stroke", "#131313");
+                  });
+                }
+
+                const iconBg = card.querySelector(".icon-bg");
+                if (iconBg) {
+                  iconBg.style.backgroundColor = "#071839";
+                  const svgs = iconBg.querySelectorAll("path");
+                  svgs.forEach((svg) => {
+                    svg.setAttribute("fill", "white");
+                  });
+                }
+              }}
             >
-              <div className="w-16 h-16 bg-[#071839] rounded-full flex items-center justify-center mb-8">
+              <div className="icon-bg w-16 h-16 bg-[#071839] rounded-full flex items-center justify-center mb-8 transition-all duration-300">
                 {service.icon}
               </div>
-              <h3 className="font-instrument text-[30px] leading-9 text-[#131313] mb-6">
+              <h3 className="font-instrument text-[30px] leading-9 mb-6 transition-colors duration-300">
                 {service.title}
               </h3>
-              <p className="text-[#5D5D5D] text-[17px] leading-7 mb-8">
+              <p className="text-[17px] leading-7 mb-8 transition-colors duration-300">
                 {service.description}
               </p>
-              <div className="flex items-center gap-3 text-[#131313]">
+              <div className="learn-more-link flex items-center gap-3 transition-colors duration-300">
                 <span className="text-[17px]">Learn more</span>
                 <svg
                   width="20"
@@ -96,6 +164,7 @@ export default function ServicesSection() {
                     strokeWidth="1.66667"
                     strokeLinecap="round"
                     strokeLinejoin="round"
+                    className="transition-colors duration-300"
                   />
                   <path
                     d="M5.83325 14.1654L14.1666 5.83203"
@@ -103,6 +172,7 @@ export default function ServicesSection() {
                     strokeWidth="1.66667"
                     strokeLinecap="round"
                     strokeLinejoin="round"
+                    className="transition-colors duration-300"
                   />
                 </svg>
               </div>
