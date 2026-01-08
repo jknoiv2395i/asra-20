@@ -28,7 +28,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Home
                 </Link>
@@ -36,7 +36,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/about"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   About Us
                 </Link>
@@ -44,7 +44,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/contact"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Contact
                 </Link>
@@ -52,7 +52,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/service-areas"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Service Areas
                 </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/buy-residential"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Buy Residential
                 </Link>
@@ -77,7 +77,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/2bhk-flats"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   2BHK Flats
                 </Link>
@@ -85,7 +85,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/3bhk-apartments"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   3BHK Apartments
                 </Link>
@@ -93,7 +93,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/luxury-properties"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Luxury Properties
                 </Link>
@@ -101,7 +101,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/affordable-flats"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Affordable Flats
                 </Link>
@@ -118,7 +118,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/properties"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   All Properties
                 </Link>
@@ -126,7 +126,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/residential"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Residential
                 </Link>
@@ -134,7 +134,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/commercial"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Commercial
                 </Link>
@@ -142,7 +142,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/industrial"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Industrial
                 </Link>
@@ -159,7 +159,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/residential-rentals"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Residential Rentals
                 </Link>
@@ -167,7 +167,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/commercial-rentals"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Commercial Rentals
                 </Link>
@@ -184,7 +184,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/services"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Services
                 </Link>
@@ -192,7 +192,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/projects"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Projects
                 </Link>
@@ -200,7 +200,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/the-brandt"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   The Brandt
                 </Link>
@@ -208,7 +208,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/blog"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Blog
                 </Link>
@@ -216,7 +216,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/ai-assistant"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   AI Assistant
                 </Link>
@@ -233,7 +233,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/residential-440008"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Residential 440008
                 </Link>
@@ -241,7 +241,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/commercial-440008"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Commercial 440008
                 </Link>
