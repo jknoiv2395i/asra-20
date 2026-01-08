@@ -250,16 +250,16 @@ export default function BenefitsSection() {
               {/* Icon Container */}
               <div className="relative w-14 h-14 flex-shrink-0">
                 {/* Outer circle */}
-                <div className="absolute inset-0 rounded-full border border-[#E0DEF7] bg-white"></div>
+                <div className="absolute inset-0 rounded-full border border-gray-300 bg-gray-100"></div>
                 {/* Inner circle */}
-                <div className="absolute inset-1 rounded-full bg-[#E0DEF7]"></div>
+                <div className="absolute inset-1 rounded-full bg-gray-200"></div>
                 {/* Icon */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   {benefit.icon}
                 </div>
                 {/* Badge */}
                 {benefit.badge && (
-                  <div className="absolute -bottom-0.5 -right-0.5 w-5 h-5 rounded-full bg-[#1E9CE8] flex items-center justify-center">
+                  <div className="absolute -bottom-0.5 -right-0.5 w-5 h-5 rounded-full bg-black flex items-center justify-center">
                     {benefit.badge}
                   </div>
                 )}
