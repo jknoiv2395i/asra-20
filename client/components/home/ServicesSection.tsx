@@ -70,18 +70,37 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="border border-[#C3D5F1] rounded-2xl p-8 hover:shadow-lg transition-shadow group cursor-pointer"
+              className="service-card border border-[#C3D5F1] rounded-2xl p-8 cursor-pointer transition-all duration-300 group"
+              style={{
+                backgroundColor: "#ffffff",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#1E9CE8";
+                e.currentTarget.style.borderColor = "#1E9CE8";
+                e.currentTarget.style.boxShadow = "0 10px 30px rgba(30, 156, 232, 0.2)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "#ffffff";
+                e.currentTarget.style.borderColor = "#C3D5F1";
+                e.currentTarget.style.boxShadow = "none";
+              }}
             >
-              <div className="w-16 h-16 bg-[#071839] rounded-full flex items-center justify-center mb-8">
+              <div className="w-16 h-16 bg-[#071839] rounded-full flex items-center justify-center mb-8 transition-all duration-300 group-hover:bg-white">
                 {service.icon}
               </div>
-              <h3 className="font-instrument text-[30px] leading-9 text-[#131313] mb-6">
+              <h3
+                className="font-instrument text-[30px] leading-9 mb-6 transition-colors duration-300"
+                style={{ color: "#131313" }}
+              >
                 {service.title}
               </h3>
-              <p className="text-[#5D5D5D] text-[17px] leading-7 mb-8">
+              <p
+                className="text-[17px] leading-7 mb-8 transition-colors duration-300"
+                style={{ color: "#5D5D5D" }}
+              >
                 {service.description}
               </p>
-              <div className="flex items-center gap-3 text-[#131313]">
+              <div className="flex items-center gap-3 transition-colors duration-300" style={{ color: "#131313" }}>
                 <span className="text-[17px]">Learn more</span>
                 <svg
                   width="20"
@@ -96,6 +115,7 @@ export default function ServicesSection() {
                     strokeWidth="1.66667"
                     strokeLinecap="round"
                     strokeLinejoin="round"
+                    className="transition-colors duration-300"
                   />
                   <path
                     d="M5.83325 14.1654L14.1666 5.83203"
@@ -103,6 +123,7 @@ export default function ServicesSection() {
                     strokeWidth="1.66667"
                     strokeLinecap="round"
                     strokeLinejoin="round"
+                    className="transition-colors duration-300"
                   />
                 </svg>
               </div>
