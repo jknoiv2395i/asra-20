@@ -249,7 +249,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
       </div>
 
       {/* Contact Information */}
