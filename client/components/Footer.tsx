@@ -7,7 +7,7 @@ export default function Footer() {
         {/* Logo and Description */}
         <div className="mb-14">
           <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/b4aac2549760714a8a79fe7578ca74940e6e1a4c?width=272"
+            src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2Fd5a54f26a8c849d7b8a8047cf874bdac"
             alt="MPHD Group Logo"
             className="h-[110px] w-[136px] mb-4"
           />
