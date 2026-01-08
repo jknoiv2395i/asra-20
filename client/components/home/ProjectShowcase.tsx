@@ -1,4 +1,8 @@
+import { useRef } from "react";
+
 export default function ProjectShowcase() {
+  const carouselRef = useRef<HTMLDivElement>(null);
+
   const projects = [
     {
       image:
@@ -26,65 +30,64 @@ export default function ProjectShowcase() {
     },
   ];
 
+  const scroll = (direction: "left" | "right") => {
+    if (carouselRef.current) {
+      const scrollAmount = 400;
+      carouselRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <section className="w-full bg-white" style={{ padding: "64px 137px 64px 113px" }}>
-      <div className="max-w-[1216px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-12">
-          {/* First Project - Spans more columns */}
-          <div className="lg:col-span-5">
-            <div className="rounded-2xl overflow-hidden mb-6" style={{ aspectRatio: projects[0].aspectRatio }}>
-              <img
-                src={projects[0].image}
-                alt={projects[0].title}
-                className="w-full h-full object-cover"
-              />
+    <section className="w-full bg-white px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto">
+        {/* Carousel Container */}
+        <div
+          ref={carouselRef}
+          className="flex gap-6 md:gap-8 overflow-x-auto scroll-smooth mb-8 md:mb-12 lg:mb-12 pb-4"
+          style={{
+            scrollBehavior: "smooth",
+            scrollSnapType: "x mandatory",
+            WebkitOverflowScrolling: "touch",
+          }}
+        >
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0"
+              style={{
+                width: index === 0 ? "clamp(300px, 50vw, 500px)" : "clamp(250px, 40vw, 400px)",
+                scrollSnapAlign: "start",
+              }}
+            >
+              <div
+                className="rounded-3xl overflow-hidden mb-4 md:mb-6"
+                style={{ aspectRatio: project.aspectRatio }}
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="font-instrument text-lg md:text-xl lg:text-2xl leading-snug md:leading-8 lg:leading-8 text-[#131313] mb-3 md:mb-4 tracking-tight">
+                {project.title}
+              </h3>
+              <p className="text-[#5D5D5D] text-sm md:text-base leading-6 md:leading-7">
+                {project.description}
+              </p>
             </div>
-            <h3 className="font-instrument text-[30px] leading-[38px] text-[#131313] mb-4 tracking-tight">
-              {projects[0].title}
-            </h3>
-            <p className="text-[#5D5D5D] text-lg leading-[29px]">
-              {projects[0].description}
-            </p>
-          </div>
-
-          {/* Second Project */}
-          <div className="lg:col-span-3">
-            <div className="rounded-2xl overflow-hidden mb-6" style={{ aspectRatio: projects[1].aspectRatio }}>
-              <img
-                src={projects[1].image}
-                alt={projects[1].title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="font-instrument text-[30px] leading-[38px] text-[#131313] mb-4 tracking-tight">
-              {projects[1].title}
-            </h3>
-            <p className="text-[#5D5D5D] text-lg leading-[29px]">
-              {projects[1].description}
-            </p>
-          </div>
-
-          {/* Third Project */}
-          <div className="lg:col-span-4">
-            <div className="rounded-2xl overflow-hidden mb-6" style={{ aspectRatio: projects[2].aspectRatio }}>
-              <img
-                src={projects[2].image}
-                alt={projects[2].title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="font-instrument text-[30px] leading-[38px] text-[#131313] mb-4 tracking-tight">
-              {projects[2].title}
-            </h3>
-            <p className="text-[#5D5D5D] text-lg leading-[29px]">
-              {projects[2].description}
-            </p>
-          </div>
+          ))}
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex items-center justify-center gap-6">
-          <button className="w-14 h-14 bg-[#071839] rounded-full flex items-center justify-center hover:bg-[#0a2050] transition-colors">
+        <div className="flex items-center justify-center gap-4 md:gap-6">
+          <button
+            onClick={() => scroll("left")}
+            className="w-10 h-10 md:w-14 md:h-14 bg-[#071839] rounded-full flex items-center justify-center hover:bg-[#0a2050] transition-colors flex-shrink-0"
+          >
             <svg
               width="24"
               height="24"
@@ -101,7 +104,10 @@ export default function ProjectShowcase() {
               />
             </svg>
           </button>
-          <button className="w-14 h-14 bg-[#071839] rounded-full flex items-center justify-center hover:bg-[#0a2050] transition-colors">
+          <button
+            onClick={() => scroll("right")}
+            className="w-10 h-10 md:w-14 md:h-14 bg-[#071839] rounded-full flex items-center justify-center hover:bg-[#0a2050] transition-colors flex-shrink-0"
+          >
             <svg
               width="24"
               height="24"

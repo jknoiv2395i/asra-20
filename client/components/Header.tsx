@@ -7,9 +7,9 @@ export default function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2Fea71525dd8ea470bb0c07f096721fbd7%2F9d55a1122b3a412091e385b1651a8aa3"
+            src="https://cdn.builder.io/api/v1/image/assets%2Ff3cec11e1cc7472984f9b839742a8940%2F5e5ebcbc127c453a9e4bf868b1038ac1"
             alt="MPHD Group - Real Estate Consultants Nagpur Logo"
-            className="h-[61px] w-auto"
+            className="h-[97px] w-[101px] sm:h-[87px] sm:w-[92px]"
           />
         </Link>
 

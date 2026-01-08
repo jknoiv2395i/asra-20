@@ -79,21 +79,24 @@ export default function HeroSection() {
 
       {/* Centered Content Container */}
       <motion.div
-        className="hero-content-wrapper absolute left-1/2 top-12 md:top-16 -translate-x-1/2 w-full max-w-2xl px-4 md:px-6 flex flex-col items-center"
+        className="hero-content-wrapper absolute left-1/2 top-24 sm:top-12 md:top-16 -translate-x-1/2 w-[99%] sm:w-full max-w-2xl px-4 md:px-6 flex flex-col items-center"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
+        style={{
+          top: "94px",
+        }}
       >
         {/* Main Heading */}
         <motion.h1
-          className="hero-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white text-center font-instrument font-normal leading-tight mb-4 sm:mb-6"
+          className="hero-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white text-center font-instrument font-normal leading-tight mb-4 sm:mb-6 w-full"
           variants={headlineVariants}
           style={{
             fontFamily: "'Instrument Sans', Inter, system-ui, sans-serif",
-            width: "100%",
           }}
         >
-          Your gateway to prestige properties
+          <p>Your gateway to </p>
+          <p>prestige properties</p>
         </motion.h1>
 
         {/* Subheading */}
