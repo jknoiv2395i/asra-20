@@ -227,14 +227,7 @@ export default function BenefitsSection() {
           />
 
           {/* Content Overlay */}
-          <div className="absolute inset-0 p-8 md:p-10 lg:p-12 flex flex-col justify-start" style={{
-            '@media (max-width: 640px)': {
-              backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F7246dc4011f944fd97de5fc88477069e%2F24a63a841a044e0a92d49c1b485d61ad)',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-              backgroundSize: 'cover',
-            }
-          }}>
+          <div className="absolute inset-0 p-8 md:p-10 lg:p-12 flex flex-col justify-start">
             <div className="max-w-xs space-y-4">
               <h2 className="font-instrument text-3xl md:text-4xl font-bold text-white leading-tight">
                 The new way to find your new home
