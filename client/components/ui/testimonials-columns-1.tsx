@@ -24,9 +24,10 @@ export const TestimonialsColumn = (props: {
           ease: "linear",
           repeatType: "loop",
         }}
-        className="flex flex-col gap-6 pb-6 bg-background w-full sm:w-auto"
+        className="flex flex-col gap-6 pb-6 bg-background"
         style={{
-          height: "auto",
+          width: "304px",
+          height: "1404px",
           marginTop: "60px",
         }}
       >
