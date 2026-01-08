@@ -53,7 +53,7 @@ const thirdColumn = testimonials.slice(4, 6);
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-white relative py-12 md:py-16 lg:py-20 px-4 md:px-8">
+    <section className="bg-white relative py-12 md:py-16 lg:py-20 px-4 md:px-8 mb-[82px] sm:mb-0">
       <div className="max-w-6xl z-10 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -67,7 +67,7 @@ export default function TestimonialsSection() {
           className="flex flex-col items-center justify-center max-w-md md:max-w-xl mx-auto mb-8 md:mb-12 lg:mb-16"
         >
           <h2
-            className="tracking-tight text-center text-[#020817] text-3xl md:text-4xl lg:text-5xl leading-tight"
+            className="tracking-tight text-center text-[#020817] text-[32px] sm:text-3xl md:text-4xl lg:text-5xl leading-tight w-[312px] sm:w-auto"
             style={{
               font: '48px/48px "Istok Web", sans-serif',
             }}
