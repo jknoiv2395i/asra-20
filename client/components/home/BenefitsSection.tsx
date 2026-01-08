@@ -190,7 +190,7 @@ export default function BenefitsSection() {
             />
             <path
               d="M28 26.8333V26.8449"
-              stroke="#1E9CE8"
+              stroke="#000000"
               strokeWidth="6"
               strokeLinecap="round"
               strokeLinejoin="round"
