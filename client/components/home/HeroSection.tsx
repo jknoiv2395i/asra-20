@@ -1,74 +1,96 @@
 import { motion } from "motion/react";
-
-import { motion } from "motion/react";
+import { useState } from "react";
 
 export default function HeroSection() {
+  const [isHoveringButton, setIsHoveringButton] = useState(false);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.2,
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const headlineVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 1.2,
+        ease: "easeOut",
+        delay: 0.1,
+      },
+    },
+  };
+
+  const backgroundVariants = {
+    hidden: { opacity: 0, scale: 1.05 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 2,
+        ease: "easeOut",
+        delay: 0.5,
+      },
+    },
+  };
+
   return (
-    <section
-      className="hero-section"
+    <motion.section
+      className="hero-section relative w-full min-h-screen md:h-screen bg-[#1E9CE8] overflow-hidden"
+      initial="hidden"
+      animate="visible"
+      variants={backgroundVariants}
       style={{
-        position: "relative",
-        width: "100%",
-        height: "911px",
-        backgroundColor: "#1E9CE8",
         backgroundImage:
           "url(https://api.builder.io/api/v1/image/assets/TEMP/ec4dbbbabe37a36b8cd44006f5f5207c0c897340?width=3840)",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "cover",
-        overflow: "hidden",
       }}
     >
       {/* Gradient Overlay */}
       <div
-        className="gradient-overlay"
+        className="gradient-overlay absolute left-0 bottom-0 w-full h-60 md:h-80 pointer-events-none"
         style={{
-          position: "absolute",
-          left: 0,
-          top: "675px",
-          width: "100%",
-          height: "240px",
           background:
             "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)",
         }}
       />
 
       {/* Centered Content Container */}
-      <div
-        className="hero-content-wrapper"
-        style={{
-          position: "absolute",
-          left: "50%",
-          top: "62px",
-          transform: "translateX(-50%)",
-          width: "100%",
-          maxWidth: "631px",
-          padding: "0 24px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
+      <motion.div
+        className="hero-content-wrapper absolute left-1/2 top-12 md:top-16 -translate-x-1/2 w-full max-w-2xl px-4 md:px-6 flex flex-col items-center"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
       >
         {/* Main Heading */}
         <motion.h1
-          className="hero-heading"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          className="hero-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white text-center font-instrument font-normal leading-tight mb-4 sm:mb-6"
+          variants={headlineVariants}
           style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            width: "657px",
-            alignSelf: "center",
-            color: "#FFF",
-            textAlign: "center",
             fontFamily: "'Instrument Sans', Inter, system-ui, sans-serif",
-            fontSize: "72px",
-            fontStyle: "normal",
-            fontWeight: 400,
-            lineHeight: "72px",
-            margin: "0 0 24px 0",
+            width: "100%",
           }}
         >
           Your gateway to prestige properties
@@ -76,24 +98,10 @@ export default function HeroSection() {
 
         {/* Subheading */}
         <motion.p
-          className="hero-subheading"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
+          className="hero-subheading text-sm sm:text-lg md:text-xl text-white/90 text-center max-w-xs sm:max-w-md md:max-w-lg mb-6 sm:mb-8 leading-relaxed"
+          variants={itemVariants}
           style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            width: "100%",
-            maxWidth: "480px",
-            color: "rgba(255, 255, 255, 0.90)",
-            textAlign: "center",
             fontFamily: "Inter, system-ui, sans-serif",
-            fontSize: "18.6px",
-            fontStyle: "normal",
-            fontWeight: 400,
-            lineHeight: "28px",
-            margin: "0 0 32px 0",
           }}
         >
           Bring your architectural projects to life with a template that puts
@@ -102,61 +110,26 @@ export default function HeroSection() {
 
         {/* CTA Button */}
         <motion.button
-          className="hero-cta-button"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          style={{
-            display: "flex",
-            padding: "8px 16px",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "7.8px",
-            borderRadius: "9999px",
-            background: "#FFF",
-            boxShadow:
-              "0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10)",
-            border: "none",
-            cursor: "pointer",
-            transition: "all 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
-            height: "40px",
-            minWidth: "145px",
+          className="hero-cta-button flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white rounded-full text-gray-900 text-sm sm:text-base font-medium hover:bg-gray-50 transition-colors"
+          variants={itemVariants}
+          whileHover={{
+            background: "#f9fafb",
+            transition: { duration: 0.2 },
           }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "scale(1.05)";
-            e.currentTarget.style.boxShadow =
-              "0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.15)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "scale(1)";
-            e.currentTarget.style.boxShadow =
-              "0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10)";
-          }}
+          onMouseEnter={() => setIsHoveringButton(true)}
+          onMouseLeave={() => setIsHoveringButton(false)}
         >
           <span
             style={{
-              color: "#111827",
-              textAlign: "center",
               fontFamily: "Inter, system-ui, sans-serif",
-              fontSize: "14.9px",
-              fontStyle: "normal",
-              fontWeight: 500,
-              lineHeight: "24px",
             }}
           >
             Get started
           </span>
-          <div
-            style={{
-              display: "flex",
-              width: "24px",
-              height: "24px",
-              padding: "5px",
-              justifyContent: "center",
-              alignItems: "center",
-              borderRadius: "9999px",
-              background: "#111827",
-            }}
+          <motion.div
+            className="flex items-center justify-center w-6 h-6 rounded-full bg-gray-900"
+            animate={isHoveringButton ? { scale: 1.05 } : { scale: 1 }}
+            transition={{ duration: 0.2 }}
           >
             <svg
               width="14"
@@ -173,67 +146,9 @@ export default function HeroSection() {
                 strokeLinejoin="round"
               />
             </svg>
-          </div>
+          </motion.div>
         </motion.button>
-      </div>
-
-      {/* Responsive Styles */}
-      <style jsx>{`
-        @media (max-width: 991px) {
-          .hero-section {
-            height: auto;
-            min-height: 600px;
-          }
-
-          .gradient-overlay {
-            top: auto;
-            bottom: 0;
-          }
-
-          .hero-content-wrapper {
-            top: 80px;
-            padding: 0 24px;
-          }
-
-          .hero-heading {
-            font-size: 48px !important;
-            line-height: 52px !important;
-            margin-bottom: 16px;
-          }
-
-          .hero-subheading {
-            font-size: 16px !important;
-            line-height: 24px !important;
-            margin-bottom: 24px;
-          }
-        }
-
-        @media (max-width: 640px) {
-          .hero-section {
-            min-height: 500px;
-          }
-
-          .hero-content-wrapper {
-            top: 60px;
-            padding: 0 16px;
-          }
-
-          .hero-heading {
-            font-size: 36px !important;
-            line-height: 40px !important;
-          }
-
-          .hero-subheading {
-            font-size: 15px !important;
-            line-height: 22px !important;
-          }
-
-          .hero-cta-button {
-            min-width: 130px;
-            font-size: 14px !important;
-          }
-        }
-      `}</style>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

@@ -2,33 +2,33 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#131313]" style={{ padding: "80px 0" }}>
-      <div className="max-w-[1280px] mx-auto">
+    <footer className="w-full bg-[#131313] px-4 py-20 lg:py-24">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-start gap-12 mb-12 lg:mb-16">
         {/* Logo and Description */}
-        <div className="mb-14">
+        <div className="max-w-md">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2Fd5a54f26a8c849d7b8a8047cf874bdac"
             alt="MPHD Group Logo"
             className="h-[110px] w-[136px] mb-4"
           />
-          <p className="text-[#B7B7B7] text-lg leading-[29px] max-w-[392px]">
+          <p className="text-[#B7B7B7] text-lg leading-relaxed">
             Bring your architectural projects to life with a template that puts
             your work front and center.
           </p>
         </div>
 
         {/* Footer Navigation */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8 mb-14">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 flex-1">
           {/* Company */}
           <div>
-            <h4 className="text-white/60 text-[11px] font-semibold uppercase tracking-wide mb-4">
+            <h4 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
               Company
             </h4>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Home
                 </Link>
@@ -36,7 +36,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/about"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   About Us
                 </Link>
@@ -44,7 +44,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/contact"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Contact
                 </Link>
@@ -52,7 +52,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/service-areas"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Service Areas
                 </Link>
@@ -62,14 +62,14 @@ export default function Footer() {
 
           {/* Property Types */}
           <div>
-            <h4 className="text-white/60 text-[11px] font-semibold uppercase tracking-wide mb-4">
+            <h4 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
               Property Types
             </h4>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/buy-residential"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Buy Residential
                 </Link>
@@ -77,7 +77,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/2bhk-flats"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   2BHK Flats
                 </Link>
@@ -85,7 +85,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/3bhk-apartments"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   3BHK Apartments
                 </Link>
@@ -93,7 +93,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/luxury-properties"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Luxury Properties
                 </Link>
@@ -101,7 +101,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/affordable-flats"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Affordable Flats
                 </Link>
@@ -111,14 +111,14 @@ export default function Footer() {
 
           {/* Categories */}
           <div>
-            <h4 className="text-white/60 text-[11px] font-semibold uppercase tracking-wide mb-4">
+            <h4 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
               Categories
             </h4>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/properties"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   All Properties
                 </Link>
@@ -126,7 +126,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/residential"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Residential
                 </Link>
@@ -134,7 +134,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/commercial"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Commercial
                 </Link>
@@ -142,7 +142,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/industrial"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Industrial
                 </Link>
@@ -152,14 +152,14 @@ export default function Footer() {
 
           {/* Rentals */}
           <div>
-            <h4 className="text-white/60 text-[11px] font-semibold uppercase tracking-wide mb-4">
+            <h4 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
               Rentals
             </h4>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/residential-rentals"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Residential Rentals
                 </Link>
@@ -167,7 +167,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/commercial-rentals"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Commercial Rentals
                 </Link>
@@ -177,14 +177,14 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="text-white/60 text-[11px] font-semibold uppercase tracking-wide mb-4">
+            <h4 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
               Resources
             </h4>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/services"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Services
                 </Link>
@@ -192,7 +192,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/projects"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Projects
                 </Link>
@@ -200,7 +200,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/the-brandt"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   The Brandt
                 </Link>
@@ -208,7 +208,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/blog"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Blog
                 </Link>
@@ -216,7 +216,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/ai-assistant"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   AI Assistant
                 </Link>
@@ -226,14 +226,14 @@ export default function Footer() {
 
           {/* Local Pages */}
           <div className="col-span-2 md:col-span-1">
-            <h4 className="text-white/60 text-[11px] font-semibold uppercase tracking-wide mb-4">
+            <h4 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
               Local Pages
             </h4>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/residential-440008"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Residential 440008
                 </Link>
@@ -241,7 +241,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/commercial-440008"
-                  className="text-white/90 text-sm hover:text-white transition-colors"
+                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
                   Commercial 440008
                 </Link>
@@ -249,32 +249,34 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+      </div>
 
-        {/* Contact Information */}
-        <div className="border-t border-white/10 pt-7">
-          <div className="grid md:grid-cols-3 gap-6 mb-6">
-            <div>
-              <p className="text-[#989898] text-base leading-6">
-                <strong className="font-bold">Office Address</strong>
-                <br />
-                Bhandara Road, Behind Jk Tower, Small Factory Area Bagadgangj
-                Nagper Maharashtra-2440008
-              </p>
-            </div>
-            <div>
-              <p className="text-[#989898] text-base leading-6">
-                <strong className="font-bold">Phone Number</strong>
-                <br />
-                office: 7387777085
-                <br />
-                Mobile:-7387777686/8275046765
-              </p>
-            </div>
-            <div>
-              <p className="text-[#989898] text-base leading-6">
-                EMAIL :- info@mphdgroup.com
-              </p>
-            </div>
+      {/* Contact Information */}
+      <div className="max-w-6xl mx-auto border-t border-white/10 pt-8 md:pt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+          <div>
+            <p className="text-[#989898] text-lg leading-relaxed">
+              <strong className="font-bold">Office Address</strong>
+              <br />
+              Bhandara Road, Behind Jk Tower, Small Factory Area Bagadgangj
+              Nagper Maharashtra-2440008
+            </p>
+          </div>
+          <div>
+            <p className="text-[#989898] text-lg leading-relaxed">
+              <strong className="font-bold">Phone Number</strong>
+              <br />
+              office: 7387777085
+              <br />
+              Mobile:-7387777686/8275046765
+            </p>
+          </div>
+          <div>
+            <p className="text-[#989898] text-lg leading-relaxed">
+              <strong className="font-bold">EMAIL</strong>
+              <br />
+              info@mphdgroup.com
+            </p>
           </div>
         </div>
       </div>
