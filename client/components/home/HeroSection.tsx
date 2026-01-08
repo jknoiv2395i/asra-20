@@ -79,15 +79,12 @@ export default function HeroSection() {
 
       {/* Centered Content Container */}
       <motion.div
-        className="hero-content-wrapper absolute left-1/2 top-24 sm:top-12 md:top-16 -translate-x-1/2 w-full max-w-2xl px-4 md:px-6 flex flex-col items-center"
+        className="hero-content-wrapper absolute left-1/2 top-24 sm:top-12 md:top-16 -translate-x-1/2 w-[99%] sm:w-full max-w-2xl px-4 md:px-6 flex flex-col items-center"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
         style={{
-          "@media (max-width: 640px)": {
-            top: "94px",
-            width: "99%",
-          },
+          top: "94px",
         }}
       >
         {/* Main Heading */}
