@@ -267,10 +267,10 @@ export default function BenefitsSection() {
 
               {/* Text Content */}
               <div className="flex-1 space-y-4">
-                <h3 className="font-instrument text-xl md:text-2xl font-bold text-[#000929] leading-tight">
+                <h3 className="font-instrument text-xl md:text-2xl font-bold text-black leading-tight">
                   {benefit.title}
                 </h3>
-                <p className="text-sm md:text-base text-[#4D5461] leading-relaxed">
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
