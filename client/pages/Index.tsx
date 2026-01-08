@@ -3,6 +3,7 @@ import HeroSection from "@/components/home/HeroSection";
 import LogoCarousel from "@/components/home/LogoCarousel";
 import IntroSection from "@/components/home/IntroSection";
 import ServicesSection from "@/components/home/ServicesSection";
+import BenefitsSection from "@/components/home/BenefitsSection";
 import FeaturedProjects from "@/components/home/FeaturedProjects";
 import ExcellenceSection from "@/components/home/ExcellenceSection";
 import ProjectShowcase from "@/components/home/ProjectShowcase";
@@ -17,6 +18,7 @@ export default function Index() {
       <LogoCarousel />
       <IntroSection />
       <ServicesSection />
+      <BenefitsSection />
       <FeaturedProjects />
       <ExcellenceSection />
       <ProjectShowcase />
