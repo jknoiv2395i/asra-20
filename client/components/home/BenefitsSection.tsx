@@ -219,24 +219,24 @@ export default function BenefitsSection() {
     <section className="w-full bg-white px-6 py-12 md:px-8 lg:px-12 md:py-16 lg:py-20">
       <div className="max-w-sm mx-auto md:max-w-2xl lg:max-w-6xl">
         {/* Illustration Card */}
-        <div className="relative bg-gradient-to-br from-blue-50 to-purple-100 rounded-3xl overflow-hidden mb-12 md:mb-16">
+        <div className="relative bg-black rounded-3xl overflow-hidden mb-12 md:mb-16">
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/2a46bc55961699466193c6ca637b43432ae50554?width=654"
             alt="Find your new home illustration"
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-cover opacity-40"
           />
 
           {/* Content Overlay */}
           <div className="absolute inset-0 p-8 md:p-10 lg:p-12 flex flex-col justify-start">
             <div className="max-w-xs space-y-4">
-              <h2 className="font-instrument text-3xl md:text-4xl font-bold text-[#071839] leading-tight">
+              <h2 className="font-instrument text-3xl md:text-4xl font-bold text-white leading-tight">
                 The new way to find your new home
               </h2>
-              <p className="text-base md:text-lg text-[#071839] opacity-70 leading-relaxed">
+              <p className="text-base md:text-lg text-white opacity-70 leading-relaxed">
                 Find your dream place to live in with more than 10k+ properties
                 listed.
               </p>
-              <button className="mt-4 px-4 py-2.5 bg-[#071839] text-white text-sm font-bold rounded-lg hover:bg-[#0a1f4d] transition-colors">
+              <button className="mt-4 px-4 py-2.5 bg-white text-black text-sm font-bold rounded-lg hover:bg-gray-200 transition-colors">
                 Browse Properties
               </button>
             </div>
