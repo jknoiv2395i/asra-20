@@ -38,14 +38,14 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="w-full bg-white" style={{ padding: "64px 0" }}>
-      <div className="max-w-[1216px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+    <section className="w-full bg-white px-4 md:px-8 py-16 md:py-24 lg:py-32">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
         {/* Left Content */}
         <div>
-          <h2 className="font-instrument text-[48px] md:text-[60px] leading-[48px] md:leading-[60px] text-black mb-6 tracking-tight">
+          <h2 className="font-instrument text-5xl md:text-6xl leading-[60px] md:leading-[72px] text-black mb-6 font-normal tracking-tight">
             Frequently asked questions
           </h2>
-          <p className="text-[#4B5563] text-[17px] leading-7">
+          <p className="text-[#4B5563] text-base md:text-lg leading-relaxed">
             To help you make informed decisions, we've compiled answers to some
             of the most commonly asked questions.
           </p>
@@ -60,10 +60,10 @@ export default function FAQSection() {
                 value={`item-${index}`}
                 className="border-t-2 border-b border-[#C3D5F1] py-4"
               >
-                <AccordionTrigger className="text-left font-instrument text-[22px] md:text-[27px] font-medium leading-8 text-[#1F2937] hover:no-underline">
+                <AccordionTrigger className="text-left font-instrument text-xl md:text-2xl lg:text-[27px] font-normal leading-8 text-[#1F2937] hover:no-underline tracking-[-0.018em]">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-[#4B5563] text-base leading-7 pt-4">
+                <AccordionContent className="text-[#4B5563] text-base md:text-lg leading-relaxed pt-4 pr-4 md:pr-8">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
