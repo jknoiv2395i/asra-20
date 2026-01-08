@@ -2,23 +2,23 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#131313]" style={{ padding: "80px 0" }}>
-      <div className="max-w-[1280px] mx-auto">
+    <footer className="w-full bg-[#131313] px-4 py-20 lg:py-24">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-start gap-12 mb-12 lg:mb-16">
         {/* Logo and Description */}
-        <div className="mb-14">
+        <div className="max-w-md">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2Fd5a54f26a8c849d7b8a8047cf874bdac"
             alt="MPHD Group Logo"
             className="h-[110px] w-[136px] mb-4"
           />
-          <p className="text-[#B7B7B7] text-lg leading-[29px] max-w-[392px]">
+          <p className="text-[#B7B7B7] text-lg leading-relaxed">
             Bring your architectural projects to life with a template that puts
             your work front and center.
           </p>
         </div>
 
         {/* Footer Navigation */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8 mb-14">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 flex-1">
           {/* Company */}
           <div>
             <h4 className="text-white/60 text-[11px] font-semibold uppercase tracking-wide mb-4">
