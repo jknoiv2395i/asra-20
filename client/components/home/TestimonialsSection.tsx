@@ -67,7 +67,7 @@ export default function TestimonialsSection() {
           className="flex flex-col items-center justify-center max-w-md md:max-w-xl mx-auto mb-8 md:mb-12 lg:mb-16"
         >
           <h2
-            className="tracking-tight text-center text-[#020817] text-[32px] sm:text-3xl md:text-4xl lg:text-5xl leading-tight w-[312px] sm:w-auto"
+            className="tracking-tight text-center text-[#020817] text-[35px] sm:text-3xl md:text-4xl lg:text-5xl leading-tight w-[312px] sm:w-auto"
             style={{
               font: '48px/48px "Istok Web", sans-serif',
             }}
