@@ -25,20 +25,17 @@ export default function FeaturedProjects() {
   ];
 
   return (
-    <section
-      className="w-full bg-white"
-      style={{ marginLeft: "19px", padding: "35px 147px 96px 133px" }}
-    >
-      <div className="max-w-[1280px] mx-auto">
-        <h2 className="font-instrument text-[40px] md:text-[54px] leading-[54px] text-black text-center mb-16 tracking-tight">
+    <section className="w-full bg-white px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="font-instrument text-2xl md:text-4xl lg:text-5xl leading-tight text-black text-center mb-8 md:mb-12 lg:mb-16 tracking-tight">
           Our Featured Projects
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-8">
           {/* First Project */}
           <div className="lg:col-span-4">
             <div
-              className="rounded-[18px] overflow-hidden mb-6"
+              className="rounded-3xl overflow-hidden mb-4 md:mb-6 lg:mb-8"
               style={{ aspectRatio: projects[0].aspectRatio }}
             >
               <img
@@ -47,10 +44,10 @@ export default function FeaturedProjects() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="font-instrument text-[27px] leading-[36px] text-[#131313] mb-4 tracking-tight">
+            <h3 className="font-instrument text-lg md:text-2xl lg:text-[27px] leading-snug md:leading-9 lg:leading-9 text-[#131313] mb-2 md:mb-4 tracking-tight">
               {projects[0].title}
             </h3>
-            <p className="text-[#5D5D5D] text-lg tracking-wide">
+            <p className="text-[#5D5D5D] text-sm md:text-base lg:text-lg tracking-wide">
               {projects[0].date}
             </p>
           </div>
@@ -58,7 +55,7 @@ export default function FeaturedProjects() {
           {/* Second Project */}
           <div className="lg:col-span-5">
             <div
-              className="rounded-[18px] overflow-hidden mb-6"
+              className="rounded-3xl overflow-hidden mb-4 md:mb-6 lg:mb-8"
               style={{ aspectRatio: projects[1].aspectRatio }}
             >
               <img
@@ -67,10 +64,10 @@ export default function FeaturedProjects() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="font-instrument text-[27px] leading-[36px] text-[#131313] mb-4 tracking-tight">
+            <h3 className="font-instrument text-lg md:text-2xl lg:text-[27px] leading-snug md:leading-9 lg:leading-9 text-[#131313] mb-2 md:mb-4 tracking-tight">
               {projects[1].title}
             </h3>
-            <p className="text-[#5D5D5D] text-lg tracking-wide">
+            <p className="text-[#5D5D5D] text-sm md:text-base lg:text-lg tracking-wide">
               {projects[1].date}
             </p>
           </div>
@@ -78,7 +75,7 @@ export default function FeaturedProjects() {
           {/* Third Project */}
           <div className="lg:col-span-3">
             <div
-              className="rounded-[18px] overflow-hidden mb-6"
+              className="rounded-3xl overflow-hidden mb-4 md:mb-6 lg:mb-8"
               style={{ aspectRatio: projects[2].aspectRatio }}
             >
               <img
@@ -87,10 +84,10 @@ export default function FeaturedProjects() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="font-instrument text-[27px] leading-[36px] text-[#131313] mb-4 tracking-tight">
+            <h3 className="font-instrument text-lg md:text-2xl lg:text-[27px] leading-snug md:leading-9 lg:leading-9 text-[#131313] mb-2 md:mb-4 tracking-tight">
               {projects[2].title}
             </h3>
-            <p className="text-[#5D5D5D] text-lg tracking-wide">
+            <p className="text-[#5D5D5D] text-sm md:text-base lg:text-lg tracking-wide">
               {projects[2].date}
             </p>
           </div>
