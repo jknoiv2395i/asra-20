@@ -278,6 +278,17 @@ export default function BenefitsSection() {
           ))}
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .benefits-overlay {
+            background-image: url(https://cdn.builder.io/api/v1/image/assets%2F7246dc4011f944fd97de5fc88477069e%2F24a63a841a044e0a92d49c1b485d61ad);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+          }
+        }
+      `}</style>
     </section>
   );
 }
