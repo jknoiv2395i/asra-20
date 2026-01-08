@@ -250,31 +250,34 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Contact Information */}
-        <div className="border-t border-white/10 pt-7">
-          <div className="grid md:grid-cols-3 gap-6 mb-6">
-            <div>
-              <p className="text-[#989898] text-base leading-6">
-                <strong className="font-bold">Office Address</strong>
-                <br />
-                Bhandara Road, Behind Jk Tower, Small Factory Area Bagadgangj
-                Nagper Maharashtra-2440008
-              </p>
-            </div>
-            <div>
-              <p className="text-[#989898] text-base leading-6">
-                <strong className="font-bold">Phone Number</strong>
-                <br />
-                office: 7387777085
-                <br />
-                Mobile:-7387777686/8275046765
-              </p>
-            </div>
-            <div>
-              <p className="text-[#989898] text-base leading-6">
-                EMAIL :- info@mphdgroup.com
-              </p>
-            </div>
+      </div>
+
+      {/* Contact Information */}
+      <div className="max-w-6xl mx-auto border-t border-white/10 pt-8 md:pt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+          <div>
+            <p className="text-[#989898] text-lg leading-relaxed">
+              <strong className="font-bold">Office Address</strong>
+              <br />
+              Bhandara Road, Behind Jk Tower, Small Factory Area Bagadgangj
+              Nagper Maharashtra-2440008
+            </p>
+          </div>
+          <div>
+            <p className="text-[#989898] text-lg leading-relaxed">
+              <strong className="font-bold">Phone Number</strong>
+              <br />
+              office: 7387777085
+              <br />
+              Mobile:-7387777686/8275046765
+            </p>
+          </div>
+          <div>
+            <p className="text-[#989898] text-lg leading-relaxed">
+              <strong className="font-bold">EMAIL</strong>
+              <br />
+              info@mphdgroup.com
+            </p>
           </div>
         </div>
       </div>
