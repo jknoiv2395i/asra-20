@@ -10,6 +10,12 @@ export default function Header() {
             src="https://cdn.builder.io/api/v1/image/assets%2Fea71525dd8ea470bb0c07f096721fbd7%2F9d55a1122b3a412091e385b1651a8aa3"
             alt="MPHD Group - Real Estate Consultants Nagpur Logo"
             className="h-[61px] w-auto"
+            style={{
+              "@media (max-width: 640px)": {
+                width: "92px",
+                height: "87px",
+              },
+            }}
           />
         </Link>
 
