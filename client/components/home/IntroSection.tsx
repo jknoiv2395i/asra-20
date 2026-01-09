@@ -28,7 +28,7 @@ export default function IntroSection() {
           turns it into reality.
         </h2>
         <p
-          className="text-[15px] sm:text-base md:text-lg text-[#5D5D5D] font-normal tracking-[0.2px] sm:tracking-[0.36px] leading-[23px] sm:leading-relaxed mt-2 sm:mt-0"
+          className="intro-paragraph text-[15px] sm:text-base md:text-lg text-[#5D5D5D] font-normal tracking-[0.2px] sm:tracking-[0.36px] leading-[23px] sm:leading-relaxed mt-2 sm:mt-0"
           style={{
             marginTop: "8px",
           }}
