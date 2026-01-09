@@ -181,24 +181,8 @@ export default function HeroSection() {
           </div>
 
           {/* CTA Button */}
-          <button
-            className="inline-flex items-center gap-3 bg-white text-black px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all sm:bg-black sm:text-white"
-            style={{
-              "@media (max-width: 640px)": {
-                backgroundColor: "rgba(0, 0, 0, 1)",
-                color: "rgba(255, 255, 255, 1)",
-              },
-            }}
-          >
-            <span
-              className="font-medium sm:text-white"
-              style={{
-                "@media (max-width: 640px)": {
-                  color: "rgba(255, 255, 255, 1)",
-                  marginRight: "2px",
-                },
-              }}
-            >
+          <button className="inline-flex items-center gap-3 bg-white text-black px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all sm:bg-black sm:text-white">
+            <span className="font-medium sm:text-white">
               Get started
             </span>
           </button>
