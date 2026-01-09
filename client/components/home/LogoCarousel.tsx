@@ -53,15 +53,7 @@ export default function LogoCarousel() {
   ];
 
   return (
-    <section
-      className="w-full h-auto bg-white flex items-center justify-center py-8 md:py-16 overflow-hidden"
-      style={{
-        "@media (max-width: 640px)": {
-          color: "#0e0840",
-          backgroundColor: "#0e0840",
-        },
-      } as any}
-    >
+    <section className="w-full h-auto bg-white flex items-center justify-center py-8 md:py-16 overflow-hidden sm:bg-[#0e0840] sm:text-[#0e0840]">
       <div className="w-full flex items-center justify-center overflow-hidden px-4">
         <div className="flex items-center gap-12 md:gap-20 animate-scroll">
           {/* Render logos twice for seamless loop */}
