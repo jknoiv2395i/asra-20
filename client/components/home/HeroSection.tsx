@@ -35,7 +35,7 @@ export default function HeroSection() {
           margin: "0 -1px 2px 8px",
           "@media (max-width: 640px)": {
             marginTop: "-3px",
-            paddingBottom: "10px",
+            paddingBottom: "12px",
           },
         }}
       >
@@ -49,6 +49,9 @@ export default function HeroSection() {
         className="text-white font-normal text-base leading-[26px] max-w-[492px]"
         style={{
           margin: "-5px 0 0 9px",
+          "@media (max-width: 640px)": {
+            paddingBottom: "16px",
+          },
         }}
       >
         Spanty is an international estate company that offers services like
@@ -62,6 +65,7 @@ export default function HeroSection() {
         style={{
           "@media (max-width: 640px)": {
             marginTop: "12px",
+            paddingBottom: "37px",
           },
         }}
       >
