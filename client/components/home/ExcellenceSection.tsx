@@ -78,29 +78,6 @@ export default function ExcellenceSection() {
             </div>
           </div>
 
-          {/* Right Side - Content */}
-          <div className="flex flex-col gap-[43px] w-full lg:flex-1">
-            {/* Text Content */}
-            <div className="flex flex-col gap-[17px]">
-              <h2 className="text-[#2B0A01] font-bold text-3xl md:text-4xl lg:text-[48px] leading-[1.17] tracking-[-2.118px]">
-                We use Real Estate to
-                <br />
-                show our appreciation of
-                <br />
-                the world.
-              </h2>
-              <p className="text-[#7B7B7B] text-base md:text-lg leading-[27px]">
-                We provide equity and debt capital globally to back
-                <br className="hidden md:block" />
-                projects that make an impact.
-              </p>
-            </div>
-
-            {/* Button */}
-            <button className="bg-black text-white font-bold text-sm leading-5 px-[41px] py-[19px] w-fit hover:bg-gray-900 transition-colors">
-              Know More
-            </button>
-          </div>
         </div>
       </div>
     </section>
