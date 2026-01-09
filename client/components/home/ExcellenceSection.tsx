@@ -23,7 +23,14 @@ export default function ExcellenceSection() {
           <div className="excellence-heading-cta flex flex-col gap-[43px] w-full sm:pb-[43px] sm:gap-[18px] mb-8 md:mb-12">
             {/* Text Content */}
             <div className="flex flex-col gap-[17px]">
-              <h2 className="font-instrument text-[#2B0A01] font-bold text-3xl md:text-4xl lg:text-[48px] leading-[1.17] tracking-[-2.118px]">
+              <h2
+                className="font-instrument text-[#2B0A01] font-bold text-3xl md:text-4xl lg:text-[48px] leading-[1.17] tracking-[-2.118px]"
+                style={{
+                  "@media (max-width: 640px)": {
+                    letterSpacing: "-1.1px",
+                  },
+                }}
+              >
                 <div
                   style={{
                     "@media (max-width: 640px)": {
