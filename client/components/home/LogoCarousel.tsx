@@ -70,23 +70,7 @@ function LogoCarouselContent() {
 
   return (
     <section className="logo-carousel-section w-full h-auto bg-white flex items-center justify-center py-8 md:py-16 overflow-hidden">
-      <div className="w-full flex items-center justify-center overflow-hidden px-4">
-        <div className="flex items-center gap-12 md:gap-20 animate-scroll">
-          {/* Render logos twice for seamless loop */}
-          {[...logos, ...logos].map((logo, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 flex items-center justify-center h-16 md:h-20"
-            >
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                className={`${logo.className} w-auto object-contain opacity-90`}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+      <div className="w-full flex items-center justify-center overflow-hidden px-4" />
     </section>
   );
 }
