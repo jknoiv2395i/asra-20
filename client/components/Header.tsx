@@ -55,7 +55,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors">
           <svg
-            className="w-6 h-6"
+            className="w-6 h-6 sm:text-[#444344]"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
