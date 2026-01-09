@@ -69,6 +69,8 @@ export default function Header() {
           </svg>
         </button>
       </div>
+
+      <header className="relative z-50 w-full" style={{ padding: "32px 139px" }} />
     </header>
   );
 }
