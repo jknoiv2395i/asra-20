@@ -1,4 +1,20 @@
 export default function LogoCarousel() {
+  return (
+    <>
+      <style>{`
+        @media (max-width: 640px) {
+          .logo-carousel-section {
+            color: #0e0840;
+            background-color: #0e0840;
+          }
+        }
+      `}</style>
+      <LogoCarouselContent />
+    </>
+  );
+}
+
+function LogoCarouselContent() {
   const logos = [
     {
       src: "https://api.builder.io/api/v1/image/assets/TEMP/f7594c995dd6a2991a68df5162dbb03264d997c1?width=166",
