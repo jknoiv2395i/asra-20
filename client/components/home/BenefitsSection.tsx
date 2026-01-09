@@ -165,8 +165,13 @@ export default function BenefitsSection() {
                 Find your dream place to live in with more than 10k+ properties
                 listed.
               </p>
-              <button className="mt-4 px-4 py-2.5 bg-white text-black text-sm font-bold rounded-lg hover:bg-gray-200 transition-colors">
-                Browse Properties
+              <button className="mt-4 inline-flex items-center gap-3 bg-white text-black px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all sm:w-[132px] sm:h-[39px] sm:-ml-1 sm:pl-4">
+                <span className="font-medium sm:text-xs sm:-ml-1">Get started</span>
+                <div className="flex items-center justify-center w-9 h-9 sm:w-[30px] sm:h-[29px] bg-black rounded-full">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.15817 5.14453H12.9898V11.9761M12.5154 5.61895L5.58887 12.5455" stroke="white" strokeWidth="1.61023" strokeMiterlimit="10" strokeLinecap="square" />
+                  </svg>
+                </div>
               </button>
             </div>
           </div>
