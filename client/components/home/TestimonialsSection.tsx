@@ -62,7 +62,7 @@ export default function TestimonialsSection() {
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12 mb-12 md:mb-16">
           {/* Heading */}
           <div className="flex-1">
-            <h2 className="testimonials-heading text-black text-4xl md:text-5xl lg:text-[60px] font-normal leading-tight tracking-tight">
+            <h2 className="font-instrument testimonials-heading text-black text-4xl md:text-5xl lg:text-[60px] font-normal leading-tight tracking-tight">
               Our Customers
               <br />
               Think We're
@@ -183,7 +183,7 @@ export default function TestimonialsSection() {
                     className="customer-avatar w-12 h-12 rounded-full object-cover"
                   />
                   <div className="customer-details">
-                    <h4 className="customer-name text-black text-base md:text-lg font-semibold">
+                    <h4 className="font-instrument customer-name text-black text-base md:text-lg font-semibold">
                       {testimonial.name}
                     </h4>
                     <p className="customer-role text-gray-600 text-sm md:text-base">
