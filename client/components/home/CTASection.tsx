@@ -22,6 +22,11 @@ export default function CTASection() {
             justifyContent: "flex-start",
             alignItems: "flex-start",
             margin: "200px 0 auto",
+            "@media (max-width: 640px)": {
+              height: "345px",
+              paddingBottom: "85px",
+              margin: "94px 0 auto",
+            },
           }}
         >
           <h2 className="font-instrument font-normal text-3xl md:text-5xl lg:text-7xl leading-tight md:leading-tight lg:leading-[96px] text-white mb-4 md:mb-6 tracking-tight">
