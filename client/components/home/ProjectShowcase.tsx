@@ -67,7 +67,15 @@ export default function ProjectShowcase() {
           <div className="flex items-center gap-2 mb-6 md:mb-8" />
 
           {/* Main Heading */}
-          <h2 className="font-instrument text-center text-[#010101] text-3xl md:text-5xl lg:text-[69px] font-normal lg:leading-[77px] tracking-tight lg:tracking-[-3.8px] capitalize max-w-4xl">
+          <h2
+            className="font-instrument text-center text-[#010101] text-3xl md:text-5xl lg:text-[69px] font-normal lg:leading-[77px] tracking-tight lg:tracking-[-3.8px] capitalize max-w-4xl"
+            style={{
+              "@media (max-width: 640px)": {
+                maxWidth: "817px",
+                width: "319px",
+              },
+            }}
+          >
             If you're in need of{" "}
             <span className="font-medium text-[#33A4BB]">rental</span> services
           </h2>
