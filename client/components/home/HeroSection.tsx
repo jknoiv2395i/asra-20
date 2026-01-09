@@ -6,7 +6,7 @@ export default function HeroSection() {
       className="relative w-full bg-[#0E0840] overflow-hidden"
       style={{
         "@media (max-width: 640px)": {
-          height: "1018.1px",
+          height: "977px",
         },
       }}
     >
@@ -61,7 +61,7 @@ export default function HeroSection() {
         className="flex flex-row relative z-10"
         style={{
           "@media (max-width: 640px)": {
-            marginTop: "18px",
+            marginTop: "12px",
           },
         }}
       >
