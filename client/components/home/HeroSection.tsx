@@ -6,7 +6,7 @@ export default function HeroSection() {
       className="relative w-full bg-[#0E0840] overflow-hidden"
       style={{
         "@media (max-width: 640px)": {
-          height: "1018.1px",
+          height: "977px",
         },
       }}
     >
@@ -24,7 +24,12 @@ export default function HeroSection() {
         src="https://api.builder.io/api/v1/image/assets/TEMP/1ec8c53d0601e692be66b84a2ddbf1b3724282f1?width=800"
         alt="Real Estate Property"
         className="block lg:hidden w-full h-auto object-cover"
-        style={{ marginBottom: "33px" }}
+        style={{
+          marginBottom: "33px",
+          "@media (max-width: 640px)": {
+            marginBottom: "11px",
+          },
+        }}
       />
 
       {/* Main Content */}
@@ -35,7 +40,7 @@ export default function HeroSection() {
           margin: "0 -1px 2px 8px",
           "@media (max-width: 640px)": {
             marginTop: "-3px",
-            paddingBottom: "10px",
+            paddingBottom: "12px",
           },
         }}
       >
@@ -49,6 +54,9 @@ export default function HeroSection() {
         className="text-white font-normal text-base leading-[26px] max-w-[492px]"
         style={{
           margin: "-5px 0 0 9px",
+          "@media (max-width: 640px)": {
+            paddingBottom: "16px",
+          },
         }}
       >
         Spanty is an international estate company that offers services like
@@ -61,7 +69,7 @@ export default function HeroSection() {
         className="flex flex-row relative z-10"
         style={{
           "@media (max-width: 640px)": {
-            marginTop: "18px",
+            padding: "20px 0 58px",
           },
         }}
       >
