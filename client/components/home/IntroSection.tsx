@@ -3,9 +3,16 @@ export default function IntroSection() {
     <section className="w-full bg-white py-16 md:py-24 lg:py-32 px-4 md:px-8">
       <style>{`
         @media (max-width: 640px) {
+          .intro-section {
+            padding-top: 69px !important;
+          }
           .intro-heading {
-            font-size: 24px;
-            width: 372px;
+            font-size: 23px !important;
+            width: 358px !important;
+          }
+          .intro-paragraph {
+            padding-left: 15px !important;
+            margin: 0 auto !important;
           }
         }
       `}</style>
