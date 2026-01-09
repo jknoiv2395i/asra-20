@@ -69,7 +69,7 @@ function LogoCarouselContent() {
   ];
 
   return (
-    <section className="w-full h-auto bg-white flex items-center justify-center py-8 md:py-16 overflow-hidden sm:bg-[#0e0840] sm:text-[#0e0840]">
+    <section className="logo-carousel-section w-full h-auto bg-white flex items-center justify-center py-8 md:py-16 overflow-hidden">
       <div className="w-full flex items-center justify-center overflow-hidden px-4">
         <div className="flex items-center gap-12 md:gap-20 animate-scroll">
           {/* Render logos twice for seamless loop */}
