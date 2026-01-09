@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 flex-1">
           {/* Company */}
           <div>
-            <h4 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
+            <h4 className="font-instrument text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
               Company
             </h4>
             <ul className="space-y-3">
@@ -62,7 +62,7 @@ export default function Footer() {
 
           {/* Property Types */}
           <div>
-            <h4 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
+            <h4 className="font-instrument text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
               Property Types
             </h4>
             <ul className="space-y-3">
@@ -111,7 +111,7 @@ export default function Footer() {
 
           {/* Categories */}
           <div>
-            <h4 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
+            <h4 className="font-instrument text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
               Categories
             </h4>
             <ul className="space-y-3">
@@ -152,7 +152,7 @@ export default function Footer() {
 
           {/* Rentals */}
           <div>
-            <h4 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
+            <h4 className="font-instrument text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
               Rentals
             </h4>
             <ul className="space-y-3">
@@ -177,7 +177,7 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
+            <h4 className="font-instrument text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
               Resources
             </h4>
             <ul className="space-y-3">
@@ -226,7 +226,7 @@ export default function Footer() {
 
           {/* Local Pages */}
           <div className="col-span-2 md:col-span-1">
-            <h4 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
+            <h4 className="font-instrument text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
               Local Pages
             </h4>
             <ul className="space-y-3">
