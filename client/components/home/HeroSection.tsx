@@ -2,7 +2,20 @@ import { motion } from "motion/react";
 
 export default function HeroSection() {
   return (
-    <section
+    <>
+      <style>{`
+        @media (max-width: 640px) {
+          .hero-cta-button {
+            background-color: rgba(0, 0, 0, 1) !important;
+            color: rgba(255, 255, 255, 1) !important;
+          }
+          .hero-cta-text {
+            color: rgba(255, 255, 255, 1) !important;
+            margin-right: 2px !important;
+          }
+        }
+      `}</style>
+      <section
       className="relative w-full bg-[#0E0840] overflow-hidden"
       style={{
         "@media (max-width: 640px)": {
@@ -181,8 +194,8 @@ export default function HeroSection() {
           </div>
 
           {/* CTA Button */}
-          <button className="inline-flex items-center gap-3 bg-white text-black px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all sm:bg-black sm:text-white">
-            <span className="font-medium sm:text-white">
+          <button className="hero-cta-button inline-flex items-center gap-3 bg-white text-black px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all">
+            <span className="hero-cta-text font-medium">
               Get started
             </span>
           </button>
@@ -268,5 +281,6 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
+    </>
   );
 }
