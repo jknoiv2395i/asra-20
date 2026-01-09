@@ -47,7 +47,7 @@ export default function HeroSection() {
 
       {/* Main Content */}
       <h2
-        className="text-[#F6DEE3] font-bold text-4xl md:text-5xl lg:text-[72px] leading-[45px] lg:leading-[72px] tracking-tighter"
+        className="font-instrument text-[#F6DEE3] font-bold text-4xl md:text-5xl lg:text-[72px] leading-[45px] lg:leading-[72px] tracking-tighter"
         style={{
           letterSpacing: "-1.8px",
           margin: "0 -1px 2px 8px",
