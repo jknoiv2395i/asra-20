@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const testimonials = [
   {
@@ -40,21 +40,47 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const autoplayRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Auto-play carousel
+  useEffect(() => {
+    const startAutoplay = () => {
+      autoplayRef.current = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+      }, 4000); // Change every 4 seconds
+    };
+
+    startAutoplay();
+
+    return () => {
+      if (autoplayRef.current) {
+        clearInterval(autoplayRef.current);
+      }
+    };
+  }, []);
 
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 2 >= testimonials.length ? 0 : prev + 2));
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    // Reset autoplay timer when manually navigating
+    if (autoplayRef.current) {
+      clearInterval(autoplayRef.current);
+    }
+    autoplayRef.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 4000);
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) =>
-      prev - 2 < 0 ? Math.max(testimonials.length - 2, 0) : prev - 2,
-    );
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    // Reset autoplay timer when manually navigating
+    if (autoplayRef.current) {
+      clearInterval(autoplayRef.current);
+    }
+    autoplayRef.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 4000);
   };
-
-  const visibleTestimonials = testimonials.slice(
-    currentIndex,
-    currentIndex + 2,
-  );
 
   return (
     <section className="testimonials-section w-full bg-white py-12 md:py-16 lg:py-20 px-4 md:px-8">
@@ -118,12 +144,19 @@ export default function TestimonialsSection() {
           </div>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="testimonials-grid grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
-          {visibleTestimonials.map((testimonial, index) => (
+        {/* Testimonials Carousel */}
+        <div
+          ref={carouselRef}
+          className="testimonials-carousel flex gap-6 md:gap-8 overflow-hidden"
+        >
+          {testimonials.map((testimonial, index) => (
             <div
-              key={currentIndex + index}
-              className="testimonial-card bg-white p-6 md:p-8 lg:p-10 transition-all duration-500 ease-in-out"
+              key={index}
+              className="testimonial-card flex-shrink-0 w-full md:w-1/2 bg-white p-6 md:p-8 lg:p-10 transition-all duration-500 ease-in-out"
+              style={{
+                transform: `translateX(calc(-${currentIndex * 100}% - ${currentIndex * 24}px))`,
+                transition: 'transform 0.5s ease-in-out'
+              }}
             >
               {/* Quote Icon */}
               <div className="quote-icon mb-6">
