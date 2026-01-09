@@ -27,7 +27,7 @@ export default function HeroSection() {
         style={{
           marginBottom: "33px",
           "@media (max-width: 640px)": {
-            marginBottom: "8px",
+            marginBottom: "11px",
           },
         }}
       />
@@ -69,8 +69,7 @@ export default function HeroSection() {
         className="flex flex-row relative z-10"
         style={{
           "@media (max-width: 640px)": {
-            marginTop: "25px",
-            paddingBottom: "80px",
+            padding: "20px 0 58px",
           },
         }}
       >
