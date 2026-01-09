@@ -24,7 +24,7 @@ export default function CTASection() {
             margin: "200px 0 auto",
           }}
         >
-          <h2 className="font-normal text-3xl md:text-5xl lg:text-7xl leading-tight md:leading-tight lg:leading-[96px] text-white mb-4 md:mb-6 tracking-tight">
+          <h2 className="font-instrument font-normal text-3xl md:text-5xl lg:text-7xl leading-tight md:leading-tight lg:leading-[96px] text-white mb-4 md:mb-6 tracking-tight">
             Schedule a free consultation
           </h2>
           <p className="text-white text-base md:text-lg leading-6 md:leading-7 mb-6 md:mb-10">
