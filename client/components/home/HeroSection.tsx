@@ -68,7 +68,7 @@ export default function HeroSection() {
           style={{
             margin: "-5px 0 0 9px",
             "@media (max-width: 640px)": {
-              paddingBottom: "16px",
+              paddingBottom: "18px",
             },
           }}
         >
@@ -100,6 +100,8 @@ export default function HeroSection() {
                 height: "319px",
                 width: "205px",
                 boxShadow: "2px 7px 0 0 rgba(0, 0, 0, 0)",
+                borderRadius: "21px",
+                overflow: "hidden",
               },
             }}
           >
@@ -194,7 +196,14 @@ export default function HeroSection() {
             </div>
 
             {/* CTA Button */}
-            <button className="hero-cta-button inline-flex items-center gap-3 bg-white text-black px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all">
+            <button
+              className="hero-cta-button inline-flex items-center gap-3 bg-white text-black px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all"
+              style={{
+                "@media (max-width: 640px)": {
+                  paddingRight: "16px",
+                },
+              }}
+            >
               <span className="hero-cta-text font-medium">Get started</span>
             </button>
           </div>
