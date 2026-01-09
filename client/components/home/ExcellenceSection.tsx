@@ -23,7 +23,7 @@ export default function ExcellenceSection() {
           <div className="excellence-heading-cta flex flex-col gap-[43px] w-full sm:pb-[43px] sm:gap-[18px] mb-8 md:mb-12">
             {/* Text Content */}
             <div className="flex flex-col gap-[17px]">
-              <h2 className="text-[#2B0A01] font-bold text-3xl md:text-4xl lg:text-[48px] leading-[1.17] tracking-[-2.118px]">
+              <h2 className="font-instrument text-[#2B0A01] font-bold text-3xl md:text-4xl lg:text-[48px] leading-[1.17] tracking-[-2.118px]">
                 We use Real Estate to
                 <br />
                 show our appreciation of
@@ -50,7 +50,7 @@ export default function ExcellenceSection() {
             <div className="w-full lg:w-[535px] grid grid-cols-2 gap-x-0 gap-y-0">
               {/* Stat 1 - Years experience */}
               <div className="flex flex-col gap-[10px] pr-8 md:pr-12 lg:pr-20 pb-8 md:pb-12">
-                <h3 className="text-[#401408] font-semibold text-4xl md:text-5xl leading-[60px]">
+                <h3 className="font-instrument text-[#401408] font-semibold text-4xl md:text-5xl leading-[60px]">
                   9
                 </h3>
                 <p className="text-[#7B7B7B] text-base md:text-lg leading-[27px]">
@@ -62,7 +62,7 @@ export default function ExcellenceSection() {
 
               {/* Stat 2 - Total Net Profit */}
               <div className="flex flex-col gap-[10px] pr-8 md:pr-12 lg:pr-20 pb-8 md:pb-12">
-                <h3 className="text-[#401408] font-semibold text-4xl md:text-5xl leading-[60px]">
+                <h3 className="font-instrument text-[#401408] font-semibold text-4xl md:text-5xl leading-[60px]">
                   $23K
                 </h3>
                 <p className="text-[#7B7B7B] text-base md:text-lg leading-[27px]">
@@ -74,7 +74,7 @@ export default function ExcellenceSection() {
 
               {/* Stat 3 - Happy customers */}
               <div className="flex flex-col gap-[10px] pr-8 md:pr-12 lg:pr-20 pb-8 md:pb-12">
-                <h3 className="text-[#401408] font-semibold text-4xl md:text-5xl leading-[60px]">
+                <h3 className="font-instrument text-[#401408] font-semibold text-4xl md:text-5xl leading-[60px]">
                   17
                 </h3>
                 <p className="text-[#7B7B7B] text-base md:text-lg leading-[27px]">
@@ -86,7 +86,7 @@ export default function ExcellenceSection() {
 
               {/* Stat 4 - Approximate Profit */}
               <div className="flex flex-col gap-[10px] pr-8 md:pr-12 lg:pr-20 pb-8 md:pb-12">
-                <h3 className="text-[#401408] font-semibold text-4xl md:text-5xl leading-[60px]">
+                <h3 className="font-instrument text-[#401408] font-semibold text-4xl md:text-5xl leading-[60px]">
                   $4K-7K
                 </h3>
                 <p className="text-[#7B7B7B] text-base md:text-lg leading-[27px]">

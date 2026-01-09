@@ -67,7 +67,7 @@ export default function ProjectShowcase() {
           <div className="flex items-center gap-2 mb-6 md:mb-8" />
 
           {/* Main Heading */}
-          <h2 className="text-center text-[#010101] text-3xl md:text-5xl lg:text-[69px] font-normal lg:leading-[77px] tracking-tight lg:tracking-[-3.8px] capitalize max-w-4xl">
+          <h2 className="font-instrument text-center text-[#010101] text-3xl md:text-5xl lg:text-[69px] font-normal lg:leading-[77px] tracking-tight lg:tracking-[-3.8px] capitalize max-w-4xl">
             If you're in need of{" "}
             <span className="font-medium text-[#33A4BB]">rental</span> services
           </h2>
@@ -104,7 +104,7 @@ export default function ProjectShowcase() {
               <div className="property-info flex flex-col gap-4 md:gap-5">
                 {/* Title and Description */}
                 <div className="property-text flex flex-col gap-2 md:gap-3">
-                  <h3 className="property-title text-[#010101] text-2xl md:text-[28px] lg:text-[30px] font-medium leading-normal">
+                  <h3 className="font-instrument property-title text-[#010101] text-2xl md:text-[28px] lg:text-[30px] font-medium leading-normal">
                     {property.title}
                   </h3>
                   <p className="property-description text-[#010101] text-base md:text-[17px] lg:text-[18px] leading-[1.52] font-normal">
