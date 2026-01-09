@@ -37,11 +37,15 @@ export default function ExcellenceSection() {
                       color: "#000000",
                     },
                   }}
-                >
-                  <span style={{ fontWeight: "normal" }}>
-                    We use Real Estate to
-                  </span>
-                </div>
+                />
+                <br />
+                <div
+                  style={{
+                    "@media (max-width: 640px)": {
+                      color: "rgba(0, 0, 0, 1)",
+                    },
+                  }}
+                />
                 <br />
                 <div
                   style={{
@@ -50,19 +54,16 @@ export default function ExcellenceSection() {
                     },
                   }}
                 >
-                  <span style={{ fontWeight: "normal" }}>
-                    show our appreciation of
-                  </span>
-                </div>
-                <br />
-                <div
-                  style={{
-                    "@media (max-width: 640px)": {
-                      color: "rgba(0, 0, 0, 1)",
-                    },
-                  }}
-                >
-                  <span style={{ fontWeight: "normal" }}>the world.</span>
+                  <div
+                    style={{
+                      display: "inline",
+                      fontWeight: "400",
+                    }}
+                  >
+                    <h2>We use Real Estate to</h2>
+                    <h2>show our appreciation of</h2>
+                    <p>the world.</p>
+                  </div>
                 </div>
               </h2>
               <p className="text-[#7B7B7B] text-base md:text-lg leading-[27px]">
