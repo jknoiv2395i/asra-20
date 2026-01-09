@@ -1,6 +1,6 @@
 export default function IntroSection() {
   return (
-    <section className="w-full bg-white py-16 md:py-24 lg:py-32 px-4 md:px-8">
+    <section className="intro-section w-full bg-white py-16 md:py-24 lg:py-32 px-4 md:px-8">
       <style>{`
         @media (max-width: 640px) {
           .intro-section {
