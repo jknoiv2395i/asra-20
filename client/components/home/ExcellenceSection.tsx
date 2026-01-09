@@ -8,11 +8,11 @@ export default function ExcellenceSection() {
           }
           .excellence-cta-button {
             background-color: rgba(0, 0, 0, 1) !important;
-            width: 115px !important;
+            width: 143px !important;
           }
           .excellence-cta-text {
             color: rgba(255, 255, 255, 1) !important;
-            width: 102.1px !important;
+            width: 216px !important;
             margin-left: 4px !important;
           }
         }
