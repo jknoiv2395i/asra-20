@@ -19,8 +19,6 @@ export default function HeroSection() {
         />
       </div>
 
-      <header className="relative z-50 w-full" style={{ padding: "32px 139px" }} />
-
       {/* Mobile Image */}
       <img
         src="https://api.builder.io/api/v1/image/assets/TEMP/1ec8c53d0601e692be66b84a2ddbf1b3724282f1?width=800"
