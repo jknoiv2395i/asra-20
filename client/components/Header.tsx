@@ -53,22 +53,27 @@ export default function Header() {
         </button>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors">
+        <button className="md:hidden p-2 hover:bg-white/10 rounded-lg transition-colors">
           <svg
             className="w-6 h-6"
             fill="none"
-            stroke="currentColor"
             viewBox="0 0 24 24"
+            style={{ stroke: "#000" }}
+            strokeWidth={2}
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
         </button>
       </div>
+
+      <header
+        className="relative z-50 w-full"
+        style={{ padding: "32px 139px" }}
+      />
     </header>
   );
 }
