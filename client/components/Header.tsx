@@ -70,7 +70,10 @@ export default function Header() {
         </button>
       </div>
 
-      <header className="relative z-50 w-full" style={{ padding: "32px 139px" }} />
+      <header
+        className="relative z-50 w-full"
+        style={{ padding: "32px 139px" }}
+      />
     </header>
   );
 }
