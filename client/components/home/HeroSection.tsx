@@ -6,7 +6,7 @@ export default function HeroSection() {
       className="relative w-full bg-[#0E0840] overflow-hidden"
       style={{
         "@media (max-width: 640px)": {
-          height: "1032.6px",
+          height: "994.1px",
         },
       }}
     >
