@@ -11,7 +11,9 @@ export default function ExcellenceSection() {
                 9
               </h3>
               <p className="text-[#7B7B7B] text-base md:text-lg leading-[27px]">
-                Years experience in<br />real estate
+                Years experience in
+                <br />
+                real estate
               </p>
             </div>
 
@@ -21,7 +23,9 @@ export default function ExcellenceSection() {
                 $23K
               </h3>
               <p className="text-[#7B7B7B] text-base md:text-lg leading-[27px]">
-                Total Net Profit Every<br />Month
+                Total Net Profit Every
+                <br />
+                Month
               </p>
             </div>
 
@@ -31,7 +35,9 @@ export default function ExcellenceSection() {
                 17
               </h3>
               <p className="text-[#7B7B7B] text-base md:text-lg leading-[27px]">
-                Every month a new<br />happy customer
+                Every month a new
+                <br />
+                happy customer
               </p>
             </div>
 
@@ -41,7 +47,9 @@ export default function ExcellenceSection() {
                 $4K-7K
               </h3>
               <p className="text-[#7B7B7B] text-base md:text-lg leading-[27px]">
-                Approximate Profit In<br />20 Business Days
+                Approximate Profit In
+                <br />
+                20 Business Days
               </p>
             </div>
           </div>
@@ -51,12 +59,15 @@ export default function ExcellenceSection() {
             {/* Text Content */}
             <div className="flex flex-col gap-[17px]">
               <h2 className="text-[#2B0A01] font-bold text-3xl md:text-4xl lg:text-[48px] leading-[1.17] tracking-[-2.118px]">
-                We use Real Estate to<br />
-                show our appreciation of<br />
+                We use Real Estate to
+                <br />
+                show our appreciation of
+                <br />
                 the world.
               </h2>
               <p className="text-[#7B7B7B] text-base md:text-lg leading-[27px]">
-                We provide equity and debt capital globally to back<br className="hidden md:block" />
+                We provide equity and debt capital globally to back
+                <br className="hidden md:block" />
                 projects that make an impact.
               </p>
             </div>
