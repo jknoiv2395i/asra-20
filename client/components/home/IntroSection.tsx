@@ -5,7 +5,7 @@ export default function IntroSection() {
         @media (max-width: 640px) {
           .intro-heading {
             font-size: 24px;
-            width: 369px;
+            width: 372px;
           }
         }
       `}</style>
