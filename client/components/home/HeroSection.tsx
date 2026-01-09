@@ -59,7 +59,7 @@ export default function HeroSection() {
         className="flex flex-row relative z-10"
         style={{
           "@media (max-width: 640px)": {
-            margin: "15px 0 75px",
+            marginTop: "18px",
           },
         }}
       >
