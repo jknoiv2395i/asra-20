@@ -1,10 +1,7 @@
 import { motion } from "motion/react";
-import { MapPin, DollarSign, Layers, ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { MapPin, DollarSign, Layers } from "lucide-react";
 
 export default function HeroSection() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <section className="relative w-full min-h-screen bg-[#0E0840] overflow-hidden">
       {/* Background House Image - Desktop Only */}
@@ -16,78 +13,10 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* Header Navigation */}
-      <header className="relative z-50 w-full px-4 md:px-8 lg:px-[139px] py-6 md:py-8">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-start gap-0.5">
-            <h1 className="text-white font-bold text-2xl md:text-[27px] leading-none tracking-tight">
-              Spanty
-            </h1>
-            <span className="text-white text-sm md:text-[19px] leading-none">®</span>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8 xl:gap-12">
-            <a href="#home" className="text-white font-medium text-base hover:opacity-80 transition-opacity">
-              Home
-            </a>
-            <a href="#properties" className="text-white font-medium text-[17px] hover:opacity-80 transition-opacity">
-              Properties
-            </a>
-            <a href="#agents" className="text-white font-medium text-base hover:opacity-80 transition-opacity">
-              Agents
-            </a>
-            <button className="flex items-center gap-2 text-white font-medium text-base hover:opacity-80 transition-opacity">
-              Pages
-              <ChevronDown className="w-5 h-5" />
-            </button>
-          </nav>
-
-          {/* Contact Button - Desktop */}
-          <button className="hidden lg:flex items-center justify-center px-[35px] py-4 bg-white text-[#401408] font-bold text-sm hover:bg-gray-100 transition-colors">
-            Contact Us
-          </button>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-white p-2"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="lg:hidden mt-6 pb-6 flex flex-col gap-4"
-          >
-            <a href="#home" className="text-white font-medium text-base hover:opacity-80">
-              Home
-            </a>
-            <a href="#properties" className="text-white font-medium text-base hover:opacity-80">
-              Properties
-            </a>
-            <a href="#agents" className="text-white font-medium text-base hover:opacity-80">
-              Agents
-            </a>
-            <a href="#pages" className="text-white font-medium text-base hover:opacity-80">
-              Pages
-            </a>
-            <button className="w-full mt-2 px-6 py-3 bg-white text-[#401408] font-bold text-sm hover:bg-gray-100 transition-colors">
-              Contact Us
-            </button>
-          </motion.div>
-        )}
-      </header>
+      <header className="relative z-50 w-full" style={{ padding: "32px 139px" }} />
 
       {/* Main Content Container */}
-      <div className="relative z-10 px-4 md:px-8 lg:px-[139px] pt-8 md:pt-12 lg:pt-20 pb-16 md:pb-24">
+      <div className="relative z-10" style={{ padding: "80px 139px 96px" }}>
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-24">
           {/* Left Column - Content */}
           <div className="flex flex-col">
