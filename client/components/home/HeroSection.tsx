@@ -24,7 +24,12 @@ export default function HeroSection() {
         src="https://api.builder.io/api/v1/image/assets/TEMP/1ec8c53d0601e692be66b84a2ddbf1b3724282f1?width=800"
         alt="Real Estate Property"
         className="block lg:hidden w-full h-auto object-cover"
-        style={{ marginBottom: "33px" }}
+        style={{
+          marginBottom: "33px",
+          "@media (max-width: 640px)": {
+            marginBottom: "8px",
+          },
+        }}
       />
 
       {/* Main Content */}
@@ -64,7 +69,7 @@ export default function HeroSection() {
         className="flex flex-row relative z-10"
         style={{
           "@media (max-width: 640px)": {
-            marginTop: "12px",
+            marginTop: "25px",
             paddingBottom: "37px",
           },
         }}
