@@ -159,7 +159,9 @@ export default function BenefitsSection() {
           <div className="benefits-overlay absolute inset-0 p-8 md:p-10 lg:p-12 flex flex-col justify-start">
             <div className="max-w-xs space-y-4">
               <h2 className="font-instrument text-3xl md:text-4xl font-bold text-white leading-tight">
-                The new way to find your new home
+                <span style={{ fontWeight: "normal" }}>
+                  The new way to find your new home
+                </span>
               </h2>
               <p className="text-base md:text-lg text-white opacity-70 leading-relaxed">
                 Find your dream place to live in with more than 10k+ properties
