@@ -59,7 +59,14 @@ export default function ProjectShowcase() {
   };
 
   return (
-    <section className="w-full bg-white px-4 md:px-8 lg:px-20 py-12 md:py-16 lg:py-20">
+    <section
+      className="w-full bg-white px-4 md:px-8 lg:px-20 py-12 md:py-16 lg:py-20"
+      style={{
+        "@media (max-width: 640px)": {
+          height: "725.9px",
+        },
+      }}
+    >
       <div className="max-w-[1440px] mx-auto">
         {/* Header Section */}
         <div className="flex flex-col items-center mb-8 md:mb-12 lg:mb-16">
