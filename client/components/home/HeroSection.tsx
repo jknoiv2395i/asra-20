@@ -68,7 +68,7 @@ export default function HeroSection() {
           style={{
             margin: "-5px 0 0 9px",
             "@media (max-width: 640px)": {
-              paddingBottom: "16px",
+              paddingBottom: "9px",
             },
           }}
         >
