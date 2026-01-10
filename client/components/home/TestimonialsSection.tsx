@@ -180,7 +180,7 @@ export default function TestimonialsSection() {
       className="testimonials-section w-full bg-white py-12 md:py-16 lg:py-20 px-4 md:px-8"
       style={{
         "@media (max-width: 640px)": {
-          height: "680px",
+          height: "691px",
         },
       }}
     >
