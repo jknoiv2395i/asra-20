@@ -145,7 +145,14 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className="w-full bg-white px-6 py-12 md:px-8 lg:px-12 md:py-16 lg:py-20">
+    <section
+      className="w-full bg-white px-6 py-12 md:px-8 lg:px-12 md:py-16 lg:py-20"
+      style={{
+        "@media (max-width: 640px)": {
+          height: "1070.7px",
+        },
+      }}
+    >
       <div className="max-w-sm mx-auto md:max-w-2xl lg:max-w-6xl">
         {/* Illustration Card */}
         <div className="relative bg-black rounded-3xl overflow-hidden mb-12 md:mb-16">
