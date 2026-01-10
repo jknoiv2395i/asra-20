@@ -196,7 +196,14 @@ export default function HeroSection() {
             </div>
 
             {/* CTA Button */}
-            <button className="hero-cta-button inline-flex items-center gap-3 bg-white text-black px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all">
+            <button
+              className="hero-cta-button inline-flex items-center gap-3 bg-white text-black px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all"
+              style={{
+                "@media (max-width: 640px)": {
+                  paddingRight: "11px",
+                },
+              }}
+            >
               <span className="hero-cta-text font-medium">Get started</span>
             </button>
           </div>
