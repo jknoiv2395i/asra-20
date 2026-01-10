@@ -59,7 +59,14 @@ export default function ProjectShowcase() {
   };
 
   return (
-    <section className="w-full bg-white px-4 md:px-8 lg:px-20 py-12 md:py-16 lg:py-20">
+    <section
+      className="w-full bg-white px-4 md:px-8 lg:px-20 py-12 md:py-16 lg:py-20"
+      style={{
+        "@media (max-width: 640px)": {
+          height: "725.9px",
+        },
+      }}
+    >
       <div className="max-w-[1440px] mx-auto">
         {/* Header Section */}
         <div className="flex flex-col items-center mb-8 md:mb-12 lg:mb-16">
@@ -67,7 +74,14 @@ export default function ProjectShowcase() {
           <div className="flex items-center gap-2 mb-6 md:mb-8" />
 
           {/* Main Heading */}
-          <h2 className="font-instrument text-center text-[#010101] text-3xl md:text-5xl lg:text-[69px] font-normal lg:leading-[77px] tracking-tight lg:tracking-[-3.8px] capitalize max-w-4xl">
+          <h2
+            className="font-instrument text-center text-[#010101] text-3xl md:text-5xl lg:text-[69px] font-normal lg:leading-[77px] tracking-tight lg:tracking-[-3.8px] capitalize max-w-4xl"
+            style={{
+              "@media (max-width: 640px)": {
+                width: "320px",
+              },
+            }}
+          >
             If you're in need of{" "}
             <span className="font-medium text-[#33A4BB]">rental</span> services
           </h2>
