@@ -100,6 +100,8 @@ export default function HeroSection() {
                 height: "319px",
                 width: "205px",
                 boxShadow: "2px 7px 0 0 rgba(0, 0, 0, 0)",
+                borderRadius: "26px",
+                overflow: "hidden",
               },
             }}
           >
