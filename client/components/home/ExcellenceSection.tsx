@@ -18,13 +18,13 @@ export default function ExcellenceSection() {
         }
       `}</style>
       <section
-      className="w-full bg-white px-4 md:px-8 lg:px-[137px] py-12 md:py-16 lg:py-20"
-      style={{
-        "@media (max-width: 640px)": {
-          height: "719.5px",
-        },
-      }}
-    >
+        className="w-full bg-white px-4 md:px-8 lg:px-[137px] py-12 md:py-16 lg:py-20"
+        style={{
+          "@media (max-width: 640px)": {
+            height: "719.5px",
+          },
+        }}
+      >
         <div className="max-w-[1440px] mx-auto">
           {/* Heading and CTA */}
           <div className="excellence-heading-cta flex flex-col gap-[43px] w-full sm:pb-[43px] sm:gap-[18px] mb-8 md:mb-12">
