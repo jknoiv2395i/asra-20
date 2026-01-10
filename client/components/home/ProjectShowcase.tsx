@@ -71,8 +71,7 @@ export default function ProjectShowcase() {
             className="font-instrument text-center text-[#010101] text-3xl md:text-5xl lg:text-[69px] font-normal lg:leading-[77px] tracking-tight lg:tracking-[-3.8px] capitalize max-w-4xl"
             style={{
               "@media (max-width: 640px)": {
-                maxWidth: "817px",
-                width: "319px",
+                width: "304px",
               },
             }}
           >
