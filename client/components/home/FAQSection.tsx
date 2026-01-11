@@ -8,29 +8,29 @@ import {
 export default function FAQSection() {
   const faqs = [
     {
-      question: "What makes MPHD Group different in the real estate industry?",
+      question: "What makes Asra real estate different in the real estate industry?",
       answer:
-        "MPHD Group brings innovative thinking and cutting-edge technology to real estate services. We combine professional expertise with personalized service, ensuring every client receives tailored solutions for their unique property needs.",
+        "Asra real estate brings innovative thinking and cutting-edge technology to real estate services. We combine professional expertise with personalized service, ensuring every client receives tailored solutions for their unique property needs.",
     },
     {
-      question: "What types of properties does MPHD Group specialize in?",
+      question: "What types of properties does Asra real estate specialize in?",
       answer:
         "We specialize in residential, commercial, industrial, and agricultural properties. Whether you're looking to buy, sell, rent, or invest, our diverse portfolio and expert team can guide you through every type of real estate transaction.",
     },
     {
-      question: "How does MPHD Group ensure transparency in property transactions?",
+      question: "How does Asra real estate ensure transparency in property transactions?",
       answer:
         "Transparency is at the core of our operations. We provide detailed property reports, clear documentation, legal verification, and regular communication throughout the transaction process to ensure our clients make informed decisions.",
     },
     {
-      question: "What support does MPHD Group provide for first-time property buyers?",
+      question: "What support does Asra real estate provide for first-time property buyers?",
       answer:
         "For first-time buyers, we offer comprehensive guidance including market analysis, financing assistance, legal documentation support, and property inspection services. Our team walks you through each step of the buying process.",
     },
     {
-      question: "Does MPHD Group offer investment consultation for real estate?",
+      question: "Does Asra real estate offer investment consultation for real estate?",
       answer:
-        "Yes, MPHD Group provides professional investment consulting to help clients identify promising property investments with strong appreciation potential. We analyze market trends and provide data-driven recommendations for your real estate portfolio.",
+        "Yes, Asra real estate provides professional investment consulting to help clients identify promising property investments with strong appreciation potential. We analyze market trends and provide data-driven recommendations for your real estate portfolio.",
     },
   ];
 
