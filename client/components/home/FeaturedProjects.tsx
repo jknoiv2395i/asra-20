@@ -25,9 +25,23 @@ export default function FeaturedProjects() {
   ];
 
   return (
-    <section className="w-full bg-white px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20">
+    <section
+      className="w-full bg-white px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20"
+      style={{
+        "@media (max-width: 640px)": {
+          height: "1515.7px",
+        },
+      }}
+    >
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-instrument text-2xl md:text-4xl lg:text-5xl leading-tight text-black text-center mb-8 md:mb-12 lg:mb-16 tracking-tight">
+        <h2
+          className="font-instrument text-2xl md:text-4xl lg:text-5xl leading-tight text-black text-center mb-8 md:mb-12 lg:mb-16 tracking-tight"
+          style={{
+            "@media (max-width: 640px)": {
+              fontSize: "32px",
+            },
+          }}
+        >
           Our Featured Projects
         </h2>
 

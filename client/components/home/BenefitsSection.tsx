@@ -145,7 +145,14 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className="w-full bg-white px-6 py-12 md:px-8 lg:px-12 md:py-16 lg:py-20">
+    <section
+      className="w-full bg-white px-6 py-12 md:px-8 lg:px-12 md:py-16 lg:py-20"
+      style={{
+        "@media (max-width: 640px)": {
+          height: "1070.7px",
+        },
+      }}
+    >
       <div className="max-w-sm mx-auto md:max-w-2xl lg:max-w-6xl">
         {/* Illustration Card */}
         <div className="relative bg-black rounded-3xl overflow-hidden mb-12 md:mb-16">
@@ -159,7 +166,9 @@ export default function BenefitsSection() {
           <div className="benefits-overlay absolute inset-0 p-8 md:p-10 lg:p-12 flex flex-col justify-start">
             <div className="max-w-xs space-y-4">
               <h2 className="font-instrument text-3xl md:text-4xl font-bold text-white leading-tight">
-                The new way to find your new home
+                <span style={{ fontWeight: "normal" }}>
+                  The new way to find your new home
+                </span>
               </h2>
               <p className="text-base md:text-lg text-white opacity-70 leading-relaxed">
                 Find your dream place to live in with more than 10k+ properties
@@ -216,7 +225,7 @@ export default function BenefitsSection() {
               {/* Text Content */}
               <div className="flex-1 space-y-4">
                 <h3 className="font-instrument text-xl md:text-2xl font-bold text-black leading-tight">
-                  {benefit.title}
+                  <span style={{ fontWeight: "normal" }}>{benefit.title}</span>
                 </h3>
                 <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                   {benefit.description}

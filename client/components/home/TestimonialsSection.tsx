@@ -38,7 +38,11 @@ const testimonials = [
   },
 ];
 
-function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] }) {
+function TestimonialCard({
+  testimonial,
+}: {
+  testimonial: (typeof testimonials)[0];
+}) {
   return (
     <div className="testimonial-card flex-shrink-0 w-full md:w-1/2 bg-white p-6 md:p-8 lg:p-10">
       {/* Quote Icon */}
@@ -165,7 +169,9 @@ export default function TestimonialsSection() {
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
+    );
     // Reset autoplay timer when manually navigating
     if (autoplayRef.current) {
       clearInterval(autoplayRef.current);
@@ -176,7 +182,14 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="testimonials-section w-full bg-white py-12 md:py-16 lg:py-20 px-4 md:px-8">
+    <section
+      className="testimonials-section w-full bg-white py-12 md:py-16 lg:py-20 px-4 md:px-8"
+      style={{
+        "@media (max-width: 640px)": {
+          height: "691px",
+        },
+      }}
+    >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12 mb-12 md:mb-16">
           {/* Heading */}
@@ -243,7 +256,7 @@ export default function TestimonialsSection() {
             className="testimonials-carousel-track flex gap-6 md:gap-8"
             style={{
               transform: `translateX(calc(-${currentIndex * 100}% - ${currentIndex * 1.5}rem))`,
-              transition: 'transform 0.5s ease-in-out',
+              transition: "transform 0.5s ease-in-out",
             }}
           >
             {testimonials.map((testimonial, index) => (
