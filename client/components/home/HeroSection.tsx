@@ -68,7 +68,11 @@ export default function HeroSection() {
           style={{
             margin: "-5px 0 0 9px",
             "@media (max-width: 640px)": {
+quantum-space
+              paddingBottom: "9px",
+
               paddingBottom: "18px",
+main
             },
           }}
         >
@@ -100,7 +104,11 @@ export default function HeroSection() {
                 height: "319px",
                 width: "205px",
                 boxShadow: "2px 7px 0 0 rgba(0, 0, 0, 0)",
+quantum-space
+                borderRadius: "26px",
+
                 borderRadius: "21px",
+ main
                 overflow: "hidden",
               },
             }}
@@ -200,7 +208,11 @@ export default function HeroSection() {
               className="hero-cta-button inline-flex items-center gap-3 bg-white text-black px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all"
               style={{
                 "@media (max-width: 640px)": {
+ quantum-space
+                  paddingRight: "11px",
+
                   paddingRight: "16px",
+ main
                 },
               }}
             >

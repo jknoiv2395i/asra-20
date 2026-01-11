@@ -8,32 +8,33 @@ import {
 export default function FAQSection() {
   const faqs = [
     {
-      question: "Who are the best property consultants in Nagpur?",
+      question:
+        "What makes Asra real estate different in the real estate industry?",
       answer:
-        "MPHD Group is recognized as one of the leading property consultants in Nagpur, offering comprehensive real estate services including residential, commercial, and industrial property solutions.",
+        "Asra real estate brings innovative thinking and cutting-edge technology to real estate services. We combine professional expertise with personalized service, ensuring every client receives tailored solutions for their unique property needs.",
+    },
+    {
+      question: "What types of properties does Asra real estate specialize in?",
+      answer:
+        "We specialize in residential, commercial, industrial, and agricultural properties. Whether you're looking to buy, sell, rent, or invest, our diverse portfolio and expert team can guide you through every type of real estate transaction.",
     },
     {
       question:
-        "What services does MPHD Group offer as a real estate agency in Nagpur?",
+        "How does Asra real estate ensure transparency in property transactions?",
       answer:
-        "MPHD Group offers a wide range of services including property buying and selling, rental services, legal support, property valuation, and investment consulting.",
+        "Transparency is at the core of our operations. We provide detailed property reports, clear documentation, legal verification, and regular communication throughout the transaction process to ensure our clients make informed decisions.",
     },
     {
       question:
-        "How can I rent a flat or commercial space through MPHD Group's rental services in Nagpur?",
+        "What support does Asra real estate provide for first-time property buyers?",
       answer:
-        "You can contact MPHD Group directly through their office or website to explore available rental properties. Their team will assist you in finding the perfect flat or commercial space based on your requirements.",
-    },
-    {
-      question: "Does MPHD Group provide legal help for property in India?",
-      answer:
-        "Yes, MPHD Group provides comprehensive legal support for property transactions, ensuring all documentation and compliance requirements are properly handled.",
+        "For first-time buyers, we offer comprehensive guidance including market analysis, financing assistance, legal documentation support, and property inspection services. Our team walks you through each step of the buying process.",
     },
     {
       question:
-        "Can MPHD Group help with land acquisition for infrastructure or industrial projects?",
+        "Does Asra real estate offer investment consultation for real estate?",
       answer:
-        "Yes, MPHD Group specializes in land acquisition services for infrastructure and industrial projects, working with experienced professionals to facilitate smooth transactions.",
+        "Yes, Asra real estate provides professional investment consulting to help clients identify promising property investments with strong appreciation potential. We analyze market trends and provide data-driven recommendations for your real estate portfolio.",
     },
   ];
 
