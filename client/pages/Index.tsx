@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import HeroSection from "@/components/home/HeroSection";
 import LogoCarousel from "@/components/home/LogoCarousel";
-import IntroSection from "@/components/home/IntroSection";
+import IntroSection, { IntroHeading } from "@/components/home/IntroSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import BenefitsSection from "@/components/home/BenefitsSection";
 import FeaturedProjects from "@/components/home/FeaturedProjects";
