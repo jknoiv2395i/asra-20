@@ -111,7 +111,7 @@ function LogoCarouselContent() {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <section className="logo-carousel-section w-full bg-white overflow-hidden py-12 md:py-16">
+    <section className="logo-carousel-section w-full bg-white overflow-hidden py-6 md:py-8">
       <div className="relative flex items-center">
         {/* Scrolling container */}
         <div className="flex logo-scroll-container">

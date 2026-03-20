@@ -1,3 +1,5 @@
+import { AnimatedSection, StaggerContainer, AnimatedItem } from "@/components/animations/AnimatedSection";
+
 export default function FeaturedProjects() {
   const projects = [
     {
@@ -26,7 +28,7 @@ export default function FeaturedProjects() {
 
   return (
     <section
-      className="w-full bg-white px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20"
+      className="w-full bg-white px-4 md:px-8 lg:px-12 pt-8 md:pt-10 lg:pt-12 pb-4 md:pb-6 lg:pb-8"
       style={{
         "@media (max-width: 640px)": {
           height: "1515.7px",
@@ -34,20 +36,22 @@ export default function FeaturedProjects() {
       }}
     >
       <div className="max-w-6xl mx-auto">
-        <h2
-          className="font-instrument text-2xl md:text-4xl lg:text-5xl leading-tight text-black text-center mb-8 md:mb-12 lg:mb-16 tracking-tight"
-          style={{
-            "@media (max-width: 640px)": {
-              fontSize: "32px",
-            },
-          }}
-        >
-          Our Featured Projects
-        </h2>
+        <AnimatedSection>
+          <h2
+            className="font-instrument text-2xl md:text-4xl lg:text-5xl leading-tight text-black text-center mb-8 md:mb-12 lg:mb-16 tracking-tight"
+            style={{
+              "@media (max-width: 640px)": {
+                fontSize: "32px",
+              },
+            }}
+          >
+            Our Featured Projects
+          </h2>
+        </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-8">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-8">
           {/* First Project */}
-          <div className="lg:col-span-4">
+          <AnimatedItem className="lg:col-span-4">
             <div
               className="rounded-3xl overflow-hidden mb-4 md:mb-6 lg:mb-8"
               style={{ aspectRatio: projects[0].aspectRatio }}
@@ -55,7 +59,7 @@ export default function FeaturedProjects() {
               <img
                 src={projects[0].image}
                 alt={projects[0].title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
             <h3 className="font-instrument text-lg md:text-2xl lg:text-[27px] leading-snug md:leading-9 lg:leading-9 text-[#131313] mb-2 md:mb-4 tracking-tight">
@@ -64,10 +68,10 @@ export default function FeaturedProjects() {
             <p className="text-[#5D5D5D] text-sm md:text-base lg:text-lg tracking-wide">
               {projects[0].date}
             </p>
-          </div>
+          </AnimatedItem>
 
           {/* Second Project */}
-          <div className="lg:col-span-5">
+          <AnimatedItem className="lg:col-span-5">
             <div
               className="rounded-3xl overflow-hidden mb-4 md:mb-6 lg:mb-8"
               style={{ aspectRatio: projects[1].aspectRatio }}
@@ -75,7 +79,7 @@ export default function FeaturedProjects() {
               <img
                 src={projects[1].image}
                 alt={projects[1].title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
             <h3 className="font-instrument text-lg md:text-2xl lg:text-[27px] leading-snug md:leading-9 lg:leading-9 text-[#131313] mb-2 md:mb-4 tracking-tight">
@@ -84,10 +88,10 @@ export default function FeaturedProjects() {
             <p className="text-[#5D5D5D] text-sm md:text-base lg:text-lg tracking-wide">
               {projects[1].date}
             </p>
-          </div>
+          </AnimatedItem>
 
           {/* Third Project */}
-          <div className="lg:col-span-3">
+          <AnimatedItem className="lg:col-span-3">
             <div
               className="rounded-3xl overflow-hidden mb-4 md:mb-6 lg:mb-8"
               style={{ aspectRatio: projects[2].aspectRatio }}
@@ -95,7 +99,7 @@ export default function FeaturedProjects() {
               <img
                 src={projects[2].image}
                 alt={projects[2].title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
             <h3 className="font-instrument text-lg md:text-2xl lg:text-[27px] leading-snug md:leading-9 lg:leading-9 text-[#131313] mb-2 md:mb-4 tracking-tight">
@@ -104,8 +108,8 @@ export default function FeaturedProjects() {
             <p className="text-[#5D5D5D] text-sm md:text-base lg:text-lg tracking-wide">
               {projects[2].date}
             </p>
-          </div>
-        </div>
+          </AnimatedItem>
+        </StaggerContainer>
       </div>
     </section>
   );

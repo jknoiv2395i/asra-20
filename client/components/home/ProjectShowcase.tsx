@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { AnimatedSection } from "@/components/animations/AnimatedSection";
 
 export default function ProjectShowcase() {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -60,7 +61,7 @@ export default function ProjectShowcase() {
 
   return (
     <section
-      className="w-full bg-white px-4 md:px-8 lg:px-20 py-12 md:py-16 lg:py-20"
+      className="w-full bg-white px-4 md:px-8 lg:px-20 py-8 md:py-10 lg:py-12"
       style={{
         "@media (max-width: 640px)": {
           height: "725.9px",
@@ -74,6 +75,7 @@ export default function ProjectShowcase() {
           <div className="flex items-center gap-2 mb-6 md:mb-8" />
 
           {/* Main Heading */}
+          <AnimatedSection>
           <h2
             className="font-instrument text-center text-[#010101] text-3xl md:text-5xl lg:text-[69px] font-normal lg:leading-[77px] tracking-tight lg:tracking-[-3.8px] capitalize max-w-4xl"
             style={{
@@ -85,6 +87,7 @@ export default function ProjectShowcase() {
             If you're in need of{" "}
             <span className="font-medium text-[#33A4BB]">rental</span> services
           </h2>
+          </AnimatedSection>
         </div>
 
         {/* Carousel Container */}
@@ -110,7 +113,7 @@ export default function ProjectShowcase() {
                 <img
                   src={property.image}
                   alt={property.title}
-                  className="property-image w-full h-[300px] md:h-[400px] lg:h-[449px] object-cover"
+                  className="property-image w-full h-[300px] md:h-[400px] lg:h-[449px] object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>
 

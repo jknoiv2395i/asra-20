@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 
 export default function HeroSection() {
@@ -24,19 +25,27 @@ export default function HeroSection() {
         }}
       >
         {/* Background House Image - Desktop Only */}
-        <div className="hidden lg:block absolute right-0 top-[174px] w-[756px] h-[800px]">
+        <motion.div
+          className="hidden lg:block absolute right-0 top-[174px] w-[756px] h-[800px]"
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        >
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/1ec8c53d0601e692be66b84a2ddbf1b3724282f1?width=1512"
             alt="Real Estate Property"
             className="w-full h-full object-cover"
           />
-        </div>
+        </motion.div>
 
         {/* Mobile Image */}
-        <img
+        <motion.img
           src="https://api.builder.io/api/v1/image/assets/TEMP/1ec8c53d0601e692be66b84a2ddbf1b3724282f1?width=800"
           alt="Real Estate Property"
           className="block lg:hidden w-full h-auto object-cover"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
           style={{
             marginBottom: "33px",
             "@media (max-width: 640px)": {
@@ -46,8 +55,11 @@ export default function HeroSection() {
         />
 
         {/* Main Content */}
-        <h2
+        <motion.h2
           className="font-instrument text-[#F6DEE3] font-bold text-4xl md:text-5xl lg:text-[72px] leading-[45px] lg:leading-[72px] tracking-tighter"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
           style={{
             letterSpacing: "-1.8px",
             margin: "0 -1px 2px 8px",
@@ -60,30 +72,32 @@ export default function HeroSection() {
           Creative Real
           <br />
           Estate Agency
-        </h2>
+        </motion.h2>
 
         {/* Description */}
-        <div
+        <motion.div
           className="text-white font-normal text-base leading-[26px] max-w-[492px]"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
           style={{
             margin: "-5px 0 0 9px",
             "@media (max-width: 640px)": {
-quantum-space
-              paddingBottom: "9px",
-
               paddingBottom: "18px",
-main
             },
           }}
         >
           Spanty is an international estate company that offers services like
           propery appraisal as well as the sale, purchase, and investment of
           real estate.
-        </div>
+        </motion.div>
 
         {/* Form and Services Row */}
-        <div
+        <motion.div
           className="flex flex-row relative z-10"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
           style={{
             "@media (max-width: 640px)": {
               padding: "20px 0 58px",
@@ -104,11 +118,7 @@ main
                 height: "319px",
                 width: "205px",
                 boxShadow: "2px 7px 0 0 rgba(0, 0, 0, 0)",
-quantum-space
-                borderRadius: "26px",
-
                 borderRadius: "21px",
- main
                 overflow: "hidden",
               },
             }}
@@ -204,24 +214,27 @@ quantum-space
             </div>
 
             {/* CTA Button */}
-            <button
+            <Link to="/contact">
+            <motion.button
               className="hero-cta-button inline-flex items-center gap-3 bg-white text-black px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
               style={{
                 "@media (max-width: 640px)": {
- quantum-space
-                  paddingRight: "11px",
-
                   paddingRight: "16px",
- main
                 },
               }}
             >
               <span className="hero-cta-text font-medium">Get started</span>
-            </button>
+            </motion.button>
+            </Link>
           </div>
 
           {/* Services Section */}
-          <div
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.8, ease: "easeOut" }}
             style={{
               marginLeft: "20px",
               "@media (max-width: 640px)": {
@@ -297,8 +310,8 @@ quantum-space
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
     </>
   );

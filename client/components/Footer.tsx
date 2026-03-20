@@ -7,9 +7,9 @@ export default function Footer() {
         {/* Logo and Description */}
         <div className="max-w-md">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2Fd5a54f26a8c849d7b8a8047cf874bdac"
-            alt="MPHD Group Logo"
-            className="h-[110px] w-[136px] mb-4"
+            src="/asra-logo.png"
+            alt="ASRA Real Estate Consulting Services Logo"
+            className="h-[70px] w-auto mb-4"
           />
           <p className="text-[#B7B7B7] text-lg leading-relaxed">
             Bring your architectural projects to life with a template that puts

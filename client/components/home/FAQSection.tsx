@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { AnimatedSection } from "@/components/animations/AnimatedSection";
 
 export default function FAQSection() {
   const faqs = [
@@ -39,9 +40,10 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="w-full bg-white px-4 md:px-8 py-16 md:py-24 lg:py-32">
+    <section className="w-full bg-white px-4 md:px-8 py-8 md:py-10 lg:py-12">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
         {/* Left Content */}
+        <AnimatedSection>
         <div>
           <h2 className="font-instrument text-5xl md:text-6xl leading-[60px] md:leading-[72px] text-black mb-6 font-normal tracking-tight">
             Frequently asked questions
@@ -51,8 +53,10 @@ export default function FAQSection() {
             of the most commonly asked questions.
           </p>
         </div>
+        </AnimatedSection>
 
         {/* Right FAQ Accordion */}
+        <AnimatedSection delay={0.15}>
         <div>
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
@@ -71,6 +75,7 @@ export default function FAQSection() {
             ))}
           </Accordion>
         </div>
+        </AnimatedSection>
       </div>
     </section>
   );

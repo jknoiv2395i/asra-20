@@ -1,3 +1,10 @@
+import { motion } from "motion/react";
+import {
+  AnimatedSection,
+  StaggerContainer,
+  AnimatedItem,
+} from "@/components/animations/AnimatedSection";
+
 export default function ServicesSection() {
   const services = [
     {
@@ -60,133 +67,142 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="w-full bg-white px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20">
+    <section className="w-full bg-white px-4 md:px-8 lg:px-12 py-8 md:py-10 lg:py-12">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-instrument text-xl lg:text-3xl text-black mb-8 lg:mb-12 font-normal tracking-tight">
-          OUR SERVICES
-        </h2>
+        <AnimatedSection>
+          <h2 className="font-instrument text-xl lg:text-3xl text-black mb-8 lg:mb-12 font-normal tracking-tight">
+            OUR SERVICES
+          </h2>
+        </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12 lg:mb-16">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12 lg:mb-16">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="service-card border border-[#C3D5F1] rounded-2xl p-6 lg:p-8 cursor-pointer transition-all duration-300"
-              style={{
-                backgroundColor: "#ffffff",
-              }}
-              onMouseEnter={(e) => {
-                const card = e.currentTarget;
-                card.style.backgroundColor = "#1E9CE8";
-                card.style.borderColor = "#1E9CE8";
-                card.style.boxShadow = "0 10px 30px rgba(30, 156, 232, 0.2)";
+            <AnimatedItem key={index}>
+              <motion.div
+                className="service-card border border-[#C3D5F1] rounded-2xl p-6 lg:p-8 cursor-pointer transition-all duration-300"
+                whileHover={{
+                  y: -8,
+                  boxShadow: "0 12px 30px rgba(14, 8, 64, 0.15)",
+                }}
+                style={{
+                  backgroundColor: "#ffffff",
+                }}
+                onMouseEnter={(e) => {
+                  const card = e.currentTarget;
+                  card.style.backgroundColor = "#0E0840";
+                  card.style.borderColor = "#0E0840";
 
-                // Change text colors
-                const title = card.querySelector("h3");
-                if (title) title.style.color = "#ffffff";
+                  const title = card.querySelector("h3");
+                  if (title) title.style.color = "#ffffff";
 
-                const description = card.querySelector("p");
-                if (description) description.style.color = "#ffffff";
+                  const description = card.querySelector("p");
+                  if (description) description.style.color = "#ffffff";
 
-                const linkDiv = card.querySelector(".learn-more-link");
-                if (linkDiv) {
-                  linkDiv.style.color = "#ffffff";
-                  const paths = linkDiv.querySelectorAll("path");
-                  paths.forEach((path) => {
-                    path.setAttribute("stroke", "#ffffff");
-                  });
-                }
+                  const linkDiv = card.querySelector(".learn-more-link");
+                  if (linkDiv) {
+                    (linkDiv as HTMLElement).style.color = "#ffffff";
+                    const paths = linkDiv.querySelectorAll("path");
+                    paths.forEach((path) => {
+                      path.setAttribute("stroke", "#ffffff");
+                    });
+                  }
 
-                const iconBg = card.querySelector(".icon-bg");
-                if (iconBg) {
-                  iconBg.style.backgroundColor = "#ffffff";
-                  const svgs = iconBg.querySelectorAll("path");
-                  svgs.forEach((svg) => {
-                    svg.setAttribute("fill", "#1E9CE8");
-                  });
-                }
-              }}
-              onMouseLeave={(e) => {
-                const card = e.currentTarget;
-                card.style.backgroundColor = "#ffffff";
-                card.style.borderColor = "#C3D5F1";
-                card.style.boxShadow = "none";
+                  const iconBg = card.querySelector(".icon-bg");
+                  if (iconBg) {
+                    (iconBg as HTMLElement).style.backgroundColor = "#ffffff";
+                    const svgs = iconBg.querySelectorAll("path");
+                    svgs.forEach((svg) => {
+                      svg.setAttribute("fill", "#0E0840");
+                    });
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  const card = e.currentTarget;
+                  card.style.backgroundColor = "#ffffff";
+                  card.style.borderColor = "#C3D5F1";
 
-                // Reset text colors
-                const title = card.querySelector("h3");
-                if (title) title.style.color = "#131313";
+                  const title = card.querySelector("h3");
+                  if (title) title.style.color = "#131313";
 
-                const description = card.querySelector("p");
-                if (description) description.style.color = "#5D5D5D";
+                  const description = card.querySelector("p");
+                  if (description) description.style.color = "#5D5D5D";
 
-                const linkDiv = card.querySelector(".learn-more-link");
-                if (linkDiv) {
-                  linkDiv.style.color = "#131313";
-                  const paths = linkDiv.querySelectorAll("path");
-                  paths.forEach((path) => {
-                    path.setAttribute("stroke", "#131313");
-                  });
-                }
+                  const linkDiv = card.querySelector(".learn-more-link");
+                  if (linkDiv) {
+                    (linkDiv as HTMLElement).style.color = "#131313";
+                    const paths = linkDiv.querySelectorAll("path");
+                    paths.forEach((path) => {
+                      path.setAttribute("stroke", "#131313");
+                    });
+                  }
 
-                const iconBg = card.querySelector(".icon-bg");
-                if (iconBg) {
-                  iconBg.style.backgroundColor = "#071839";
-                  const svgs = iconBg.querySelectorAll("path");
-                  svgs.forEach((svg) => {
-                    svg.setAttribute("fill", "white");
-                  });
-                }
-              }}
-            >
-              <div className="icon-bg w-16 h-16 bg-[#071839] rounded-full flex items-center justify-center mb-6 lg:mb-8 transition-all duration-300">
-                {service.icon}
-              </div>
-              <h3 className="font-instrument text-[27px] lg:text-2xl leading-8 lg:leading-9 mb-4 lg:mb-6 font-normal text-[#131313] transition-colors duration-300">
-                {service.title}
-              </h3>
-              <p className="text-base lg:text-lg leading-7 mb-6 lg:mb-8 text-[#5D5D5D] transition-colors duration-300">
-                {service.description}
-              </p>
-              <div className="learn-more-link flex items-center gap-3 text-[#131313] transition-colors duration-300">
-                <span className="text-base lg:text-lg">Learn more</span>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5.83325 5.83203H14.1666V14.1654"
-                    stroke="#131313"
-                    strokeWidth="1.66667"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="transition-colors duration-300"
-                  />
-                  <path
-                    d="M5.83325 14.1654L14.1666 5.83203"
-                    stroke="#131313"
-                    strokeWidth="1.66667"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="transition-colors duration-300"
-                  />
-                </svg>
-              </div>
-            </div>
+                  const iconBg = card.querySelector(".icon-bg");
+                  if (iconBg) {
+                    (iconBg as HTMLElement).style.backgroundColor = "#071839";
+                    const svgs = iconBg.querySelectorAll("path");
+                    svgs.forEach((svg) => {
+                      svg.setAttribute("fill", "white");
+                    });
+                  }
+                }}
+              >
+                <div className="icon-bg w-16 h-16 bg-[#071839] rounded-full flex items-center justify-center mb-6 lg:mb-8 transition-all duration-300">
+                  {service.icon}
+                </div>
+                <h3 className="font-instrument text-[27px] lg:text-2xl leading-8 lg:leading-9 mb-4 lg:mb-6 font-normal text-[#131313] transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-base lg:text-lg leading-7 mb-6 lg:mb-8 text-[#5D5D5D] transition-colors duration-300">
+                  {service.description}
+                </p>
+                <div className="learn-more-link flex items-center gap-3 text-[#131313] transition-colors duration-300">
+                  <span className="text-base lg:text-lg">Learn more</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.83325 5.83203H14.1666V14.1654"
+                      stroke="#131313"
+                      strokeWidth="1.66667"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="transition-colors duration-300"
+                    />
+                    <path
+                      d="M5.83325 14.1654L14.1666 5.83203"
+                      stroke="#131313"
+                      strokeWidth="1.66667"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="transition-colors duration-300"
+                    />
+                  </svg>
+                </div>
+              </motion.div>
+            </AnimatedItem>
           ))}
-        </div>
+        </StaggerContainer>
 
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8">
-          <p className="text-[#5D5D5D] text-base lg:text-lg leading-7 max-w-2xl">
-            Whether you're looking for your dream home, selling a property, or
-            seeking investment opportunities, our expert team is here to assist
-            you every step of the way.
-          </p>
-          <button className="px-6 md:px-8 py-3 md:py-4 bg-[#131313] text-white text-base lg:text-lg font-medium rounded-full hover:bg-black transition-colors flex-shrink-0">
-            View all
-          </button>
-        </div>
+        <AnimatedSection delay={0.2}>
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8">
+            <p className="text-[#5D5D5D] text-base lg:text-lg leading-7 max-w-2xl">
+              Whether you're looking for your dream home, selling a property, or
+              seeking investment opportunities, our expert team is here to assist
+              you every step of the way.
+            </p>
+            <motion.button
+              className="px-6 md:px-8 py-3 md:py-4 bg-[#131313] text-white text-base lg:text-lg font-medium rounded-full hover:bg-black transition-colors flex-shrink-0"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              View all
+            </motion.button>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

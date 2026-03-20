@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import { AnimatedSection } from "@/components/animations/AnimatedSection";
 
 const testimonials = [
   {
@@ -183,7 +184,7 @@ export default function TestimonialsSection() {
 
   return (
     <section
-      className="testimonials-section w-full bg-white py-12 md:py-16 lg:py-20 px-4 md:px-8"
+      className="testimonials-section w-full bg-white py-8 md:py-10 lg:py-12 px-4 md:px-8"
       style={{
         "@media (max-width: 640px)": {
           height: "691px",
@@ -191,6 +192,7 @@ export default function TestimonialsSection() {
       }}
     >
       <div className="max-w-7xl mx-auto">
+        <AnimatedSection>
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12 mb-12 md:mb-16">
           {/* Heading */}
           <div className="flex-1">
@@ -249,8 +251,10 @@ export default function TestimonialsSection() {
             </button>
           </div>
         </div>
+        </AnimatedSection>
 
         {/* Testimonials Carousel Container */}
+        <AnimatedSection delay={0.2}>
         <div className="testimonials-carousel-wrapper overflow-hidden">
           <div
             className="testimonials-carousel-track flex gap-6 md:gap-8"
@@ -264,6 +268,7 @@ export default function TestimonialsSection() {
             ))}
           </div>
         </div>
+        </AnimatedSection>
       </div>
     </section>
   );

@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { AnimatedSection, StaggerContainer, AnimatedItem } from "@/components/animations/AnimatedSection";
+
 export default function BenefitsSection() {
   const benefits = [
     {
@@ -146,7 +149,7 @@ export default function BenefitsSection() {
 
   return (
     <section
-      className="w-full bg-white px-6 py-12 md:px-8 lg:px-12 md:py-16 lg:py-20"
+      className="w-full bg-white px-6 py-8 md:px-8 lg:px-12 md:py-10 lg:py-12"
       style={{
         "@media (max-width: 640px)": {
           height: "1070.7px",
@@ -155,6 +158,7 @@ export default function BenefitsSection() {
     >
       <div className="max-w-sm mx-auto md:max-w-2xl lg:max-w-6xl">
         {/* Illustration Card */}
+        <AnimatedSection>
         <div className="relative bg-black rounded-3xl overflow-hidden mb-12 md:mb-16">
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/2a46bc55961699466193c6ca637b43432ae50554?width=654"
@@ -174,6 +178,7 @@ export default function BenefitsSection() {
                 Find your dream place to live in with more than 10k+ properties
                 listed.
               </p>
+              <Link to="/contact">
               <button className="mt-4 inline-flex items-center gap-3 bg-white text-black px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all sm:w-[132px] sm:h-[39px] sm:-ml-1 sm:pl-4">
                 <span className="font-medium sm:text-xs sm:-ml-1">
                   Get started
@@ -196,14 +201,17 @@ export default function BenefitsSection() {
                   </svg>
                 </div>
               </button>
+              </Link>
             </div>
           </div>
         </div>
+        </AnimatedSection>
 
         {/* Benefits List */}
-        <div className="flex flex-col gap-6 md:gap-8">
+        <StaggerContainer className="flex flex-col gap-6 md:gap-8">
           {benefits.map((benefit, index) => (
-            <div key={index} className="benefit-item flex items-start gap-6">
+            <AnimatedItem key={index}>
+            <div className="benefit-item flex items-start gap-6">
               {/* Icon Container */}
               <div className="relative w-14 h-14 flex-shrink-0">
                 {/* Outer circle */}
@@ -232,8 +240,9 @@ export default function BenefitsSection() {
                 </p>
               </div>
             </div>
+            </AnimatedItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
 
       <style>{`
