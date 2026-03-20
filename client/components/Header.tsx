@@ -5,7 +5,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className={`w-full absolute top-0 left-0 z-50 ${mobileMenuOpen ? 'bg-[#0E0840]' : 'bg-transparent'}`}>
+    <header className="w-full absolute top-0 left-0 z-50 bg-transparent">
       <div className="w-full px-4 md:px-8 lg:px-12 py-4 md:py-0 flex items-center justify-between h-20 md:h-24">
         {/* Logo */}
         <Link to="/" className="flex items-center">
@@ -20,19 +20,19 @@ export default function Header() {
         <nav className="hidden md:flex items-center md:gap-6 lg:gap-8">
           <Link
             to="/"
-            className="text-white/80 hover:text-white text-sm lg:text-base font-normal transition-colors duration-200"
+            className="text-gray-600 hover:text-[#0E0840] text-sm lg:text-base font-normal transition-colors duration-200"
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="text-white/80 hover:text-white text-sm lg:text-base font-normal transition-colors duration-200"
+            className="text-gray-600 hover:text-[#0E0840] text-sm lg:text-base font-normal transition-colors duration-200"
           >
             About Us
           </Link>
           <Link
             to="/properties"
-            className="text-white/80 hover:text-white text-sm lg:text-base font-normal transition-colors duration-200"
+            className="text-gray-600 hover:text-[#0E0840] text-sm lg:text-base font-normal transition-colors duration-200"
           >
             Properties
           </Link>
@@ -41,7 +41,7 @@ export default function Header() {
         {/* Contact Button */}
         <Link
           to="/contact"
-          className="hidden md:flex items-center justify-center px-6 py-2 bg-white rounded-full text-black text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200"
+          className="hidden md:flex items-center justify-center px-6 py-2 bg-black rounded-full text-white text-sm lg:text-base font-medium hover:bg-gray-900 transition-colors duration-200"
         >
           Contact us
         </Link>
@@ -65,26 +65,26 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-[#0E0840] z-40">
+        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg z-40">
           <nav className="flex flex-col px-6 py-4 gap-0">
             <Link
               to="/"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-white/80 hover:text-white text-base font-normal py-3 px-2 transition-colors duration-200"
+              className="text-gray-600 hover:text-[#0E0840] text-base font-normal py-3 px-2 transition-colors duration-200"
             >
               Home
             </Link>
             <Link
               to="/about"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-white/80 hover:text-white text-base font-normal py-3 px-2 transition-colors duration-200"
+              className="text-gray-600 hover:text-[#0E0840] text-base font-normal py-3 px-2 transition-colors duration-200"
             >
               About Us
             </Link>
             <Link
               to="/properties"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-white/80 hover:text-white text-base font-normal py-3 px-2 transition-colors duration-200"
+              className="text-gray-600 hover:text-[#0E0840] text-base font-normal py-3 px-2 transition-colors duration-200"
             >
               Properties
             </Link>
@@ -93,7 +93,7 @@ export default function Header() {
             <Link
               to="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center mt-4 px-6 py-3 bg-white rounded-full text-[#0E0840] text-base font-semibold hover:bg-gray-100 transition-colors duration-200"
+              className="flex items-center justify-center mt-4 px-6 py-3 bg-black rounded-full text-white text-base font-semibold hover:bg-gray-900 transition-colors duration-200"
             >
               Contact Us
             </Link>
