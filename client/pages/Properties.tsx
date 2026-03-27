@@ -28,8 +28,8 @@ const properties: Property[] = [
     id: 1,
     image: "https://api.builder.io/api/v1/image/assets/TEMP/f9294423c5aad854317c1b8f2ce93fa9d31a0933?width=712",
     title: "Forest Retreat Villa",
-    location: "Dharampeth, Nagpur",
-    price: "₹1.25 Cr",
+    location: "Indore-Ujjain Road, Indore",
+    price: "₹45 Lakh",
     type: "residential",
     beds: 4,
     baths: 3,
@@ -40,8 +40,8 @@ const properties: Property[] = [
     id: 2,
     image: "https://api.builder.io/api/v1/image/assets/TEMP/bab3c32ceeb7ebac77c03707ae7f7e41b7732007?width=712",
     title: "Woodland Heights Apartment",
-    location: "Sadar, Nagpur",
-    price: "₹68 Lakh",
+    location: "MR-5 Road, Indore",
+    price: "₹38 Lakh",
     type: "residential",
     beds: 3,
     baths: 2,
@@ -51,7 +51,7 @@ const properties: Property[] = [
     id: 3,
     image: "https://api.builder.io/api/v1/image/assets/TEMP/a743906f7efa3f52462098d0c43e9d94f22a2d7c?width=712",
     title: "Harmony Business Centre",
-    location: "Civil Lines, Nagpur",
+    location: "Vijay Nagar, Indore",
     price: "₹2.5 Cr",
     type: "commercial",
     area: "5,200 sq ft",
@@ -61,8 +61,8 @@ const properties: Property[] = [
     id: 4,
     image: "https://api.builder.io/api/v1/image/assets/TEMP/4b0c97890a88c03aeec91fbcf464d29dec32a560?width=712",
     title: "Aliva Priva Jardin",
-    location: "Manish Nagar, Nagpur",
-    price: "₹55 Lakh",
+    location: "Chhota Bangarda, Indore",
+    price: "₹32 Lakh",
     type: "residential",
     beds: 2,
     baths: 2,
@@ -72,7 +72,7 @@ const properties: Property[] = [
     id: 5,
     image: "https://api.builder.io/api/v1/image/assets/TEMP/93f9f38075eab9840ba7cf8f13a676f64d35dfcf?width=976",
     title: "Skyline Commercial Plaza",
-    location: "Wardha Road, Nagpur",
+    location: "Indore-Ujjain Road, Indore",
     price: "₹3.8 Cr",
     type: "commercial",
     area: "8,500 sq ft",
@@ -82,7 +82,7 @@ const properties: Property[] = [
     id: 6,
     image: "https://api.builder.io/api/v1/image/assets/TEMP/ad33659c33381eac40061641b81f19d65a13ad9f?width=712",
     title: "Asatti Industrial Park",
-    location: "MIDC Hingna, Nagpur",
+    location: "Indore Bypass, Indore",
     price: "₹4.2 Cr",
     type: "industrial",
     area: "12,000 sq ft",
@@ -91,8 +91,8 @@ const properties: Property[] = [
     id: 7,
     image: "https://api.builder.io/api/v1/image/assets/TEMP/416addc2782b9fb53a01c93ece15343753c56e75?width=768",
     title: "Green Valley Residence",
-    location: "Koradi Road, Nagpur",
-    price: "₹92 Lakh",
+    location: "AB Road, Indore",
+    price: "₹72 Lakh",
     type: "residential",
     beds: 3,
     baths: 3,
@@ -103,7 +103,7 @@ const properties: Property[] = [
     id: 8,
     image: "https://api.builder.io/api/v1/image/assets/TEMP/bde2d192e63f2855084f213abbf4641d25defc35?width=560",
     title: "Nexus Office Tower",
-    location: "Sitabuldi, Nagpur",
+    location: "MR 10, Indore",
     price: "₹1.8 Cr",
     type: "commercial",
     area: "3,800 sq ft",
@@ -112,7 +112,7 @@ const properties: Property[] = [
     id: 9,
     image: "https://api.builder.io/api/v1/image/assets/TEMP/f9294423c5aad854317c1b8f2ce93fa9d31a0933?width=712",
     title: "Warehouse Complex Unit",
-    location: "Butibori, Nagpur",
+    location: "Sanwer Road, Indore",
     price: "₹5.5 Cr",
     type: "industrial",
     area: "20,000 sq ft",
@@ -254,7 +254,7 @@ export default function Properties() {
           />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
+        <div className="relative z-10 max-w-6xl lg:max-w-7xl mx-auto px-6 md:px-8 lg:px-12 xl:px-16">
           <AnimatedSection>
             <div className="text-center mb-12">
               <div className="properties-accent-line h-[2px] w-16 rounded-full mx-auto mb-6" />
@@ -268,7 +268,7 @@ export default function Properties() {
                 Explore <span className="properties-gold-text font-semibold">Properties</span>
               </h1>
               <p className="text-[#4b5563] text-base md:text-lg leading-relaxed max-w-lg mx-auto">
-                Discover premium residential, commercial, and industrial properties handpicked for quality and value.
+              Discover premium residential, commercial, and industrial properties across Indore's prime corridors.
               </p>
             </div>
           </AnimatedSection>
@@ -326,7 +326,7 @@ export default function Properties() {
 
       {/* Properties Grid */}
       <section className="w-full bg-white px-6 md:px-8 lg:px-12 py-10 md:py-16">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl lg:max-w-7xl mx-auto">
           <StaggerContainer
             key={activeFilter}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
@@ -350,7 +350,7 @@ export default function Properties() {
 
       {/* Stats Bar */}
       <section className="w-full bg-[#0E0840] py-12 md:py-16">
-        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
+        <div className="max-w-6xl lg:max-w-7xl mx-auto px-6 md:px-8 lg:px-12 xl:px-16">
           <AnimatedSection>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>

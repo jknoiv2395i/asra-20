@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import {
   AnimatedSection,
@@ -22,9 +23,10 @@ export default function ServicesSection() {
           />
         </svg>
       ),
-      title: "Residential Property",
+      title: "Residential Plots & Apartments",
       description:
-        "Functional design organizes the residential property to meet its use objectives.",
+        "Family homes, rental apartments, or premium villas (800–2000 sqft) in high-demand areas like Super Corridor and MR-5.",
+      link: "/properties",
     },
     {
       icon: (
@@ -41,9 +43,10 @@ export default function ServicesSection() {
           />
         </svg>
       ),
-      title: "Commercial Property",
+      title: "Investment Consulting",
       description:
-        "Functional design structures the commercial property to serve its intended real estate functions.",
+        "Expert advice on high-ROI opportunities near IT hubs (TCS, Infosys). Strong networks with developers and banks for maximum returns.",
+      link: "/contact",
     },
     {
       icon: (
@@ -60,15 +63,16 @@ export default function ServicesSection() {
           />
         </svg>
       ),
-      title: "Industrial Property",
+      title: "Commercial & Industrial",
       description:
-        "Functional design configures the industrial property to support its operational real estate purposes.",
+        "Shops, offices, factories, and warehouses with excellent connectivity along Ujjain Road, Indore Bypass, and Ring Road.",
+      link: "/properties",
     },
   ];
 
   return (
-    <section className="w-full bg-white px-4 md:px-8 lg:px-12 py-8 md:py-10 lg:py-12">
-      <div className="max-w-6xl mx-auto">
+    <section className="w-full bg-white px-4 md:px-8 lg:px-12 xl:px-16 py-8 md:py-10 lg:py-14">
+      <div className="max-w-6xl lg:max-w-7xl mx-auto">
         <AnimatedSection>
           <h2 className="font-instrument text-xl lg:text-3xl text-black mb-8 lg:mb-12 font-normal tracking-tight">
             OUR SERVICES
@@ -78,6 +82,7 @@ export default function ServicesSection() {
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12 lg:mb-16">
           {services.map((service, index) => (
             <AnimatedItem key={index}>
+              <Link to={service.link}>
               <motion.div
                 className="service-card border border-[#C3D5F1] rounded-2xl p-6 lg:p-8 cursor-pointer transition-all duration-300"
                 whileHover={{
@@ -183,6 +188,7 @@ export default function ServicesSection() {
                   </svg>
                 </div>
               </motion.div>
+              </Link>
             </AnimatedItem>
           ))}
         </StaggerContainer>
@@ -190,17 +196,19 @@ export default function ServicesSection() {
         <AnimatedSection delay={0.2}>
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8">
             <p className="text-[#5D5D5D] text-base lg:text-lg leading-7 max-w-2xl">
-              Whether you're looking for your dream home, selling a property, or
-              seeking investment opportunities, our expert team is here to assist
-              you every step of the way.
+              Whether you're buying, selling, or renting — residential plots,
+              commercial spaces, apartments, or industrial land — our expert team
+              delivers personalized guidance to maximize your investment.
             </p>
-            <motion.button
-              className="px-6 md:px-8 py-3 md:py-4 bg-[#131313] text-white text-base lg:text-lg font-medium rounded-full hover:bg-black transition-colors flex-shrink-0"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              View all
-            </motion.button>
+            <Link to="/properties">
+              <motion.button
+                className="px-6 md:px-8 py-3 md:py-4 bg-[#131313] text-white text-base lg:text-lg font-medium rounded-full hover:bg-black transition-colors flex-shrink-0"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                View all
+              </motion.button>
+            </Link>
           </div>
         </AnimatedSection>
       </div>

@@ -71,16 +71,16 @@ export default function ExcellenceSection() {
                       fontWeight: "400",
                     }}
                   >
-                    <h2>We use Real Estate to</h2>
-                    <h2>show our appreciation of</h2>
-                    <p>the world.</p>
+                    <h2>Indore: India's fastest</h2>
+                    <h2>growing city for real</h2>
+                    <p>estate investment.</p>
                   </div>
                 </div>
               </h2>
               <p className="text-[#7B7B7B] text-base md:text-lg leading-[27px]">
-                We provide equity and debt capital globally to back
+                IT hubs (TCS, Infosys), Metro connectivity, Ring Road
                 <br className="hidden md:block" />
-                projects that make an impact.
+                — high ROI, rapid infrastructure growth. Invest now!
               </p>
             </div>
 
@@ -109,12 +109,12 @@ export default function ExcellenceSection() {
                     },
                   }}
                 >
-                  <span style={{ fontWeight: "normal" }}>9</span>
+                  <span style={{ fontWeight: "normal" }}>100+</span>
                 </h3>
                 <p className="text-[#7B7B7B] text-base md:text-lg leading-[27px]">
-                  Years experience in
+                  Successful transactions
                   <br />
-                  real estate
+                  completed
                 </p>
               </div>
               </AnimatedItem>
@@ -130,12 +130,12 @@ export default function ExcellenceSection() {
                     },
                   }}
                 >
-                  <span style={{ fontWeight: "normal" }}>$23K</span>
+                  <span style={{ fontWeight: "normal" }}>5+</span>
                 </h3>
                 <p className="text-[#7B7B7B] text-base md:text-lg leading-[27px]">
-                  Total Net Profit Every
+                  Prime locations
                   <br />
-                  Month
+                  served in Indore
                 </p>
               </div>
               </AnimatedItem>
@@ -151,12 +151,12 @@ export default function ExcellenceSection() {
                     },
                   }}
                 >
-                  <span style={{ fontWeight: "normal" }}>17</span>
+                  <span style={{ fontWeight: "normal" }}>High</span>
                 </h3>
                 <p className="text-[#7B7B7B] text-base md:text-lg leading-[27px]">
-                  Every month a new
+                  ROI potential near
                   <br />
-                  happy customer
+                  IT hubs & Metro
                 </p>
               </div>
               </AnimatedItem>
@@ -172,12 +172,12 @@ export default function ExcellenceSection() {
                     },
                   }}
                 >
-                  <span style={{ fontWeight: "normal" }}>$4K-7K</span>
+                  <span style={{ fontWeight: "normal" }}>100%</span>
                 </h3>
                 <p className="text-[#7B7B7B] text-base md:text-lg leading-[27px]">
-                  Approximate Profit In
+                  Commitment to ethical
                   <br />
-                  20 Business Days
+                  hassle-free deals
                 </p>
               </div>
               </AnimatedItem>

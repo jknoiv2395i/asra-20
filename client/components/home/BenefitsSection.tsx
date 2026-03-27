@@ -42,9 +42,9 @@ export default function BenefitsSection() {
           />
         </svg>
       ),
-      title: "Property Insurance",
+      title: "Verified Property Listings",
       description:
-        "We offer our customer property protection of liability coverage and insurance for their better life.",
+        "Every property is verified before listing. Access genuine deals across Super Corridor, MR-5, Chhota Bangarda, Bypass & Ring Road.",
     },
     {
       icon: (
@@ -87,9 +87,9 @@ export default function BenefitsSection() {
           />
         </svg>
       ),
-      title: "Best Price",
+      title: "Best Prices & Free Consultations",
       description:
-        "Not sure what you should be charging for your property? No need to worry, let us do the numbers for you.",
+        "We negotiate the best market prices. Get free consultations, detailed market analysis, and full legal support for confident decisions.",
     },
     {
       icon: (
@@ -141,22 +141,22 @@ export default function BenefitsSection() {
           />
         </svg>
       ),
-      title: "Lowest Commission",
+      title: "Personalized Guidance in Hindi & English",
       description:
-        "You no longer have to negotiate commissions and haggle with other agents it only cost 2%!",
+        "100+ successful transactions. From site visits to legal paperwork, we guide you in Hindi & English with strong developer and bank networks.",
     },
   ];
 
   return (
     <section
-      className="w-full bg-white px-6 py-8 md:px-8 lg:px-12 md:py-10 lg:py-12"
+      className="w-full bg-white px-6 py-8 md:px-8 lg:px-12 xl:px-16 md:py-10 lg:py-14"
       style={{
         "@media (max-width: 640px)": {
           height: "1070.7px",
         },
       }}
     >
-      <div className="max-w-sm mx-auto md:max-w-2xl lg:max-w-6xl">
+      <div className="max-w-sm mx-auto md:max-w-2xl lg:max-w-7xl">
         {/* Illustration Card */}
         <AnimatedSection>
         <div className="relative bg-black rounded-3xl overflow-hidden mb-12 md:mb-16">
@@ -171,12 +171,12 @@ export default function BenefitsSection() {
             <div className="max-w-xs space-y-4">
               <h2 className="font-instrument text-3xl md:text-4xl font-bold text-white leading-tight">
                 <span style={{ fontWeight: "normal" }}>
-                  The new way to find your new home
+                  Your gateway to prime properties in Indore
                 </span>
               </h2>
               <p className="text-base md:text-lg text-white opacity-70 leading-relaxed">
-                Find your dream place to live in with more than 10k+ properties
-                listed.
+                Explore high-return opportunities across Indore-Ujjain Road and
+                Super Corridor.
               </p>
               <Link to="/contact">
               <button className="mt-4 inline-flex items-center gap-3 bg-white text-black px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all sm:w-[132px] sm:h-[39px] sm:-ml-1 sm:pl-4">

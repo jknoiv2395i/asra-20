@@ -69,9 +69,9 @@ export default function HeroSection() {
             },
           }}
         >
-          Creative Real
+          Asra Real Estate
           <br />
-          Estate Agency
+          Consulting Services
         </motion.h2>
 
         {/* Description */}
@@ -87,9 +87,9 @@ export default function HeroSection() {
             },
           }}
         >
-          Spanty is an international estate company that offers services like
-          propery appraisal as well as the sale, purchase, and investment of
-          real estate.
+          Indore's go-to experts for high-growth real estate. We specialize in
+          buying, selling, renting, and investing across Super Corridor,
+          Indore-Ujjain Road, Chhota Bangarda, Bypass &amp; Ring Road.
         </motion.div>
 
         {/* Form and Services Row */}
@@ -148,7 +148,7 @@ export default function HeroSection() {
                     Location
                   </div>
                   <div className="text-[#191A23] text-sm font-bold leading-[17.5px]">
-                    California, US
+                    Indore, MP
                   </div>
                 </div>
               </div>
@@ -177,7 +177,7 @@ export default function HeroSection() {
                     Price
                   </div>
                   <div className="text-[#191A23] text-[13px] font-bold leading-4">
-                    $1500-$2500
+                    ₹15L–₹2.5Cr
                   </div>
                 </div>
               </div>
@@ -276,7 +276,7 @@ export default function HeroSection() {
                   />
                 </svg>
                 <div className="text-white text-[15px] font-normal leading-[24px] max-w-[189px]">
-                  The price we offer accordance with the quality we provide
+                  Verified listings with best market prices across prime locations
                 </div>
               </div>
 
@@ -306,7 +306,7 @@ export default function HeroSection() {
                   />
                 </svg>
                 <div className="text-white text-[15px] font-normal leading-[24px] max-w-[175px]">
-                  Official legality in the relevant government
+                  End-to-end legal support and documentation
                 </div>
               </div>
             </div>

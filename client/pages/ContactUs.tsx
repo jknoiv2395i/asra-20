@@ -93,7 +93,7 @@ export default function ContactUs() {
           />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
+        <div className="relative z-10 max-w-6xl lg:max-w-7xl mx-auto px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}
           <AnimatedSection>
           <div className="text-center mb-12 md:mb-16">
@@ -213,9 +213,9 @@ export default function ContactUs() {
                   <div>
                     <h3 className="text-[#0E0840] font-medium text-sm mb-1.5">Office Address</h3>
                     <p className="text-[#6b7280] text-sm leading-relaxed">
-                      Bhandara Road, Behind Jk Tower,<br />
-                      Small Factory Area Bagadgangj<br />
-                      Nagpur, Maharashtra - 440008
+                      Super Corridor, Palakhedi<br />
+                      Indore, Madhya Pradesh 453112<br />
+                      India
                     </p>
                   </div>
                 </div>
@@ -237,9 +237,7 @@ export default function ContactUs() {
                   <div>
                     <h3 className="text-[#0E0840] font-medium text-sm mb-1.5">Phone Numbers</h3>
                     <p className="text-[#6b7280] text-sm leading-relaxed">
-                      Office: 7387777085<br />
-                      Mobile: 7387777686<br />
-                      Mobile: 8275046765
+                      Primary: +91 78983 84899
                     </p>
                   </div>
                 </div>
@@ -262,7 +260,7 @@ export default function ContactUs() {
                   <div>
                     <h3 className="text-[#0E0840] font-medium text-sm mb-1.5">Email</h3>
                     <p className="text-[#6b7280] text-sm leading-relaxed">
-                      info@mphdgroup.com
+                      info@asrarealestate.com
                     </p>
                   </div>
                 </div>
@@ -300,20 +298,20 @@ export default function ContactUs() {
       {/* Map Section */}
       <section className="w-full bg-[#f9fafb]">
         <AnimatedSection>
-        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 py-10 md:py-12">
+        <div className="max-w-6xl lg:max-w-7xl mx-auto px-6 md:px-8 lg:px-12 xl:px-16 py-10 md:py-12">
           <h2 className="font-instrument text-[#0E0840] text-xl md:text-2xl font-medium mb-6 text-center">
             Find Us on the Map
           </h2>
           <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm" style={{ height: "400px" }}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.0!2d79.0882!3d21.1458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDA4JzQ0LjkiTiA3OcKwMDUnMTcuNSJF!5e0!3m2!1sen!2sin!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14720.5!2d75.8200!3d22.7650!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd0c2e8b3b5d%3A0x2b2b3e5c8e8f8f8f!2sSuper%20Corridor%2C%20Palakhedi%2C%20Indore%2C%20Madhya%20Pradesh%20453112!5e0!3m2!1sen!2sin!4v1711234567890"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="MPHD Group Office Location"
+              title="Asra Real Estate - Indore Office"
             />
           </div>
         </div>

@@ -79,7 +79,7 @@ export default function CTASection() {
           />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
+        <div className="relative z-10 max-w-6xl lg:max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           {/* Main Content Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left - Text Content */}
@@ -105,7 +105,7 @@ export default function CTASection() {
               {/* Description */}
               <p className="text-[#8a95a8] text-base md:text-lg leading-relaxed max-w-md">
                 Your property goals, our expertise — making real estate simple,
-                secure, and profitable. Let's build your future together.
+                secure, and profitable across Indore's prime corridors.
               </p>
 
               {/* CTA Buttons */}
@@ -207,10 +207,10 @@ export default function CTASection() {
               <div className="grid grid-cols-3 gap-3">
                 <div className="cta-stat-card rounded-xl px-4 py-5 text-center">
                   <p className="cta-gold-text text-2xl md:text-3xl font-semibold font-instrument">
-                    500+
+                    100+
                   </p>
                   <p className="text-white/50 text-xs mt-1.5 tracking-wide">
-                    Properties Sold
+                    Deals Closed
                   </p>
                 </div>
                 <div className="cta-stat-card rounded-xl px-4 py-5 text-center">
@@ -223,10 +223,10 @@ export default function CTASection() {
                 </div>
                 <div className="cta-stat-card rounded-xl px-4 py-5 text-center">
                   <p className="cta-gold-text text-2xl md:text-3xl font-semibold font-instrument">
-                    9yr
+                    Indore
                   </p>
                   <p className="text-white/50 text-xs mt-1.5 tracking-wide">
-                    Experience
+                    Market Focus
                   </p>
                 </div>
               </div>

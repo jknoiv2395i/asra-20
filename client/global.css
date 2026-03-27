@@ -119,3 +119,57 @@
     white-space: pre;
   }
 }
+
+/* ============================================
+   DESKTOP-ONLY ENHANCEMENTS (lg: 1024px+)
+   Mobile layout is UNTOUCHED below 1024px
+   ============================================ */
+
+@media (min-width: 1024px) {
+  /* Widen ALL max-w-6xl and max-w-7xl containers to 1440px */
+  .max-w-6xl,
+  .lg\:max-w-7xl {
+    max-width: 1440px !important;
+  }
+
+  /* Wider horizontal padding on all sections */
+  section {
+    padding-left: max(2rem, calc((100vw - 1440px) / 2 + 2rem));
+    padding-right: max(2rem, calc((100vw - 1440px) / 2 + 2rem));
+  }
+
+  /* Header desktop improvements */
+  header > div {
+    padding-left: max(2rem, calc((100vw - 1500px) / 2));
+    padding-right: max(2rem, calc((100vw - 1500px) / 2));
+  }
+
+  /* Footer desktop improvements */
+  footer {
+    padding-left: max(2rem, calc((100vw - 1440px) / 2 + 2rem));
+    padding-right: max(2rem, calc((100vw - 1440px) / 2 + 2rem));
+  }
+}
+
+@media (min-width: 1440px) {
+  /* On very wide screens, add even more breathing room */
+  .max-w-6xl,
+  .lg\:max-w-7xl {
+    max-width: 1400px !important;
+  }
+
+  section {
+    padding-left: max(3rem, calc((100vw - 1400px) / 2));
+    padding-right: max(3rem, calc((100vw - 1400px) / 2));
+  }
+
+  header > div {
+    padding-left: max(3rem, calc((100vw - 1500px) / 2));
+    padding-right: max(3rem, calc((100vw - 1500px) / 2));
+  }
+
+  footer {
+    padding-left: max(3rem, calc((100vw - 1400px) / 2));
+    padding-right: max(3rem, calc((100vw - 1400px) / 2));
+  }
+}

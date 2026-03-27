@@ -10,38 +10,38 @@ export default function FAQSection() {
   const faqs = [
     {
       question:
-        "What makes Asra real estate different in the real estate industry?",
+        "What areas does Asra Real Estate specialize in?",
       answer:
-        "Asra real estate brings innovative thinking and cutting-edge technology to real estate services. We combine professional expertise with personalized service, ensuring every client receives tailored solutions for their unique property needs.",
+        "We specialize in real estate consulting across Indore's hottest growth corridors — Indore-Ujjain Road and Super Corridor. These areas are experiencing rapid development with excellent appreciation potential for residential, commercial, and industrial properties.",
     },
     {
-      question: "What types of properties does Asra real estate specialize in?",
+      question: "What types of properties does Asra handle?",
       answer:
-        "We specialize in residential, commercial, industrial, and agricultural properties. Whether you're looking to buy, sell, rent, or invest, our diverse portfolio and expert team can guide you through every type of real estate transaction.",
-    },
-    {
-      question:
-        "How does Asra real estate ensure transparency in property transactions?",
-      answer:
-        "Transparency is at the core of our operations. We provide detailed property reports, clear documentation, legal verification, and regular communication throughout the transaction process to ensure our clients make informed decisions.",
+        "We cover a wide range: residential plots, modern apartments, commercial spaces, industrial land, and large land parcels for developers. Whether you're buying, selling, or renting, we provide end-to-end support.",
     },
     {
       question:
-        "What support does Asra real estate provide for first-time property buyers?",
+        "Do you offer free consultations?",
       answer:
-        "For first-time buyers, we offer comprehensive guidance including market analysis, financing assistance, legal documentation support, and property inspection services. Our team walks you through each step of the buying process.",
+        "Yes! We offer free consultations and market analysis for every client. Our team provides data-driven insights into Indore's real estate market to help you make informed investment decisions.",
     },
     {
       question:
-        "Does Asra real estate offer investment consultation for real estate?",
+        "Is Asra Real Estate based in Indore?",
       answer:
-        "Yes, Asra real estate provides professional investment consulting to help clients identify promising property investments with strong appreciation potential. We analyze market trends and provide data-driven recommendations for your real estate portfolio.",
+        "We are based in Bhopal with a sharp focus on Indore's real estate market. Our deep local knowledge of Indore-Ujjain Road and Super Corridor areas ensures you get access to the best deals and exclusive opportunities.",
+    },
+    {
+      question:
+        "What support do first-time buyers get from Asra?",
+      answer:
+        "First-time buyers get comprehensive guidance including site visits, market analysis, financing assistance, legal documentation support, and end-to-end paperwork handling. We support in both Hindi and English for a hassle-free experience.",
     },
   ];
 
   return (
     <section className="w-full bg-white px-4 md:px-8 py-8 md:py-10 lg:py-12">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+      <div className="max-w-6xl lg:max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
         {/* Left Content */}
         <AnimatedSection>
         <div>

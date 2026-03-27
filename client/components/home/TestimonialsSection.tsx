@@ -4,35 +4,35 @@ import { AnimatedSection } from "@/components/animations/AnimatedSection";
 
 const testimonials = [
   {
-    text: "I had the pleasure of working with ABC Realty to find my dream home, and I couldn't be happier with the entire experience.",
+    text: "Highly professional service and genuine deals. Helped me find the perfect investment property in Super Corridor, Indore.",
     fullText:
-      "From the moment I walked into their office, I felt welcomed and supported by their friendly team.",
-    name: "Sarah M.",
-    role: "Property consultation",
+      "Their market knowledge of Indore's growth corridors is unmatched. I'm confident my investment will yield great returns.",
+    name: "Rajesh K.",
+    role: "Property Investor",
     image:
       "https://api.builder.io/api/v1/image/assets/TEMP/e712ba1143c3cc4c9975370b692ef552547a4710?width=80",
     rating: 5,
   },
   {
-    text: "Once we found the perfect home, Sarah guided me through every step of the buying process, making it feel effortless on my part. She was an excellent negotiator, and thanks to her skills, I was able to secure a fantastic deal on my new home.",
-    name: "Esther Howard",
-    role: "Property consultation",
+    text: "Best real estate consultant in Indore. Transparent and trustworthy. They guided me through every step of purchasing my plot on MR-5 Road.",
+    name: "Priya T.",
+    role: "First-Time Buyer",
     image:
       "https://api.builder.io/api/v1/image/assets/TEMP/9a4f23260f560598daa941dfe6d07724045e970b?width=80",
     rating: 5,
   },
   {
-    text: "Working with MPHD Group has been a wonderful experience. Their attention to detail and customer service is exceptional.",
-    name: "Shailesh Shende",
-    role: "Real Estate Consultant",
+    text: "Working with Asra Real Estate has been a wonderful experience. Their attention to detail and personalized investment guidance is exceptional.",
+    name: "Amit Verma",
+    role: "Real Estate Investor",
     image:
       "https://api.builder.io/api/v1/image/assets/TEMP/14adce6b0a461ffa324a134f2741062c7cb6b979?width=80",
     rating: 5,
   },
   {
-    text: "Excellent work with proper co-ordination, helpful regards the communication must view. Best services & very good co operative nature.",
-    name: "Golu Chute",
-    role: "Marketing Manager",
+    text: "Excellent work with proper co-ordination. Found a great commercial plot on Ujjain Road through Asra. Best services & very co-operative team.",
+    name: "Suresh M.",
+    role: "Business Owner",
     image:
       "https://api.builder.io/api/v1/image/assets/TEMP/5ad1368ab179fbbf05be0d8e1d4555d07145fed4?width=80",
     rating: 5,

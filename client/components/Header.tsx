@@ -6,18 +6,18 @@ export default function Header() {
 
   return (
     <header className="w-full absolute top-0 left-0 z-50 bg-transparent">
-      <div className="w-full px-4 md:px-8 lg:px-12 py-4 md:py-0 flex items-center justify-between h-20 md:h-24">
+      <div className="w-full px-4 md:px-8 lg:px-12 xl:px-16 py-4 md:py-0 flex items-center justify-between h-20 md:h-24 lg:h-28">
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
             src="/asra-logo.png"
             alt="ASRA Real Estate Consulting Services Logo"
-            className="h-[60px] w-auto sm:h-[50px] sm:w-auto"
+            className="h-[60px] w-auto sm:h-[50px] sm:w-auto lg:h-[65px]"
           />
         </Link>
 
         {/* Navigation */}
-        <nav className="hidden md:flex items-center md:gap-6 lg:gap-8">
+        <nav className="hidden md:flex items-center md:gap-6 lg:gap-10 xl:gap-12">
           <Link
             to="/"
             className="text-gray-600 hover:text-[#0E0840] text-sm lg:text-base font-normal transition-colors duration-200"

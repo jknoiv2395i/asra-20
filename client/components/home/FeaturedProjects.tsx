@@ -35,7 +35,7 @@ export default function FeaturedProjects() {
         },
       }}
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl lg:max-w-7xl mx-auto">
         <AnimatedSection>
           <h2
             className="font-instrument text-2xl md:text-4xl lg:text-5xl leading-tight text-black text-center mb-8 md:mb-12 lg:mb-16 tracking-tight"

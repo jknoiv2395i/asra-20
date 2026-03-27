@@ -56,8 +56,9 @@ export default function IntroSection() {
             margin: "0 auto",
           }}
         >
-          We craft inspiring spaces that blend cutting-edge design with enduring
-          functionality, turning your vision into reality.
+          Based in Indore with deep roots in Bhopal, we deliver verified deals,
+          free consultations, and maximum ROI across Indore's hottest growth
+          corridors — Super Corridor, Indore-Ujjain Road, and Ring Road.
         </div>
       </AnimatedSection>
     </>

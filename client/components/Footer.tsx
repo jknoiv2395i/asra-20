@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#131313] px-4 py-20 lg:py-24">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-start gap-12 mb-12 lg:mb-16">
+    <footer className="w-full bg-[#131313] px-4 py-20 lg:py-24 xl:px-16">
+      <div className="max-w-6xl lg:max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-start gap-12 mb-12 lg:mb-16">
         {/* Logo and Description */}
         <div className="max-w-md">
           <img
@@ -12,13 +12,17 @@ export default function Footer() {
             className="h-[70px] w-auto mb-4"
           />
           <p className="text-[#B7B7B7] text-lg leading-relaxed">
-            Bring your architectural projects to life with a template that puts
-            your work front and center.
+            Your trusted real estate partner in Indore. Verified listings, best
+            prices, and personalized investment guidance across Super Corridor,
+            MR-5, and Ujjain Road.
+          </p>
+          <p className="text-[#B7B7B7] text-sm mt-3">
+            +91 78983 84899
           </p>
         </div>
 
         {/* Footer Navigation */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 flex-1">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 flex-1">
           {/* Company */}
           <div>
             <h4 className="font-instrument text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
@@ -43,241 +47,74 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/contact"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/service-areas"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  Service Areas
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Property Types */}
-          <div>
-            <h4 className="font-instrument text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
-              Property Types
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/buy-residential"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  Buy Residential
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/2bhk-flats"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  2BHK Flats
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/3bhk-apartments"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  3BHK Apartments
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/luxury-properties"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  Luxury Properties
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/affordable-flats"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  Affordable Flats
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Categories */}
-          <div>
-            <h4 className="font-instrument text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
-              Categories
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <Link
                   to="/properties"
                   className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
-                  All Properties
+                  Properties
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/residential"
+                  to="/contact"
                   className="text-white/90 text-sm hover:text-white transition-colors duration-200"
                 >
-                  Residential
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/commercial"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  Commercial
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/industrial"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  Industrial
+                  Contact Us
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Rentals */}
+          {/* Our Services */}
           <div>
             <h4 className="font-instrument text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
-              Rentals
+              Our Services
             </h4>
             <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/residential-rentals"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  Residential Rentals
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/commercial-rentals"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  Commercial Rentals
-                </Link>
-              </li>
+              <li className="text-white/90 text-sm">Plot Buying & Selling</li>
+              <li className="text-white/90 text-sm">Investment Consulting</li>
+              <li className="text-white/90 text-sm">Residential Properties</li>
+              <li className="text-white/90 text-sm">Commercial & Industrial</li>
+              <li className="text-white/90 text-sm">Farm Land</li>
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Prime Locations */}
           <div>
             <h4 className="font-instrument text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
-              Resources
+              Prime Locations
             </h4>
             <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/services"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/projects"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/the-brandt"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  The Brandt
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/blog"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/ai-assistant"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  AI Assistant
-                </Link>
-              </li>
+              <li className="text-white/90 text-sm">Super Corridor</li>
+              <li className="text-white/90 text-sm">MR-5 Road</li>
+              <li className="text-white/90 text-sm">Ujjain Road</li>
+              <li className="text-white/90 text-sm">Chhota Bangarda</li>
+              <li className="text-white/90 text-sm">Indore Bypass & Ring Road</li>
             </ul>
           </div>
 
-          {/* Local Pages */}
-          <div className="col-span-2 md:col-span-1">
+          {/* Contact Info */}
+          <div>
             <h4 className="font-instrument text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
-              Local Pages
+              Contact Info
             </h4>
             <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/residential-440008"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  Residential 440008
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/commercial-440008"
-                  className="text-white/90 text-sm hover:text-white transition-colors duration-200"
-                >
-                  Commercial 440008
-                </Link>
-              </li>
+              <li className="text-white/90 text-sm">+91 78983 84899</li>
+              <li className="text-white/90 text-sm">info@asrarealestate.com</li>
+              <li className="text-white/90 text-sm">Super Corridor, Palakhedi, Indore 453112</li>
             </ul>
           </div>
         </div>
       </div>
 
       {/* Contact Information */}
-      <div className="max-w-6xl mx-auto border-t border-white/10 pt-8 md:pt-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-          <div>
-            <p className="text-[#989898] text-lg leading-relaxed">
-              <strong className="font-bold">Office Address</strong>
-              <br />
-              Bhandara Road, Behind Jk Tower, Small Factory Area Bagadgangj
-              Nagper Maharashtra-2440008
-            </p>
-          </div>
-          <div>
-            <p className="text-[#989898] text-lg leading-relaxed">
-              <strong className="font-bold">Phone Number</strong>
-              <br />
-              office: 7387777085
-              <br />
-              Mobile:-7387777686/8275046765
-            </p>
-          </div>
-          <div>
-            <p className="text-[#989898] text-lg leading-relaxed">
-              <strong className="font-bold">EMAIL</strong>
-              <br />
-              info@mphdgroup.com
-            </p>
-          </div>
+      <div className="max-w-6xl lg:max-w-7xl mx-auto border-t border-white/10 pt-8 md:pt-12">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-[#989898] text-sm">
+            © 2025 Asra Real Estate Consulting Services. All rights reserved.
+          </p>
+          <p className="text-[#989898] text-sm">
+            Indore 453112 &nbsp;|&nbsp; +91 78983 84899 &nbsp;|&nbsp; info@asrarealestate.com
+          </p>
         </div>
       </div>
     </footer>
