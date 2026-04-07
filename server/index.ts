@@ -1,7 +1,11 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
+import path from "path";
 import { handleDemo } from "./routes/demo";
+import { handleLogin } from "./routes/auth";
+import propertiesRouter from "./routes/properties";
+import uploadRouter from "./routes/upload";
 
 export function createServer() {
   const app = express();
@@ -11,13 +15,24 @@ export function createServer() {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
 
-  // Example API routes
+  // Serve uploaded files statically
+  app.use("/uploads", express.static(path.join(process.cwd(), "public", "uploads")));
+
+  // Public API routes
   app.get("/api/ping", (_req, res) => {
     const ping = process.env.PING_MESSAGE ?? "ping";
     res.json({ message: ping });
   });
-
   app.get("/api/demo", handleDemo);
+
+  // Auth routes
+  app.post("/api/admin/login", handleLogin);
+
+  // Property CRUD routes
+  app.use("/api/properties", propertiesRouter);
+
+  // Upload routes
+  app.use("/api/upload", uploadRouter);
 
   return app;
 }

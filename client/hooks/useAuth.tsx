@@ -1,0 +1,82 @@
+import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+
+interface AuthContextType {
+  isAuthenticated: boolean;
+  token: string | null;
+  login: (token: string) => void;
+  logout: () => void;
+}
+
+const AuthContext = createContext<AuthContextType>({
+  isAuthenticated: false,
+  token: null,
+  login: () => {},
+  logout: () => {},
+});
+
+export function AuthProvider({ children }: { children: ReactNode }) {
+  const [token, setToken] = useState<string | null>(() => {
+    return localStorage.getItem("admin_token");
+  });
+
+  const isAuthenticated = !!token;
+
+  const login = (newToken: string) => {
+    localStorage.setItem("admin_token", newToken);
+    setToken(newToken);
+  };
+
+  const logout = () => {
+    localStorage.removeItem("admin_token");
+    setToken(null);
+  };
+
+  // Verify token is still valid on mount
+  useEffect(() => {
+    if (token) {
+      fetch("/api/properties", {
+        headers: { Authorization: `Bearer ${token}` },
+      }).catch(() => {
+        logout();
+      });
+    }
+  }, []);
+
+  return (
+    <AuthContext.Provider value={{ isAuthenticated, token, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
+}
+
+export function useAuth() {
+  return useContext(AuthContext);
+}
+
+// API helper that auto-attaches auth token
+export function useAuthFetch() {
+  const { token, logout } = useAuth();
+
+  return async (url: string, options: RequestInit = {}) => {
+    const headers: Record<string, string> = {
+      ...((options.headers as Record<string, string>) || {}),
+    };
+
+    if (token) {
+      headers["Authorization"] = `Bearer ${token}`;
+    }
+
+    // Only set Content-Type for non-FormData requests
+    if (!(options.body instanceof FormData)) {
+      headers["Content-Type"] = "application/json";
+    }
+
+    const response = await fetch(url, { ...options, headers });
+
+    if (response.status === 401) {
+      logout();
+    }
+
+    return response;
+  };
+}

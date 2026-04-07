@@ -112,9 +112,18 @@ export default function Footer() {
           <p className="text-[#989898] text-sm">
             © 2025 Asra Real Estate Consulting Services. All rights reserved.
           </p>
-          <p className="text-[#989898] text-sm">
-            Indore 453112 &nbsp;|&nbsp; +91 78983 84899 &nbsp;|&nbsp; info@asrarealestate.com
-          </p>
+          <div className="flex items-center gap-3">
+            <p className="text-[#989898] text-sm">
+              Indore 453112 &nbsp;|&nbsp; +91 78983 84899 &nbsp;|&nbsp; info@asrarealestate.com
+            </p>
+            <Link
+              to="/admin/login"
+              className="text-white/[0.12] hover:text-white/40 transition-colors text-[10px]"
+              title=""
+            >
+              ●
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

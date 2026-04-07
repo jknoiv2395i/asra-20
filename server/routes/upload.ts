@@ -1,0 +1,79 @@
+import { Router } from "express";
+import multer from "multer";
+import path from "path";
+import fs from "fs";
+import { v4 as uuidv4 } from "uuid";
+import { verifyAdmin } from "../middleware/auth";
+
+const router = Router();
+
+// Ensure uploads directory exists
+const UPLOADS_DIR = path.join(process.cwd(), "public", "uploads");
+if (!fs.existsSync(UPLOADS_DIR)) {
+  fs.mkdirSync(UPLOADS_DIR, { recursive: true });
+}
+
+// Multer config
+const storage = multer.diskStorage({
+  destination: (_req, _file, cb) => {
+    cb(null, UPLOADS_DIR);
+  },
+  filename: (_req, file, cb) => {
+    const ext = path.extname(file.originalname);
+    const uniqueName = `${uuidv4()}${ext}`;
+    cb(null, uniqueName);
+  },
+});
+
+const upload = multer({
+  storage,
+  limits: {
+    fileSize: 50 * 1024 * 1024, // 50MB max per file
+  },
+  fileFilter: (_req, file, cb) => {
+    const allowedImageTypes = ["image/jpeg", "image/png", "image/webp", "image/gif"];
+    const allowedVideoTypes = ["video/mp4", "video/webm", "video/quicktime"];
+    const allowed = [...allowedImageTypes, ...allowedVideoTypes];
+
+    if (allowed.includes(file.mimetype)) {
+      cb(null, true);
+    } else {
+      cb(new Error(`File type not supported: ${file.mimetype}`));
+    }
+  },
+});
+
+// POST /api/upload — Admin: upload multiple files
+router.post("/", verifyAdmin, upload.array("files", 20), (req, res) => {
+  const files = req.files as Express.Multer.File[];
+
+  if (!files || files.length === 0) {
+    res.status(400).json({ success: false, error: "No files uploaded" });
+    return;
+  }
+
+  const urls = files.map((f) => `/uploads/${f.filename}`);
+
+  res.json({
+    success: true,
+    data: {
+      urls,
+      count: files.length,
+    },
+  });
+});
+
+// DELETE /api/upload/:filename — Admin: delete a file
+router.delete("/:filename", verifyAdmin, (req, res) => {
+  const filePath = path.join(UPLOADS_DIR, req.params.filename);
+
+  if (!fs.existsSync(filePath)) {
+    res.status(404).json({ success: false, error: "File not found" });
+    return;
+  }
+
+  fs.unlinkSync(filePath);
+  res.json({ success: true, data: { message: "File deleted" } });
+});
+
+export default router;
