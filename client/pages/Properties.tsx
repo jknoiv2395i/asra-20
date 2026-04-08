@@ -251,16 +251,21 @@ export default function Properties() {
               ))}
             </div>
           ) : (
-            <StaggerContainer
+            <div
               key={activeFilter}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
             >
-              {filteredProperties.map((property) => (
-                <AnimatedItem key={property.id}>
+              {filteredProperties.map((property, idx) => (
+                <motion.div
+                  key={property.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: idx * 0.1, duration: 0.5 }}
+                >
                   <PropertyCard property={property} />
-                </AnimatedItem>
+                </motion.div>
               ))}
-            </StaggerContainer>
+            </div>
           )}
 
           {!loading && filteredProperties.length === 0 && (
