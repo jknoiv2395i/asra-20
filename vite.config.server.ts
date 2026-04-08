@@ -32,6 +32,11 @@ export default defineConfig({
         // External dependencies that should not be bundled
         "express",
         "cors",
+        "jsonwebtoken",
+        "multer",
+        "uuid",
+        "dotenv",
+        "dotenv/config",
       ],
       output: {
         format: "es",

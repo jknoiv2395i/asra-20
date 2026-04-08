@@ -1,24 +1,5 @@
 [
   {
-    "id": "prop-001",
-    "title": "Forest Retreat Villa",
-    "location": "Indore-Ujjain Road, Indore",
-    "price": "₹45 Lakh",
-    "type": "residential",
-    "beds": 4,
-    "baths": 3,
-    "area": "2,800 sq ft",
-    "tag": "Featured",
-    "description": "A luxurious 4-bedroom villa surrounded by lush greenery on Indore-Ujjain Road. Perfect for families seeking a premium lifestyle with modern amenities, landscaped gardens, and excellent connectivity to schools and hospitals.",
-    "images": [
-      "https://api.builder.io/api/v1/image/assets/TEMP/f9294423c5aad854317c1b8f2ce93fa9d31a0933?width=712"
-    ],
-    "videos": [],
-    "featured": true,
-    "createdAt": "2025-12-01T10:00:00Z",
-    "updatedAt": "2025-12-01T10:00:00Z"
-  },
-  {
     "id": "prop-002",
     "title": "Woodland Heights Apartment",
     "location": "MR-5 Road, Indore",
@@ -29,29 +10,15 @@
     "area": "1,650 sq ft",
     "description": "Modern 3BHK apartment on MR-5 Road with excellent ventilation, modular kitchen, and parking. Close to IT hubs and metro station. Ideal for working professionals and young families.",
     "images": [
-      "https://api.builder.io/api/v1/image/assets/TEMP/bab3c32ceeb7ebac77c03707ae7f7e41b7732007?width=712"
+      "https://api.builder.io/api/v1/image/assets/TEMP/bab3c32ceeb7ebac77c03707ae7f7e41b7732007?width=712",
+      "/uploads/b29acc10-ebd6-4714-87be-bf64f8447645.png",
+      "/uploads/b45d0d2b-3cd2-4bf5-b12b-64ca780232c5.png"
     ],
     "videos": [],
     "featured": false,
     "createdAt": "2025-11-15T10:00:00Z",
-    "updatedAt": "2025-11-15T10:00:00Z"
-  },
-  {
-    "id": "prop-003",
-    "title": "Harmony Business Centre",
-    "location": "Vijay Nagar, Indore",
-    "price": "₹2.5 Cr",
-    "type": "commercial",
-    "area": "5,200 sq ft",
-    "tag": "New",
-    "description": "Premium commercial space in Vijay Nagar, one of Indore's busiest commercial areas. Features modern architecture, ample parking, high-speed elevator access, and prime road visibility. Perfect for offices, retail chains, or co-working spaces.",
-    "images": [
-      "https://api.builder.io/api/v1/image/assets/TEMP/a743906f7efa3f52462098d0c43e9d94f22a2d7c?width=712"
-    ],
-    "videos": [],
-    "featured": true,
-    "createdAt": "2025-11-10T10:00:00Z",
-    "updatedAt": "2025-11-10T10:00:00Z"
+    "updatedAt": "2026-04-08T07:47:07.266Z",
+    "tag": ""
   },
   {
     "id": "prop-004",
@@ -155,22 +122,5 @@
     "featured": false,
     "createdAt": "2025-08-01T10:00:00Z",
     "updatedAt": "2025-08-01T10:00:00Z"
-  },
-  {
-    "id": "e29de267-b33b-4463-8261-64613055d179",
-    "title": "fg",
-    "location": "f",
-    "price": "866",
-    "type": "commercial",
-    "area": "sdfsf",
-    "tag": "",
-    "description": "",
-    "images": [
-      "/uploads/d25ff305-7ee8-4447-b203-21428a40f333.png"
-    ],
-    "videos": [],
-    "featured": true,
-    "createdAt": "2026-04-08T07:24:59.548Z",
-    "updatedAt": "2026-04-08T07:24:59.548Z"
   }
 ]

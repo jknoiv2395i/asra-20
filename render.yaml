@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: asra-realestate
+    runtime: node
+    buildCommand: pnpm install && pnpm build
+    startCommand: pnpm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ADMIN_PASSWORD
+        value: asra2024
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PORT
+        value: 8080
