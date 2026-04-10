@@ -6,6 +6,7 @@ import { handleDemo } from "./routes/demo";
 import { handleLogin } from "./routes/auth";
 import propertiesRouter from "./routes/properties";
 import uploadRouter from "./routes/upload";
+import contentRouter from "./routes/content";
 
 export function createServer() {
   const app = express();
@@ -33,6 +34,9 @@ export function createServer() {
 
   // Upload routes
   app.use("/api/upload", uploadRouter);
+
+  // Site Content CMS Routes
+  app.use("/api/content", contentRouter);
 
   return app;
 }

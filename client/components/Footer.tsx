@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useContent } from "@/hooks/useContent";
 
 export default function Footer() {
+  const { content } = useContent();
   return (
     <footer className="w-full bg-[#131313] px-4 py-20 lg:py-24 xl:px-16">
       <div className="max-w-6xl lg:max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-start gap-12 mb-12 lg:mb-16">
@@ -17,7 +19,7 @@ export default function Footer() {
             MR-5, and Ujjain Road.
           </p>
           <p className="text-[#B7B7B7] text-sm mt-3">
-            +91 78983 84899
+            {content?.contact.phone || "+91 78983 84899"}
           </p>
         </div>
 
@@ -98,9 +100,9 @@ export default function Footer() {
               Contact Info
             </h4>
             <ul className="space-y-3">
-              <li className="text-white/90 text-sm">+91 78983 84899</li>
-              <li className="text-white/90 text-sm">info@asrarealestate.com</li>
-              <li className="text-white/90 text-sm">Super Corridor, Palakhedi, Indore 453112</li>
+              <li className="text-white/90 text-sm">{content?.contact.phone || "+91 78983 84899"}</li>
+              <li className="text-white/90 text-sm">{content?.contact.email || "info@asrarealestate.com"}</li>
+              <li className="text-white/90 text-sm">{content?.contact.address || "Super Corridor, Palakhedi, Indore 453112"}</li>
             </ul>
           </div>
         </div>
@@ -114,7 +116,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-3">
             <p className="text-[#989898] text-sm">
-              Indore 453112 &nbsp;|&nbsp; +91 78983 84899 &nbsp;|&nbsp; info@asrarealestate.com
+              {content?.contact.address?.split(",").pop()} &nbsp;|&nbsp; {content?.contact.phone || "+91 78983 84899"} &nbsp;|&nbsp; {content?.contact.email || "info@asrarealestate.com"}
             </p>
             <Link
               to="/admin/login"

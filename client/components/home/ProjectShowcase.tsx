@@ -61,12 +61,7 @@ export default function ProjectShowcase() {
 
   return (
     <section
-      className="w-full bg-white px-4 md:px-8 lg:px-20 py-8 md:py-10 lg:py-12"
-      style={{
-        "@media (max-width: 640px)": {
-          height: "725.9px",
-        },
-      }}
+      className="w-full bg-white px-4 md:px-8 lg:px-20 py-8 md:py-10 lg:py-12 max-sm:h-[725.9px]"
     >
       <div className="max-w-[1440px] mx-auto">
         {/* Header Section */}
@@ -77,12 +72,7 @@ export default function ProjectShowcase() {
           {/* Main Heading */}
           <AnimatedSection>
           <h2
-            className="font-instrument text-center text-[#010101] text-3xl md:text-5xl lg:text-[69px] font-normal lg:leading-[77px] tracking-tight lg:tracking-[-3.8px] capitalize max-w-4xl"
-            style={{
-              "@media (max-width: 640px)": {
-                width: "320px",
-              },
-            }}
+            className="font-instrument text-center text-[#010101] text-3xl md:text-5xl lg:text-[69px] font-normal lg:leading-[77px] tracking-tight lg:tracking-[-3.8px] capitalize max-w-4xl max-sm:w-[320px]"
           >
             If you're in need of{" "}
             <span className="font-medium text-[#33A4BB]">rental</span> services

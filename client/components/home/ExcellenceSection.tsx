@@ -21,12 +21,7 @@ export default function ExcellenceSection() {
         }
       `}</style>
       <section
-        className="w-full bg-white px-4 md:px-8 lg:px-[137px] pt-4 md:pt-6 lg:pt-8 pb-8 md:pb-10 lg:pb-12"
-        style={{
-          "@media (max-width: 640px)": {
-            height: "719.5px",
-          },
-        }}
+        className="w-full bg-white px-4 md:px-8 lg:px-[137px] pt-4 md:pt-6 lg:pt-8 pb-8 md:pb-10 lg:pb-12 max-sm:h-[719.5px]"
       >
         <div className="max-w-[1440px] mx-auto">
           {/* Heading and CTA */}
@@ -35,36 +30,13 @@ export default function ExcellenceSection() {
             {/* Text Content */}
             <div className="flex flex-col gap-[17px]">
               <h2
-                className="font-instrument text-[#2B0A01] font-bold text-3xl md:text-4xl lg:text-[48px] leading-[1.17] tracking-[-2.118px]"
-                style={{
-                  "@media (max-width: 640px)": {
-                    letterSpacing: "-1.1px",
-                  },
-                }}
+                className="font-instrument text-[#2B0A01] font-bold text-3xl md:text-4xl lg:text-[48px] leading-[1.17] tracking-[-2.118px] max-sm:tracking-[-1.1px]"
               >
-                <div
-                  style={{
-                    "@media (max-width: 640px)": {
-                      color: "#000000",
-                    },
-                  }}
-                />
+                <div className="max-sm:text-black" />
                 <br />
-                <div
-                  style={{
-                    "@media (max-width: 640px)": {
-                      color: "rgba(0, 0, 0, 1)",
-                    },
-                  }}
-                />
+                <div className="max-sm:text-black" />
                 <br />
-                <div
-                  style={{
-                    "@media (max-width: 640px)": {
-                      color: "rgba(0, 0, 0, 1)",
-                    },
-                  }}
-                >
+                <div className="max-sm:text-black">
                   <div
                     style={{
                       display: "inline",
@@ -102,12 +74,7 @@ export default function ExcellenceSection() {
               <AnimatedItem>
               <div className="flex flex-col gap-[10px] pr-8 md:pr-12 lg:pr-20 pb-8 md:pb-12">
                 <h3
-                  className="font-instrument text-[#401408] font-semibold text-4xl md:text-5xl leading-[60px]"
-                  style={{
-                    "@media (max-width: 640px)": {
-                      color: "rgba(0, 0, 0, 1)",
-                    },
-                  }}
+                  className="font-instrument text-[#401408] font-semibold text-4xl md:text-5xl leading-[60px] max-sm:text-black"
                 >
                   <span style={{ fontWeight: "normal" }}>100+</span>
                 </h3>
@@ -123,12 +90,7 @@ export default function ExcellenceSection() {
               <AnimatedItem>
               <div className="flex flex-col gap-[10px] pr-8 md:pr-12 lg:pr-20 pb-8 md:pb-12">
                 <h3
-                  className="font-instrument text-[#401408] font-semibold text-4xl md:text-5xl leading-[60px]"
-                  style={{
-                    "@media (max-width: 640px)": {
-                      color: "rgba(0, 0, 0, 1)",
-                    },
-                  }}
+                  className="font-instrument text-[#401408] font-semibold text-4xl md:text-5xl leading-[60px] max-sm:text-black"
                 >
                   <span style={{ fontWeight: "normal" }}>5+</span>
                 </h3>
@@ -144,12 +106,7 @@ export default function ExcellenceSection() {
               <AnimatedItem>
               <div className="flex flex-col gap-[10px] pr-8 md:pr-12 lg:pr-20 pb-8 md:pb-12">
                 <h3
-                  className="font-instrument text-[#401408] font-semibold text-4xl md:text-5xl leading-[60px]"
-                  style={{
-                    "@media (max-width: 640px)": {
-                      color: "rgba(0, 0, 0, 1)",
-                    },
-                  }}
+                  className="font-instrument text-[#401408] font-semibold text-4xl md:text-5xl leading-[60px] max-sm:text-black"
                 >
                   <span style={{ fontWeight: "normal" }}>High</span>
                 </h3>
@@ -165,12 +122,7 @@ export default function ExcellenceSection() {
               <AnimatedItem>
               <div className="flex flex-col gap-[10px] pr-8 md:pr-12 lg:pr-20 pb-8 md:pb-12">
                 <h3
-                  className="font-instrument text-[#401408] font-semibold text-4xl md:text-5xl leading-[60px]"
-                  style={{
-                    "@media (max-width: 640px)": {
-                      color: "rgba(0, 0, 0, 1)",
-                    },
-                  }}
+                  className="font-instrument text-[#401408] font-semibold text-4xl md:text-5xl leading-[60px] max-sm:text-black"
                 >
                   <span style={{ fontWeight: "normal" }}>100%</span>
                 </h3>

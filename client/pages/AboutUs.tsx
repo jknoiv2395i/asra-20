@@ -6,6 +6,7 @@ import {
   StaggerContainer,
   AnimatedItem,
 } from "@/components/animations/AnimatedSection";
+import { useContent } from "@/hooks/useContent";
 
 const stats = [
   { number: "100+", label: "Successful Transactions" },
@@ -70,6 +71,7 @@ const milestones = [
 ];
 
 export default function AboutUs() {
+  const { content } = useContent();
   return (
     <Layout>
       <style>{`
@@ -141,10 +143,12 @@ export default function AboutUs() {
                 Who We Are
               </p>
               <h1 className="font-instrument text-4xl md:text-6xl lg:text-[64px] font-normal leading-tight tracking-[-0.02em] text-[#0E0840] mb-4">
-                About <span className="about-gold-text font-semibold">ASRA</span>
+                {content?.about.title || (
+                  <>About <span className="about-gold-text font-semibold">ASRA</span></>
+                )}
               </h1>
               <p className="text-[#4b5563] text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                Indore's go-to experts for high-growth real estate. From residential plots to commercial spaces and industrial land — we deliver verified deals, free consultations, and maximum ROI.
+                {content?.about.mission || "Indore's go-to experts for high-growth real estate. From residential plots to commercial spaces and industrial land — we deliver verified deals, free consultations, and maximum ROI."}
               </p>
             </div>
           </AnimatedSection>
@@ -169,13 +173,7 @@ export default function AboutUs() {
                 </h2>
                 <div className="space-y-4 text-[#4b5563] text-base leading-relaxed">
                   <p>
-                    Since our founding, Asra has built dreams through ethical, hassle-free service. Based in Indore with deep roots in Bhopal, we are led by seasoned consultants who prioritize transparency and client success in Indore's dynamic real estate market.
-                  </p>
-                  <p>
-                    We specialize in buying, selling, renting, and investing across hotspots like Super Corridor, Indore-Ujjain Road (MR-5), Chhota Bangarda, Indore Bypass, and Ring Road. From residential plots and apartments to commercial spaces, industrial land, and large parcels for developers — we deliver verified deals, free consultations, and maximum ROI.
-                  </p>
-                  <p>
-                    Indore is India's fastest-growing city with IT hubs (TCS, Infosys), metro connectivity, excellent highway access, and booming infrastructure — making it the perfect destination for smart real estate investment.
+                    {content?.about.vision || "Since our founding, Asra has built dreams through ethical, hassle-free service. Based in Indore with deep roots in Bhopal, we are led by seasoned consultants who prioritize transparency and client success in Indore's dynamic real estate market."}
                   </p>
                 </div>
               </div>

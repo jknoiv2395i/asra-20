@@ -5,8 +5,10 @@ import {
   StaggerContainer,
   AnimatedItem,
 } from "@/components/animations/AnimatedSection";
+import { useContent } from "@/hooks/useContent";
 
 export default function ContactUs() {
+  const { content } = useContent();
   return (
     <Layout>
       <style>{`
@@ -213,9 +215,7 @@ export default function ContactUs() {
                   <div>
                     <h3 className="text-[#0E0840] font-medium text-sm mb-1.5">Office Address</h3>
                     <p className="text-[#6b7280] text-sm leading-relaxed">
-                      Super Corridor, Palakhedi<br />
-                      Indore, Madhya Pradesh 453112<br />
-                      India
+                      {content?.contact.address || "Super Corridor, Palakhedi, Indore, Madhya Pradesh 453112, India"}
                     </p>
                   </div>
                 </div>
@@ -237,7 +237,7 @@ export default function ContactUs() {
                   <div>
                     <h3 className="text-[#0E0840] font-medium text-sm mb-1.5">Phone Numbers</h3>
                     <p className="text-[#6b7280] text-sm leading-relaxed">
-                      Primary: +91 78983 84899
+                      Primary: {content?.contact.phone || "+91 78983 84899"}
                     </p>
                   </div>
                 </div>
@@ -260,7 +260,7 @@ export default function ContactUs() {
                   <div>
                     <h3 className="text-[#0E0840] font-medium text-sm mb-1.5">Email</h3>
                     <p className="text-[#6b7280] text-sm leading-relaxed">
-                      info@asrarealestate.com
+                      {content?.contact.email || "info@asrarealestate.com"}
                     </p>
                   </div>
                 </div>

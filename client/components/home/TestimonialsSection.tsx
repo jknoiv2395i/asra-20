@@ -184,12 +184,7 @@ export default function TestimonialsSection() {
 
   return (
     <section
-      className="testimonials-section w-full bg-white py-8 md:py-10 lg:py-12 px-4 md:px-8"
-      style={{
-        "@media (max-width: 640px)": {
-          height: "691px",
-        },
-      }}
+      className="testimonials-section w-full bg-white py-8 md:py-10 lg:py-12 px-4 md:px-8 max-sm:h-[691px]"
     >
       <div className="max-w-7xl mx-auto">
         <AnimatedSection>

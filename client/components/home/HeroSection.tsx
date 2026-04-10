@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
+import { useContent } from "@/hooks/useContent";
 
 export default function HeroSection() {
+  const { content } = useContent();
   return (
     <>
       <style>{`
@@ -17,12 +19,7 @@ export default function HeroSection() {
         }
       `}</style>
       <section
-        className="relative w-full bg-[#0E0840] overflow-hidden"
-        style={{
-          "@media (max-width: 640px)": {
-            height: "977px",
-          },
-        }}
+        className="relative w-full bg-[#0E0840] overflow-hidden max-sm:h-[977px]"
       >
         {/* Background House Image - Desktop Only */}
         <motion.div
@@ -42,71 +39,64 @@ export default function HeroSection() {
         <motion.img
           src="https://api.builder.io/api/v1/image/assets/TEMP/1ec8c53d0601e692be66b84a2ddbf1b3724282f1?width=800"
           alt="Real Estate Property"
-          className="block lg:hidden w-full h-auto object-cover"
+          className="block lg:hidden w-full h-auto object-cover max-sm:mb-[11px]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           style={{
             marginBottom: "33px",
-            "@media (max-width: 640px)": {
-              marginBottom: "11px",
-            },
           }}
         />
 
         {/* Main Content */}
         <motion.h2
-          className="font-instrument text-[#F6DEE3] font-bold text-4xl md:text-5xl lg:text-[72px] leading-[45px] lg:leading-[72px] tracking-tighter"
+          className="font-instrument text-[#F6DEE3] font-bold text-4xl md:text-5xl lg:text-[72px] leading-[45px] lg:leading-[72px] tracking-tighter max-sm:-mt-[3px] max-sm:pb-[12px]"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
           style={{
             letterSpacing: "-1.8px",
             margin: "0 -1px 2px 8px",
-            "@media (max-width: 640px)": {
-              marginTop: "-3px",
-              paddingBottom: "12px",
-            },
           }}
         >
-          Asra Real Estate
-          <br />
-          Consulting Services
+          {content?.home.heroTitle.split("\n").map((line, i) => (
+            <span key={i}>
+              {line}
+              {i < (content?.home.heroTitle.split("\n").length || 0) - 1 && <br />}
+            </span>
+          )) || (
+            <>
+              Asra Real Estate
+              <br />
+              Consulting Services
+            </>
+          )}
         </motion.h2>
 
         {/* Description */}
         <motion.div
-          className="text-white font-normal text-base leading-[26px] max-w-[492px]"
+          className="text-white font-normal text-base leading-[26px] max-w-[492px] max-sm:pb-[18px]"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
           style={{
             margin: "-5px 0 0 9px",
-            "@media (max-width: 640px)": {
-              paddingBottom: "18px",
-            },
           }}
         >
-          Indore's go-to experts for high-growth real estate. We specialize in
-          buying, selling, renting, and investing across Super Corridor,
-          Indore-Ujjain Road, Chhota Bangarda, Bypass &amp; Ring Road.
+          {content?.home.heroSubtitle ||
+            "Indore's go-to experts for high-growth real estate. We specialize in buying, selling, renting, and investing across Super Corridor, Indore-Ujjain Road, Chhota Bangarda, Bypass & Ring Road."}
         </motion.div>
 
         {/* Form and Services Row */}
         <motion.div
-          className="flex flex-row relative z-10"
+          className="flex flex-row relative z-10 max-sm:pt-[20px] max-sm:pb-[58px]"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
-          style={{
-            "@media (max-width: 640px)": {
-              padding: "20px 0 58px",
-            },
-          }}
         >
           {/* Search Form */}
           <div
-            className="bg-white shadow-lg backdrop-blur-sm"
+            className="bg-white shadow-lg backdrop-blur-sm max-sm:h-[319px] max-sm:w-[205px] max-sm:shadow-none max-sm:rounded-[21px] max-sm:overflow-hidden"
             style={{
               backdropFilter: "blur(4px)",
               boxShadow:
@@ -114,13 +104,6 @@ export default function HeroSection() {
               maxWidth: "260px",
               marginLeft: "13px",
               padding: "20px",
-              "@media (max-width: 640px)": {
-                height: "319px",
-                width: "205px",
-                boxShadow: "2px 7px 0 0 rgba(0, 0, 0, 0)",
-                borderRadius: "21px",
-                overflow: "hidden",
-              },
             }}
           >
             <div className="flex flex-col gap-7 mb-8">
@@ -216,14 +199,9 @@ export default function HeroSection() {
             {/* CTA Button */}
             <Link to="/contact">
             <motion.button
-              className="hero-cta-button inline-flex items-center gap-3 bg-white text-black px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all"
+              className="hero-cta-button inline-flex items-center gap-3 bg-white text-black px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all max-sm:pr-[16px]"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
-              style={{
-                "@media (max-width: 640px)": {
-                  paddingRight: "16px",
-                },
-              }}
             >
               <span className="hero-cta-text font-medium">Get started</span>
             </motion.button>
@@ -232,21 +210,19 @@ export default function HeroSection() {
 
           {/* Services Section */}
           <motion.div
+            className="max-sm:w-[181px]"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.8, ease: "easeOut" }}
             style={{
               marginLeft: "20px",
-              "@media (max-width: 640px)": {
-                width: "181px",
-              },
             }}
           >
             <div
               className="text-white font-semibold text-xl mb-6 tracking-tighter"
               style={{ letterSpacing: "-0.5px" }}
             >
-              Our Services
+              {content?.home.servicesTitle || "Our Services"}
             </div>
 
             <div className="flex flex-col gap-12">

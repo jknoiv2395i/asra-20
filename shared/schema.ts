@@ -51,3 +51,51 @@ export interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;
 }
+
+export interface SiteContent {
+  home: {
+    heroTitle: string;
+    heroSubtitle: string;
+    servicesTitle: string;
+  };
+  contact: {
+    phone: string;
+    email: string;
+    address: string;
+    facebook: string;
+    twitter: string;
+    instagram: string;
+  };
+  about: {
+    title: string;
+    mission: string;
+    vision: string;
+  };
+  theme: {
+    primaryColor: string;
+  };
+}
+
+export const defaultContent: SiteContent = {
+  home: {
+    heroTitle: "Asra Real Estate\nConsulting Services",
+    heroSubtitle: "Indore's go-to experts for high-growth real estate. We specialize in buying, selling, renting, and investing across Super Corridor, Indore-Ujjain Road, Chhota Bangarda, Bypass & Ring Road.",
+    servicesTitle: "Our Services",
+  },
+  contact: {
+    phone: "+91 6265737523",
+    email: "jknoiv2395i@gmail.com",
+    address: "Regus Sky Space Business Center, AB Rd, Scheme 54 PU4, Indore, Madhya Pradesh",
+    facebook: "https://facebook.com",
+    twitter: "https://twitter.com",
+    instagram: "https://instagram.com",
+  },
+  about: {
+    title: "About Asra Real Estate",
+    mission: "To seamlessly connect people with extraordinary properties, ensuring trust, transparency, and tailored solutions in every transaction.",
+    vision: "To be the most trusted and innovative real estate consultancy, redefining property experiences and building lasting communities.",
+  },
+  theme: {
+    primaryColor: "#0E0840",
+  }
+};
