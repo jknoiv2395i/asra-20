@@ -467,7 +467,7 @@ export default function AboutUs() {
               Let's find your <span className="about-gold-text font-semibold">perfect property</span> together
             </h2>
             <p className="text-[#6b7280] text-base md:text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-              Ready to secure your next deal? Call us at <strong>+91 78983 84899</strong> or visit us in Indore. Let's turn opportunities into reality!
+              Ready to secure your next deal? Call us at <strong>+91 7880040900</strong> or visit us in Indore. Let's turn opportunities into reality!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">

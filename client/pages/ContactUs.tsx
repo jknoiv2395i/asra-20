@@ -237,7 +237,7 @@ export default function ContactUs() {
                   <div>
                     <h3 className="text-[#0E0840] font-medium text-sm mb-1.5">Phone Numbers</h3>
                     <p className="text-[#6b7280] text-sm leading-relaxed">
-                      Primary: {content?.contact.phone || "+91 78983 84899"}
+                      Primary: {content?.contact.phone || "+91 7880040900"}
                     </p>
                   </div>
                 </div>
@@ -260,7 +260,7 @@ export default function ContactUs() {
                   <div>
                     <h3 className="text-[#0E0840] font-medium text-sm mb-1.5">Email</h3>
                     <p className="text-[#6b7280] text-sm leading-relaxed">
-                      {content?.contact.email || "info@asrarealestate.com"}
+                      {content?.contact.email || "asraconsultingservices@gmail.com"}
                     </p>
                   </div>
                 </div>

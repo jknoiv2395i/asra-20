@@ -19,7 +19,7 @@ export default function Footer() {
             MR-5, and Ujjain Road.
           </p>
           <p className="text-[#B7B7B7] text-sm mt-3">
-            {content?.contact.phone || "+91 78983 84899"}
+            {content?.contact.phone || "+91 7880040900"}
           </p>
         </div>
 
@@ -100,8 +100,8 @@ export default function Footer() {
               Contact Info
             </h4>
             <ul className="space-y-3">
-              <li className="text-white/90 text-sm">{content?.contact.phone || "+91 78983 84899"}</li>
-              <li className="text-white/90 text-sm">{content?.contact.email || "info@asrarealestate.com"}</li>
+              <li className="text-white/90 text-sm">{content?.contact.phone || "+91 7880040900"}</li>
+              <li className="text-white/90 text-sm">{content?.contact.email || "asraconsultingservices@gmail.com"}</li>
               <li className="text-white/90 text-sm">{content?.contact.address || "Super Corridor, Palakhedi, Indore 453112"}</li>
             </ul>
           </div>
@@ -116,7 +116,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-3">
             <p className="text-[#989898] text-sm">
-              {content?.contact.address?.split(",").pop()} &nbsp;|&nbsp; {content?.contact.phone || "+91 78983 84899"} &nbsp;|&nbsp; {content?.contact.email || "info@asrarealestate.com"}
+              {content?.contact.address?.split(",").pop()} &nbsp;|&nbsp; {content?.contact.phone || "+91 7880040900"} &nbsp;|&nbsp; {content?.contact.email || "asraconsultingservices@gmail.com"}
             </p>
             <Link
               to="/admin/login"

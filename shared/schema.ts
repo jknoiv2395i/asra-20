@@ -83,8 +83,8 @@ export const defaultContent: SiteContent = {
     servicesTitle: "Our Services",
   },
   contact: {
-    phone: "+91 6265737523",
-    email: "jknoiv2395i@gmail.com",
+    phone: "+91 7880040900",
+    email: "asraconsultingservices@gmail.com",
     address: "Regus Sky Space Business Center, AB Rd, Scheme 54 PU4, Indore, Madhya Pradesh",
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",

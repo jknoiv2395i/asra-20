@@ -19,7 +19,7 @@ export default function HeroSection() {
         }
       `}</style>
       <section
-        className="relative w-full bg-[#0E0840] overflow-hidden max-sm:h-[977px]"
+        className="relative w-full bg-[#0E0840] overflow-hidden max-sm:h-auto max-sm:pb-4"
       >
         {/* Background House Image - Desktop Only */}
         <motion.div
@@ -89,19 +89,19 @@ export default function HeroSection() {
 
         {/* Form and Services Row */}
         <motion.div
-          className="flex flex-row relative z-10 max-sm:pt-[20px] max-sm:pb-[58px]"
+          className="flex flex-row flex-wrap relative z-10 max-sm:pt-[20px] max-sm:pb-2 max-sm:gap-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
         >
           {/* Search Form */}
           <div
-            className="bg-white shadow-lg backdrop-blur-sm max-sm:h-[319px] max-sm:w-[205px] max-sm:shadow-none max-sm:rounded-[21px] max-sm:overflow-hidden"
+            className="bg-white shadow-lg backdrop-blur-sm w-[245px] max-sm:shadow-none max-sm:rounded-[21px] max-sm:overflow-hidden"
             style={{
               backdropFilter: "blur(4px)",
               boxShadow:
                 "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
-              maxWidth: "260px",
+              maxWidth: "245px",
               marginLeft: "13px",
               padding: "20px",
             }}
@@ -210,12 +210,12 @@ export default function HeroSection() {
 
           {/* Services Section */}
           <motion.div
-            className="max-sm:w-[181px]"
+            className="w-[200px] max-sm:w-[170px]"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.8, ease: "easeOut" }}
             style={{
-              marginLeft: "20px",
+              marginLeft: "13px",
             }}
           >
             <div
