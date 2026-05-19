@@ -87,21 +87,54 @@ export default function HeroSection() {
             "Indore's go-to experts for high-growth real estate. We specialize in buying, selling, renting, and investing across Super Corridor, Indore-Ujjain Road, Chhota Bangarda, Bypass & Ring Road."}
         </motion.div>
 
+        {/* Mobile CTA Options */}
+        <motion.div
+          className="hidden max-sm:flex flex-row items-center gap-4 px-[9px] mt-4 mb-4"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+        >
+          <Link to="/contact">
+            <button className="bg-white text-black text-sm font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition-all flex items-center gap-2 shadow-lg">
+              Get Started
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 3l5 5-5 5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </Link>
+          <Link to="/properties">
+            <button className="border border-white/30 text-white text-sm font-medium px-5 py-3 rounded-full hover:bg-white/10 transition-all">
+              Explore Properties
+            </button>
+          </Link>
+        </motion.div>
+
         {/* Form and Services Row */}
         <motion.div
-          className="flex flex-row flex-wrap relative z-10 max-sm:pt-[20px] max-sm:pb-2 max-sm:gap-4"
+          className="flex flex-row flex-wrap max-sm:justify-center relative z-10 max-sm:pt-[20px] max-sm:pb-2 max-sm:gap-2 max-sm:px-1"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
         >
           {/* Search Form */}
           <div
-            className="bg-white shadow-lg backdrop-blur-sm w-[245px] max-sm:shadow-none max-sm:rounded-[21px] max-sm:overflow-hidden"
+            className="bg-white shadow-lg backdrop-blur-sm w-[245px] max-sm:hidden shrink-0 max-sm:mx-auto max-sm:shadow-none max-sm:rounded-[21px] max-sm:overflow-hidden"
             style={{
               backdropFilter: "blur(4px)",
               boxShadow:
                 "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
-              maxWidth: "245px",
               marginLeft: "13px",
               padding: "20px",
             }}
@@ -210,7 +243,7 @@ export default function HeroSection() {
 
           {/* Services Section */}
           <motion.div
-            className="w-[200px] max-sm:w-[170px]"
+            className="w-[200px] max-sm:hidden shrink-0"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.8, ease: "easeOut" }}
