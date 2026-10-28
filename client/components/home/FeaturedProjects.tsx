@@ -1,42 +1,24 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Property } from "@shared/schema";
+import { defaultPropertiesList } from "@shared/propertiesData";
 import { AnimatedSection, StaggerContainer, AnimatedItem } from "@/components/animations/AnimatedSection";
 
 export default function FeaturedProjects() {
-  const [projects, setProjects] = useState<Property[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState<Property[]>(() =>
+    defaultPropertiesList.filter((p) => p.featured).slice(0, 3)
+  );
 
   useEffect(() => {
     fetch("/api/properties?featured=true")
       .then((res) => res.json())
       .then((data) => {
-        if (data.success) setProjects(data.data.slice(0, 3));
+        if (data.success && Array.isArray(data.data) && data.data.length > 0) {
+          setProjects(data.data.slice(0, 3));
+        }
       })
-      .catch(console.error)
-      .finally(() => setLoading(false));
+      .catch(console.error);
   }, []);
-
-  if (loading) {
-    return (
-      <section className="w-full bg-white px-4 md:px-8 lg:px-12 pt-8 md:pt-10 lg:pt-12 pb-4 md:pb-6 lg:pb-8">
-        <div className="max-w-6xl lg:max-w-7xl mx-auto">
-          <div className="h-10 bg-gray-100 rounded w-1/3 mx-auto mb-12 animate-pulse" />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-8">
-            {[4, 5, 3].map((span, i) => (
-              <div key={i} className={`lg:col-span-${span}`}>
-                <div className="rounded-3xl bg-gray-100 animate-pulse" style={{ aspectRatio: "4/5" }} />
-                <div className="h-6 bg-gray-100 rounded mt-4 w-3/4 animate-pulse" />
-                <div className="h-4 bg-gray-100 rounded mt-2 w-1/3 animate-pulse" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
-  }
-
-  if (projects.length === 0) return null;
 
   const colSpans = ["lg:col-span-4", "lg:col-span-4", "lg:col-span-4"];
 
@@ -54,9 +36,7 @@ export default function FeaturedProjects() {
             return (
               <AnimatedItem key={project.id} className={colSpans[i] || "lg:col-span-4"}>
                 <Link to={`/properties/${project.id}`} className="block group">
-                  <div
-                    className="rounded-3xl overflow-hidden mb-4 md:mb-6 lg:mb-8 bg-gray-100 aspect-[4/3]"
-                  >
+                  <div className="rounded-3xl overflow-hidden mb-4 md:mb-6 lg:mb-8 bg-gray-100 aspect-[4/3] shadow-sm">
                     {project.images.length > 0 ? (
                       <img
                         src={project.images[0]}

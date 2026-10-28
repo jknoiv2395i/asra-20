@@ -1,53 +1,12 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/components/animations/AnimatedSection";
+import { defaultPropertiesList } from "@shared/propertiesData";
 
 export default function ProjectShowcase() {
   const carouselRef = useRef<HTMLDivElement>(null);
 
-  const properties = [
-    {
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/f9294423c5aad854317c1b8f2ce93fa9d31a0933?width=712",
-      title: "Forest Retreat",
-      description:
-        "Are you looking to find your dream home or invest in a lucrative property.",
-    },
-    {
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/bab3c32ceeb7ebac77c03707ae7f7e41b7732007?width=712",
-      title: "Woodland Retreat",
-      description:
-        "When it comes to selling your property, our team is equipped with the expertise.",
-    },
-    {
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/a743906f7efa3f52462098d0c43e9d94f22a2d7c?width=712",
-      title: "Harmony House",
-      description:
-        "Our agents will guide you through the entire buying process, from property",
-    },
-    {
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/4b0c97890a88c03aeec91fbcf464d29dec32a560?width=712",
-      title: "Aliva Priva Jardin",
-      description:
-        "If you're in need of rental services, our team can assist you in finding suitable",
-    },
-    {
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/ad33659c33381eac40061641b81f19d65a13ad9f?width=712",
-      title: "Asatti Garden City",
-      description:
-        "Interested in real estate investment opportunities? Our experts can provide",
-    },
-    {
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/ad33659c33381eac40061641b81f19d65a13ad9f?width=712",
-      title: "Citraland Puri Serang",
-      description:
-        "If you're planning a relocation to our area, we understand that the process",
-    },
-  ];
+  const showcaseProperties = defaultPropertiesList.slice(0, 6);
 
   const scroll = (direction: "left" | "right") => {
     if (carouselRef.current) {
@@ -60,23 +19,18 @@ export default function ProjectShowcase() {
   };
 
   return (
-    <section
-      className="w-full bg-white px-4 md:px-8 lg:px-20 py-8 md:py-10 lg:py-12 max-sm:h-[725.9px]"
-    >
+    <section className="w-full bg-white px-4 md:px-8 lg:px-20 py-8 md:py-10 lg:py-12">
       <div className="max-w-[1440px] mx-auto">
         {/* Header Section */}
         <div className="flex flex-col items-center mb-8 md:mb-12 lg:mb-16">
-          {/* Dreamer Home Badge */}
-          <div className="flex items-center gap-2 mb-6 md:mb-8" />
-
-          {/* Main Heading */}
           <AnimatedSection>
-          <h2
-            className="font-instrument text-center text-[#010101] text-3xl md:text-5xl lg:text-[69px] font-normal lg:leading-[77px] tracking-tight lg:tracking-[-3.8px] capitalize max-w-4xl max-sm:w-[320px]"
-          >
-            If you're in need of{" "}
-            <span className="font-medium text-[#33A4BB]">rental</span> services
-          </h2>
+            <h2 className="font-instrument text-center text-[#010101] text-3xl md:text-5xl lg:text-[60px] font-normal lg:leading-[68px] tracking-tight capitalize max-w-4xl">
+              Explore Our{" "}
+              <span className="font-medium text-[#33A4BB]">Featured</span> Developments
+            </h2>
+            <p className="text-[#5D5D5D] text-center text-sm md:text-base lg:text-lg mt-3 max-w-2xl">
+              Discover prime residential plots, luxury apartments, and commercial projects across Indore and Ujjain Road.
+            </p>
           </AnimatedSection>
         </div>
 
@@ -92,72 +46,69 @@ export default function ProjectShowcase() {
             msOverflowStyle: "none",
           }}
         >
-          {properties.map((property, index) => (
+          {showcaseProperties.map((property) => (
             <div
-              key={index}
-              className="property-card flex-shrink-0 w-[300px] md:w-[320px] lg:w-[356px]"
+              key={property.id}
+              className="property-card flex-shrink-0 w-[300px] md:w-[320px] lg:w-[356px] flex flex-col justify-between"
               style={{ scrollSnapAlign: "start" }}
             >
-              {/* Property Image */}
-              <div className="property-image-wrapper rounded-[10px] overflow-hidden mb-6 md:mb-7 lg:mb-8">
-                <img
-                  src={property.image}
-                  alt={property.title}
-                  className="property-image w-full h-[300px] md:h-[400px] lg:h-[449px] object-cover transition-transform duration-500 hover:scale-105"
-                />
-              </div>
-
-              {/* Property Info */}
-              <div className="property-info flex flex-col gap-4 md:gap-5">
-                {/* Title and Description */}
-                <div className="property-text flex flex-col gap-2 md:gap-3">
-                  <h3 className="font-instrument property-title text-[#010101] text-2xl md:text-[28px] lg:text-[30px] font-medium leading-normal">
-                    {property.title}
-                  </h3>
-                  <p className="property-description text-[#010101] text-base md:text-[17px] lg:text-[18px] leading-[1.52] font-normal">
-                    {property.description}
-                  </p>
+              <Link to={`/properties/${property.id}`} className="block group">
+                {/* Property Image */}
+                <div className="property-image-wrapper rounded-2xl overflow-hidden mb-5 bg-gray-100 aspect-[4/3] relative">
+                  {property.images && property.images.length > 0 ? (
+                    <img
+                      src={property.images[0]}
+                      alt={property.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-gray-300">
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                      </svg>
+                    </div>
+                  )}
+                  {property.tag && (
+                    <span className="absolute top-3 left-3 bg-[#0E0840] text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow">
+                      {property.tag}
+                    </span>
+                  )}
                 </div>
 
-                {/* Book Now CTA */}
-                <button className="book-now-btn flex items-center gap-2 group w-fit">
-                  <span className="book-now-text text-black text-base md:text-[18px] lg:text-[19px] font-bold uppercase leading-tight tracking-wide">
-                    Book Now
-                  </span>
+                {/* Property Info */}
+                <div className="property-info flex flex-col gap-2">
+                  <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">
+                    {property.location}
+                  </p>
+                  <h3 className="font-instrument text-[#010101] text-xl md:text-2xl font-medium leading-snug group-hover:text-[#c9a96e] transition-colors">
+                    {property.title}
+                  </h3>
+                  <p className="text-[#0E0840] text-base md:text-lg font-semibold mt-1">
+                    {property.price}
+                  </p>
+                </div>
+              </Link>
+
+              {/* View Details CTA */}
+              <div className="mt-4 pt-4 border-t border-gray-100">
+                <Link
+                  to={`/properties/${property.id}`}
+                  className="flex items-center gap-2 group w-fit text-sm font-bold text-[#0E0840] hover:text-[#c9a96e] transition-colors uppercase tracking-wider"
+                >
+                  <span>View Details</span>
                   <svg
-                    className="book-now-arrow w-5 h-5 transition-transform group-hover:translate-x-1"
-                    viewBox="0 0 21 21"
+                    className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                    viewBox="0 0 24 24"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
-                    <g clipPath="url(#clip0)" opacity="0.9">
-                      <path
-                        d="M11.4035 17.3651L18.3143 10.4543L11.4035 3.5435"
-                        stroke="#6E00FF"
-                        strokeWidth="2.68794"
-                        strokeMiterlimit="20"
-                        strokeLinecap="square"
-                      />
-                      <path
-                        d="M4.49268 10.4543H16.9325"
-                        stroke="#6E00FF"
-                        strokeWidth="2.68794"
-                        strokeMiterlimit="20"
-                        strokeLinecap="square"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0">
-                        <rect
-                          width="14.7836"
-                          height="14.7836"
-                          fill="white"
-                          transform="translate(0 10.4536) rotate(-45)"
-                        />
-                      </clipPath>
-                    </defs>
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
                   </svg>
-                </button>
+                </Link>
               </div>
             </div>
           ))}
@@ -167,58 +118,42 @@ export default function ProjectShowcase() {
         <div className="flex items-center justify-center gap-4 md:gap-6 mt-8 md:mt-12">
           <button
             onClick={() => scroll("left")}
-            className="nav-btn-prev w-10 h-10 md:w-14 md:h-14 bg-[#071839] rounded-full flex items-center justify-center hover:bg-[#0a2050] transition-colors"
+            className="w-10 h-10 md:w-12 md:h-12 bg-[#0E0840] rounded-full flex items-center justify-center hover:bg-[#1a1060] transition-colors shadow"
             aria-label="Scroll left"
           >
             <svg
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
-              <path
-                d="M15 18L9 12L15 6"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+              <path d="M15 18L9 12L15 6" />
             </svg>
           </button>
           <button
             onClick={() => scroll("right")}
-            className="nav-btn-next w-10 h-10 md:w-14 md:h-14 bg-[#071839] rounded-full flex items-center justify-center hover:bg-[#0a2050] transition-colors"
+            className="w-10 h-10 md:w-12 md:h-12 bg-[#0E0840] rounded-full flex items-center justify-center hover:bg-[#1a1060] transition-colors shadow"
             aria-label="Scroll right"
           >
             <svg
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
-              <path
-                d="M9 18L15 12L9 6"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+              <path d="M9 18L15 12L9 6" />
             </svg>
           </button>
         </div>
       </div>
-
-      <style>{`
-        .property-card::-webkit-scrollbar {
-          display: none;
-        }
-        
-        div[ref]::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </section>
   );
 }

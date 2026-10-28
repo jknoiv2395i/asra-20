@@ -2,13 +2,16 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { Property } from "@shared/schema";
+import { defaultPropertiesList } from "@shared/propertiesData";
 import { motion } from "motion/react";
 import { AnimatedSection } from "@/components/animations/AnimatedSection";
 
 export default function PropertyDetail() {
   const { id } = useParams<{ id: string }>();
-  const [property, setProperty] = useState<Property | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [property, setProperty] = useState<Property | null>(
+    () => defaultPropertiesList.find((p) => p.id === id) || null
+  );
+  const [loading, setLoading] = useState(() => !defaultPropertiesList.some((p) => p.id === id));
   const [activeImage, setActiveImage] = useState(0);
   const [showLightbox, setShowLightbox] = useState(false);
 
@@ -16,7 +19,7 @@ export default function PropertyDetail() {
     fetch(`/api/properties/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        if (data.success) setProperty(data.data);
+        if (data.success && data.data) setProperty(data.data);
       })
       .catch(console.error)
       .finally(() => setLoading(false));

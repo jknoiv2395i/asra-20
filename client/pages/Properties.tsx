@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { motion } from "motion/react";
 import { Property } from "@shared/schema";
+import { defaultPropertiesList } from "@shared/propertiesData";
 import {
   AnimatedSection,
   StaggerContainer,
@@ -125,14 +126,16 @@ function PropertyCard({ property }: { property: Property }) {
 
 export default function Properties() {
   const [activeFilter, setActiveFilter] = useState<FilterType>("all");
-  const [properties, setProperties] = useState<Property[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [properties, setProperties] = useState<Property[]>(() => defaultPropertiesList);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetch("/api/properties")
       .then((res) => res.json())
       .then((data) => {
-        if (data.success) setProperties(data.data);
+        if (data.success && Array.isArray(data.data) && data.data.length > 0) {
+          setProperties(data.data);
+        }
       })
       .catch(console.error)
       .finally(() => setLoading(false));
