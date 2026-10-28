@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function LogoCarousel() {
   return (
     <>
@@ -30,36 +32,40 @@ export default function LogoCarousel() {
   );
 }
 
+type LogoItem =
+  | { name: string; type: "svg"; content: React.ReactNode }
+  | { name: string; type: "image"; src: string };
+
 function LogoCarouselContent() {
-  const logos = [
+  const logos: LogoItem[] = [
     {
       name: "Client 1",
-      type: "image" as const,
+      type: "image",
       src: "/clients/logo1.png",
     },
     {
       name: "Subham",
-      type: "image" as const,
+      type: "image",
       src: "/clients/subham-logo.png",
     },
     {
       name: "Client 2",
-      type: "image" as const,
+      type: "image",
       src: "/clients/logo2.png",
     },
     {
       name: "BCM Group",
-      type: "image" as const,
+      type: "image",
       src: "/clients/logo-bcm-group.webp",
     },
     {
       name: "Client Dark",
-      type: "image" as const,
+      type: "image",
       src: "/clients/logo-dark.png",
     },
     {
       name: "GPL",
-      type: "image" as const,
+      type: "image",
       src: "/clients/GPL_Logo.jpg",
     },
   ];

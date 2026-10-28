@@ -189,7 +189,9 @@ export default function PropertyDetail() {
                 {property.description && (
                   <div className="mb-8">
                     <h2 className="font-instrument text-xl font-semibold text-[#0E0840] mb-3">About this Property</h2>
-                    <p className="text-gray-600 leading-relaxed">{property.description}</p>
+                    <div className="text-gray-600 leading-relaxed whitespace-pre-line text-sm md:text-base">
+                      {property.description}
+                    </div>
                   </div>
                 )}
 

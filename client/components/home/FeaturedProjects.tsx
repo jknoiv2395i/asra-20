@@ -38,7 +38,7 @@ export default function FeaturedProjects() {
 
   if (projects.length === 0) return null;
 
-  const aspectRatios = ["4/5", "488/407", "4/5"];
+  const colSpans = ["lg:col-span-4", "lg:col-span-4", "lg:col-span-4"];
 
   return (
     <section className="w-full bg-white px-4 md:px-8 lg:px-12 pt-8 md:pt-10 lg:pt-12 pb-4 md:pb-6 lg:pb-8">
@@ -51,13 +51,11 @@ export default function FeaturedProjects() {
 
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-8">
           {projects.map((project, i) => {
-            const colSpans = [4, 5, 3];
             return (
-              <AnimatedItem key={project.id} className={`lg:col-span-${colSpans[i] || 4}`}>
+              <AnimatedItem key={project.id} className={colSpans[i] || "lg:col-span-4"}>
                 <Link to={`/properties/${project.id}`} className="block group">
                   <div
-                    className="rounded-3xl overflow-hidden mb-4 md:mb-6 lg:mb-8"
-                    style={{ aspectRatio: aspectRatios[i] || "4/5" }}
+                    className="rounded-3xl overflow-hidden mb-4 md:mb-6 lg:mb-8 bg-gray-100 aspect-[4/3]"
                   >
                     {project.images.length > 0 ? (
                       <img
