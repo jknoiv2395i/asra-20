@@ -26,11 +26,12 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
 
   const updateContent = async (newContent: SiteContent) => {
     try {
+      const token = localStorage.getItem("admin_token") || localStorage.getItem("adminToken");
       const res = await fetch("/api/content", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(newContent),
       });

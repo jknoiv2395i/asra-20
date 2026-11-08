@@ -3,7 +3,8 @@ import express from "express";
 import cors from "cors";
 import path from "path";
 import { handleDemo } from "./routes/demo";
-import { handleLogin } from "./routes/auth";
+import { handleLogin, handleVerify } from "./routes/auth";
+import { verifyAdmin } from "./middleware/auth";
 import propertiesRouter from "./routes/properties";
 import uploadRouter from "./routes/upload";
 import contentRouter from "./routes/content";
@@ -28,6 +29,7 @@ export function createServer() {
 
   // Auth routes
   app.post("/api/admin/login", handleLogin);
+  app.get("/api/admin/verify", verifyAdmin, handleVerify);
 
   // Property CRUD routes
   app.use("/api/properties", propertiesRouter);

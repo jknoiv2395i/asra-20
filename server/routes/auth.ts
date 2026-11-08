@@ -1,5 +1,5 @@
 import { RequestHandler } from "express";
-import { generateToken } from "../middleware/auth";
+import { generateToken, verifyAdmin, AuthRequest } from "../middleware/auth";
 
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "asra2024";
 
@@ -21,4 +21,8 @@ export const handleLogin: RequestHandler = (req, res) => {
     success: true,
     data: { token, message: "Login successful" },
   });
+};
+
+export const handleVerify: RequestHandler = (req: AuthRequest, res) => {
+  res.json({ success: true, valid: true });
 };

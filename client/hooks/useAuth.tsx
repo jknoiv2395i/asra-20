@@ -34,11 +34,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   // Verify token is still valid on mount
   useEffect(() => {
     if (token) {
-      fetch("/api/properties", {
+      fetch("/api/admin/verify", {
         headers: { Authorization: `Bearer ${token}` },
-      }).catch(() => {
-        logout();
-      });
+      })
+        .then((res) => {
+          if (!res.ok) {
+            logout();
+          }
+        })
+        .catch(() => {
+          // If network error, don't immediately kick user out
+        });
     }
   }, []);
 
