@@ -13,7 +13,7 @@ export default function FeaturedProjects() {
     fetch("/api/properties?featured=true")
       .then((res) => res.json())
       .then((data) => {
-        if (data.success && Array.isArray(data.data) && data.data.length > 0) {
+        if (data.success && Array.isArray(data.data)) {
           setProjects(data.data.slice(0, 6));
         }
       })

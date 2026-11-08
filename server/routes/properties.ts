@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
   const properties = readProperties();
   const { type, featured } = req.query;
 
-  let filtered = properties;
+  let filtered = [...properties];
 
   if (type && type !== "all") {
     filtered = filtered.filter((p) => p.type === type);
@@ -23,7 +23,7 @@ router.get("/", (req, res) => {
 
   // Sort by createdAt descending (newest first)
   filtered.sort(
-    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+    (a, b) => new Date(b.createdAt || 0).getTime() - new Date(a.createdAt || 0).getTime(),
   );
 
   res.json({ success: true, data: filtered });
@@ -43,39 +43,64 @@ router.get("/:id", (req, res) => {
 router.post("/", verifyAdmin, (req, res) => {
   const input: PropertyInput = req.body;
 
-  if (!input.title || !input.location || !input.price || !input.type || !input.area) {
+  if (!input || !input.title || !input.location) {
     res
       .status(400)
-      .json({ success: false, error: "Missing required fields: title, location, price, type, area" });
+      .json({ success: false, error: "Missing required fields: title and location are required." });
     return;
   }
 
   const now = new Date().toISOString();
   const property: Property = {
-    id: uuidv4(),
-    title: input.title,
-    location: input.location,
-    price: input.price,
-    type: input.type,
-    beds: input.beds,
-    baths: input.baths,
-    area: input.area,
-    tag: input.tag,
-    description: input.description,
-    images: input.images || [],
-    videos: input.videos || [],
-    featured: input.featured || false,
+    id: `prop-${uuidv4().slice(0, 8)}`,
+    title: String(input.title).trim(),
+    location: String(input.location).trim(),
+    price: input.price ? String(input.price).trim() : "Contact for Price",
+    type: (input.type as any) || "residential",
+    beds: input.beds != null && !isNaN(Number(input.beds)) ? Number(input.beds) : undefined,
+    baths: input.baths != null && !isNaN(Number(input.baths)) ? Number(input.baths) : undefined,
+    area: input.area ? String(input.area).trim() : "On Request",
+    tag: input.tag ? String(input.tag).trim() : undefined,
+    description: input.description ? String(input.description).trim() : undefined,
+    images: Array.isArray(input.images) ? input.images.filter(Boolean) : [],
+    videos: Array.isArray(input.videos) ? input.videos.filter(Boolean) : [],
+    featured: Boolean(input.featured),
     createdAt: now,
     updatedAt: now,
   };
 
-  addProperty(property);
-  res.status(201).json({ success: true, data: property });
+  const created = addProperty(property);
+  res.status(201).json({ success: true, data: created });
 });
 
 // PUT /api/properties/:id — Admin: update property
 router.put("/:id", verifyAdmin, (req, res) => {
-  const updated = updateProperty(req.params.id, req.body);
+  const input: Partial<PropertyInput> = req.body;
+  if (!input) {
+    res.status(400).json({ success: false, error: "No update data provided." });
+    return;
+  }
+
+  const updates: Partial<Property> = {};
+  if (input.title !== undefined) updates.title = String(input.title).trim();
+  if (input.location !== undefined) updates.location = String(input.location).trim();
+  if (input.price !== undefined) updates.price = String(input.price).trim();
+  if (input.type !== undefined) updates.type = input.type;
+  if (input.area !== undefined) updates.area = String(input.area).trim();
+  if (input.tag !== undefined) updates.tag = String(input.tag).trim();
+  if (input.description !== undefined) updates.description = String(input.description).trim();
+  if (input.images !== undefined) updates.images = Array.isArray(input.images) ? input.images.filter(Boolean) : [];
+  if (input.videos !== undefined) updates.videos = Array.isArray(input.videos) ? input.videos.filter(Boolean) : [];
+  if (input.featured !== undefined) updates.featured = Boolean(input.featured);
+  
+  if (input.beds !== undefined) {
+    updates.beds = input.beds != null && !isNaN(Number(input.beds)) ? Number(input.beds) : undefined;
+  }
+  if (input.baths !== undefined) {
+    updates.baths = input.baths != null && !isNaN(Number(input.baths)) ? Number(input.baths) : undefined;
+  }
+
+  const updated = updateProperty(req.params.id, updates);
   if (!updated) {
     res.status(404).json({ success: false, error: "Property not found" });
     return;

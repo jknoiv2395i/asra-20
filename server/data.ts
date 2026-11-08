@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { Property } from "@shared/schema";
+import { defaultPropertiesList } from "@shared/propertiesData";
 
 const DATA_DIR = path.join(process.cwd(), "data");
 const DATA_FILE = path.join(DATA_DIR, "properties.json");
@@ -10,14 +11,26 @@ function ensureDataDir() {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
   if (!fs.existsSync(DATA_FILE)) {
-    fs.writeFileSync(DATA_FILE, JSON.stringify([], null, 2), "utf-8");
+    fs.writeFileSync(DATA_FILE, JSON.stringify(defaultPropertiesList, null, 2), "utf-8");
   }
 }
 
 export function readProperties(): Property[] {
   ensureDataDir();
-  const raw = fs.readFileSync(DATA_FILE, "utf-8");
-  return JSON.parse(raw) as Property[];
+  try {
+    const raw = fs.readFileSync(DATA_FILE, "utf-8");
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed) && parsed.length > 0) {
+      return parsed as Property[];
+    }
+    // If parsed array is empty and file was fresh, return parsed or defaultPropertiesList
+    if (Array.isArray(parsed)) {
+      return parsed as Property[];
+    }
+  } catch (err) {
+    console.error("Failed to read properties.json, fallback to defaults", err);
+  }
+  return [...defaultPropertiesList];
 }
 
 export function writeProperties(properties: Property[]): void {
@@ -32,7 +45,7 @@ export function findProperty(id: string): Property | undefined {
 
 export function addProperty(property: Property): Property {
   const properties = readProperties();
-  properties.push(property);
+  properties.unshift(property);
   writeProperties(properties);
   return property;
 }

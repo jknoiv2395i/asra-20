@@ -133,7 +133,7 @@ export default function Properties() {
     fetch("/api/properties")
       .then((res) => res.json())
       .then((data) => {
-        if (data.success && Array.isArray(data.data) && data.data.length > 0) {
+        if (data.success && Array.isArray(data.data)) {
           setProperties(data.data);
         }
       })

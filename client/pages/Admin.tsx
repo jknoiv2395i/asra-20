@@ -5,6 +5,7 @@ import { Property, PropertyInput } from "@shared/schema";
 import PropertyForm from "@/components/admin/PropertyForm";
 import ContentEditor from "@/components/admin/ContentEditor";
 import { motion, AnimatePresence } from "motion/react";
+import { toast } from "sonner";
 
 export default function Admin() {
   const { isAuthenticated, logout } = useAuth();
@@ -16,6 +17,7 @@ export default function Admin() {
   const [showForm, setShowForm] = useState(false);
   const [editingProperty, setEditingProperty] = useState<Property | null>(null);
   const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null);
+  const [deleting, setDeleting] = useState(false);
   const [filter, setFilter] = useState<string>("all");
 
   const [activeTab, setActiveTab] = useState<"properties" | "content">("properties");
@@ -33,46 +35,76 @@ export default function Admin() {
     try {
       const res = await fetch("/api/properties");
       const data = await res.json();
-      if (data.success) setProperties(data.data);
+      if (data.success && Array.isArray(data.data)) {
+        setProperties(data.data);
+      }
     } catch (err) {
-      console.error("Failed to fetch:", err);
+      console.error("Failed to fetch properties:", err);
+      toast.error("Could not fetch properties list from server.");
     } finally {
       setLoading(false);
     }
   };
 
   const handleAdd = async (input: PropertyInput) => {
-    const res = await authFetch("/api/properties", {
-      method: "POST",
-      body: JSON.stringify(input),
-    });
-    const data = await res.json();
-    if (data.success) {
-      setShowForm(false);
-      fetchProperties();
+    try {
+      const res = await authFetch("/api/properties", {
+        method: "POST",
+        body: JSON.stringify(input),
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        toast.success("Property added successfully!");
+        setShowForm(false);
+        await fetchProperties();
+      } else {
+        toast.error(data.error || "Failed to add property");
+      }
+    } catch (err: any) {
+      console.error("Error adding property:", err);
+      toast.error(err.message || "Failed to add property. Please try again.");
     }
   };
 
   const handleEdit = async (input: PropertyInput) => {
     if (!editingProperty) return;
-    const res = await authFetch(`/api/properties/${editingProperty.id}`, {
-      method: "PUT",
-      body: JSON.stringify(input),
-    });
-    const data = await res.json();
-    if (data.success) {
-      setEditingProperty(null);
-      setShowForm(false);
-      fetchProperties();
+    try {
+      const res = await authFetch(`/api/properties/${editingProperty.id}`, {
+        method: "PUT",
+        body: JSON.stringify(input),
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        toast.success("Property updated successfully!");
+        setEditingProperty(null);
+        setShowForm(false);
+        await fetchProperties();
+      } else {
+        toast.error(data.error || "Failed to update property");
+      }
+    } catch (err: any) {
+      console.error("Error updating property:", err);
+      toast.error(err.message || "Failed to update property. Please try again.");
     }
   };
 
   const handleDelete = async (id: string) => {
-    const res = await authFetch(`/api/properties/${id}`, { method: "DELETE" });
-    const data = await res.json();
-    if (data.success) {
-      setDeleteConfirm(null);
-      fetchProperties();
+    setDeleting(true);
+    try {
+      const res = await authFetch(`/api/properties/${id}`, { method: "DELETE" });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        toast.success("Property deleted successfully!");
+        setDeleteConfirm(null);
+        await fetchProperties();
+      } else {
+        toast.error(data.error || "Failed to delete property");
+      }
+    } catch (err: any) {
+      console.error("Error deleting property:", err);
+      toast.error(err.message || "Failed to delete property. Please try again.");
+    } finally {
+      setDeleting(false);
     }
   };
 
@@ -88,6 +120,7 @@ export default function Admin() {
 
   const handleLogout = () => {
     logout();
+    toast.info("Logged out successfully");
     navigate("/admin/login");
   };
 
@@ -98,49 +131,51 @@ export default function Admin() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-6">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "linear-gradient(135deg, #c9a96e, #b8943f)" }}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E0840" strokeWidth="2.5">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-                <div>
-                  <h1 className="text-white font-semibold text-sm">ASRA Admin</h1>
-                  <p className="text-white/40 text-[10px]">Dashboard</p>
-                </div>
-              </div>
-
-              {/* Navigation Tabs */}
-              <div className="hidden sm:flex border-l border-white/10 pl-6 gap-2">
+              <a href="/" className="font-instrument text-xl font-bold text-white tracking-tight flex items-center gap-2">
+                <span>ASRA</span>
+                <span className="text-xs font-normal text-white/50 border border-white/20 rounded px-1.5 py-0.5">Admin</span>
+              </a>
+              {/* Desktop Nav tabs */}
+              <nav className="hidden sm:flex items-center gap-1">
                 <button
                   onClick={() => setActiveTab("properties")}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-                    activeTab === "properties" ? "bg-white/10 text-white" : "text-white/50 hover:bg-white/5 hover:text-white"
+                  className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                    activeTab === "properties"
+                      ? "bg-white/15 text-white"
+                      : "text-white/60 hover:text-white hover:bg-white/5"
                   }`}
                 >
-                  Properties
+                  Properties ({properties.length})
                 </button>
                 <button
                   onClick={() => setActiveTab("content")}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-                    activeTab === "content" ? "bg-white/10 text-white" : "text-white/50 hover:bg-white/5 hover:text-white"
+                  className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                    activeTab === "content"
+                      ? "bg-white/15 text-white"
+                      : "text-white/60 hover:text-white hover:bg-white/5"
                   }`}
                 >
                   Site Content
                 </button>
-              </div>
+              </nav>
             </div>
+
             <div className="flex items-center gap-3">
-              <a href="/" target="_blank" className="text-white/50 hover:text-white/80 text-xs transition-colors">
-                View Site ↗
+              <a
+                href="/properties"
+                target="_blank"
+                rel="noreferrer"
+                className="text-xs text-white/60 hover:text-white transition-colors hidden sm:inline-flex items-center gap-1"
+              >
+                <span>View Live Site</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                </svg>
               </a>
               <button
                 onClick={handleLogout}
-                className="text-white/50 hover:text-red-400 text-xs transition-colors flex items-center gap-1"
+                className="px-3 py-1.5 rounded-lg text-xs font-medium text-white/70 hover:text-white hover:bg-white/10 transition-colors"
               >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4" /><polyline points="16 17 21 12 16 7" /><line x1="21" x2="9" y1="12" y2="12" />
-                </svg>
                 Logout
               </button>
             </div>
@@ -156,7 +191,7 @@ export default function Admin() {
             activeTab === "properties" ? "bg-white/10 text-white" : "text-white/50 hover:bg-white/5 hover:text-white"
           }`}
         >
-          Properties
+          Properties ({properties.length})
         </button>
         <button
           onClick={() => setActiveTab("content")}
@@ -169,10 +204,7 @@ export default function Admin() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
-        
-        {activeTab === "content" && (
-          <ContentEditor />
-        )}
+        {activeTab === "content" && <ContentEditor />}
 
         {activeTab === "properties" && (
           <>
@@ -210,13 +242,13 @@ export default function Admin() {
               </div>
               <button
                 onClick={() => { setEditingProperty(null); setShowForm(true); }}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white transition-all hover:shadow-lg"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white transition-all shadow hover:shadow-lg active:scale-95"
                 style={{ background: "linear-gradient(135deg, #c9a96e, #b8943f)" }}
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path d="M12 5v14M5 12h14" strokeLinecap="round" />
                 </svg>
-                Add Property
+                + Add Property
               </button>
             </div>
 
@@ -229,7 +261,13 @@ export default function Admin() {
                   <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" strokeLinecap="round" strokeLinejoin="round" />
                   <path d="M9 22V12h6v10" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                <p className="text-gray-400 text-sm">No properties found.</p>
+                <p className="text-gray-400 text-sm mb-4">No properties found in this category.</p>
+                <button
+                  onClick={() => { setEditingProperty(null); setShowForm(true); }}
+                  className="px-4 py-2 bg-[#0E0840] text-white text-xs font-semibold rounded-lg"
+                >
+                  Add Your First Property
+                </button>
               </div>
             ) : (
               <div className="space-y-3">
@@ -242,8 +280,8 @@ export default function Admin() {
                     className="bg-white rounded-2xl p-4 md:p-5 shadow-sm border border-gray-100 flex flex-col sm:flex-row items-start sm:items-center gap-4 hover:shadow-md transition-shadow"
                   >
                     {/* Thumbnail */}
-                    <div className="w-full sm:w-20 h-32 sm:h-16 rounded-xl overflow-hidden bg-gray-100 flex-shrink-0">
-                      {property.images.length > 0 ? (
+                    <div className="w-full sm:w-24 h-28 sm:h-20 rounded-xl overflow-hidden bg-gray-100 flex-shrink-0">
+                      {property.images && property.images.length > 0 ? (
                         <img
                           src={property.images[0]}
                           alt={property.title}
@@ -262,37 +300,45 @@ export default function Admin() {
 
                     {/* Info */}
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-1">
-                        <h3 className="font-semibold text-sm text-[#0E0840] truncate">{property.title}</h3>
+                      <div className="flex flex-wrap items-center gap-2 mb-1">
+                        <h3 className="font-semibold text-base text-[#0E0840] truncate">{property.title}</h3>
                         {property.tag && (
                           <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#c9a96e]/10 text-[#c9a96e] whitespace-nowrap">
                             {property.tag}
                           </span>
                         )}
                         {property.featured && (
-                          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-500 whitespace-nowrap">
-                            ★ Featured
+                          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 whitespace-nowrap">
+                            ★ Homepage
                           </span>
                         )}
                       </div>
-                      <div className="flex flex-wrap items-center gap-3 text-xs text-gray-400">
-                        <span>{property.location}</span>
-                        <span className="capitalize px-2 py-0.5 rounded-full bg-gray-50 text-gray-500">{property.type}</span>
-                        <span>{property.area}</span>
+                      <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500">
+                        <span className="font-medium text-gray-700">{property.location}</span>
+                        <span className="capitalize px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">{property.type}</span>
+                        {property.area && <span>{property.area}</span>}
                         <span className="font-semibold text-[#0E0840]">{property.price}</span>
-                        <span>{property.images.length} img{property.images.length !== 1 ? "s" : ""}</span>
-                        {property.videos.length > 0 && (
+                        <span>{property.images?.length || 0} image{(property.images?.length || 0) !== 1 ? "s" : ""}</span>
+                        {(property.videos?.length || 0) > 0 && (
                           <span>{property.videos.length} video{property.videos.length !== 1 ? "s" : ""}</span>
                         )}
                       </div>
                     </div>
 
                     {/* Actions */}
-                    <div className="flex items-center gap-2 flex-shrink-0">
+                    <div className="flex items-center gap-2 flex-shrink-0 w-full sm:w-auto justify-end pt-2 sm:pt-0 border-t sm:border-0 border-gray-50">
+                      <a
+                        href={`/properties/${property.id}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="px-3 py-1.5 rounded-lg bg-gray-50 hover:bg-gray-100 text-gray-600 text-xs font-medium transition-colors"
+                      >
+                        Preview
+                      </a>
                       <button
                         onClick={() => { setEditingProperty(property); setShowForm(true); }}
-                        className="p-2 rounded-lg bg-gray-50 hover:bg-[#0E0840]/5 text-gray-500 hover:text-[#0E0840] transition-colors"
-                        title="Edit"
+                        className="p-2 rounded-lg bg-gray-50 hover:bg-[#0E0840]/5 text-gray-700 hover:text-[#0E0840] transition-colors"
+                        title="Edit property"
                       >
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" />
@@ -302,7 +348,7 @@ export default function Admin() {
                       <button
                         onClick={() => setDeleteConfirm(property.id)}
                         className="p-2 rounded-lg bg-gray-50 hover:bg-red-50 text-gray-500 hover:text-red-500 transition-colors"
-                        title="Delete"
+                        title="Delete property"
                       >
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2" />
@@ -328,20 +374,29 @@ export default function Admin() {
           >
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => { setShowForm(false); setEditingProperty(null); }} />
             <motion.div
-              className="relative bg-white rounded-3xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden"
+              className="relative bg-white rounded-3xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden flex flex-col"
               initial={{ scale: 0.95, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 20 }}
             >
-              <div className="p-6 md:p-8 border-b border-gray-100">
-                <h2 className="font-instrument text-2xl font-bold text-[#0E0840]">
-                  {editingProperty ? "Edit Property" : "Add New Property"}
-                </h2>
-                <p className="text-gray-400 text-sm mt-1">
-                  {editingProperty ? "Update property details below" : "Fill in the property details below"}
-                </p>
+              <div className="p-6 md:p-8 border-b border-gray-100 flex items-center justify-between">
+                <div>
+                  <h2 className="font-instrument text-2xl font-bold text-[#0E0840]">
+                    {editingProperty ? "Edit Property" : "Add New Property"}
+                  </h2>
+                  <p className="text-gray-400 text-xs mt-0.5">
+                    {editingProperty ? `Editing: ${editingProperty.title}` : "Fill in property details below"}
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => { setShowForm(false); setEditingProperty(null); }}
+                  className="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 flex items-center justify-center text-sm font-bold"
+                >
+                  ×
+                </button>
               </div>
-              <div className="p-6 md:p-8">
+              <div className="p-6 md:p-8 overflow-y-auto flex-1">
                 <PropertyForm
                   property={editingProperty}
                   onSubmit={editingProperty ? handleEdit : handleAdd}
@@ -362,9 +417,9 @@ export default function Admin() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setDeleteConfirm(null)} />
+            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => !deleting && setDeleteConfirm(null)} />
             <motion.div
-              className="relative bg-white rounded-2xl shadow-2xl p-8 w-full max-w-sm text-center"
+              className="relative bg-white rounded-2xl shadow-2xl p-6 md:p-8 w-full max-w-sm text-center"
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
@@ -375,19 +430,25 @@ export default function Admin() {
                 </svg>
               </div>
               <h3 className="font-bold text-lg text-gray-900 mb-2">Delete Property</h3>
-              <p className="text-gray-500 text-sm mb-6">This action cannot be undone. The property and all its data will be permanently removed.</p>
+              <p className="text-gray-500 text-xs mb-6">
+                Are you sure you want to delete this property? It will be permanently removed from the website.
+              </p>
               <div className="flex gap-3">
                 <button
+                  type="button"
+                  disabled={deleting}
                   onClick={() => setDeleteConfirm(null)}
-                  className="flex-1 py-2.5 rounded-xl text-sm font-medium border border-gray-200 text-gray-600 hover:bg-gray-50 transition-colors"
+                  className="flex-1 py-2.5 rounded-xl text-sm font-medium border border-gray-200 text-gray-600 hover:bg-gray-50 transition-colors disabled:opacity-50"
                 >
                   Cancel
                 </button>
                 <button
+                  type="button"
+                  disabled={deleting}
                   onClick={() => handleDelete(deleteConfirm)}
-                  className="flex-1 py-2.5 rounded-xl text-sm font-semibold bg-red-500 text-white hover:bg-red-600 transition-colors"
+                  className="flex-1 py-2.5 rounded-xl text-sm font-semibold bg-red-600 text-white hover:bg-red-700 transition-colors disabled:opacity-50"
                 >
-                  Delete
+                  {deleting ? "Deleting..." : "Delete"}
                 </button>
               </div>
             </motion.div>

@@ -16,26 +16,29 @@ const AuthContext = createContext<AuthContextType>({
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [token, setToken] = useState<string | null>(() => {
-    return localStorage.getItem("admin_token");
+    return localStorage.getItem("admin_token") || localStorage.getItem("adminToken");
   });
 
   const isAuthenticated = !!token;
 
   const login = (newToken: string) => {
     localStorage.setItem("admin_token", newToken);
+    localStorage.setItem("adminToken", newToken);
     setToken(newToken);
   };
 
   const logout = () => {
     localStorage.removeItem("admin_token");
+    localStorage.removeItem("adminToken");
     setToken(null);
   };
 
-  // Verify token is still valid on mount
+  // Verify token on mount
   useEffect(() => {
-    if (token) {
+    const currentToken = token || localStorage.getItem("admin_token") || localStorage.getItem("adminToken");
+    if (currentToken) {
       fetch("/api/admin/verify", {
-        headers: { Authorization: `Bearer ${token}` },
+        headers: { Authorization: `Bearer ${currentToken}` },
       })
         .then((res) => {
           if (!res.ok) {
@@ -43,7 +46,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           }
         })
         .catch(() => {
-          // If network error, don't immediately kick user out
+          // If network error, don't kick user out
         });
     }
   }, []);
@@ -64,12 +67,13 @@ export function useAuthFetch() {
   const { token, logout } = useAuth();
 
   return async (url: string, options: RequestInit = {}) => {
+    const activeToken = token || localStorage.getItem("admin_token") || localStorage.getItem("adminToken");
     const headers: Record<string, string> = {
       ...((options.headers as Record<string, string>) || {}),
     };
 
-    if (token) {
-      headers["Authorization"] = `Bearer ${token}`;
+    if (activeToken) {
+      headers["Authorization"] = `Bearer ${activeToken}`;
     }
 
     // Only set Content-Type for non-FormData requests
