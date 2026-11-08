@@ -6,7 +6,7 @@ import { AnimatedSection, StaggerContainer, AnimatedItem } from "@/components/an
 
 export default function FeaturedProjects() {
   const [projects, setProjects] = useState<Property[]>(() =>
-    defaultPropertiesList.filter((p) => p.featured).slice(0, 3)
+    defaultPropertiesList.filter((p) => p.featured).slice(0, 6)
   );
 
   useEffect(() => {
@@ -14,7 +14,7 @@ export default function FeaturedProjects() {
       .then((res) => res.json())
       .then((data) => {
         if (data.success && Array.isArray(data.data) && data.data.length > 0) {
-          setProjects(data.data.slice(0, 3));
+          setProjects(data.data.slice(0, 6));
         }
       })
       .catch(console.error);

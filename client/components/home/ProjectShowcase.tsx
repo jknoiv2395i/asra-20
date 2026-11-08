@@ -6,7 +6,7 @@ import { defaultPropertiesList } from "@shared/propertiesData";
 export default function ProjectShowcase() {
   const carouselRef = useRef<HTMLDivElement>(null);
 
-  const showcaseProperties = defaultPropertiesList.slice(0, 6);
+  const showcaseProperties = defaultPropertiesList.slice(0, 8);
 
   const scroll = (direction: "left" | "right") => {
     if (carouselRef.current) {
