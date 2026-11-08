@@ -31,7 +31,6 @@ Contact Asra Real Estate Consulting Services:
 📞 Phone: +91 78800 40900
 🌐 Website: www.asrarealestateconsultingservices.com`,
     images: [
-      "/uploads/tirupati-dev-lok-entrance.jpg",
       "/uploads/tirupati-dev-lok-1.jpeg",
       "/uploads/tirupati-dev-lok-2.jpeg",
       "/uploads/tirupati-dev-lok-3.jpeg",
