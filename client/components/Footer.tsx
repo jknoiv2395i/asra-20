@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Logo and Description */}
         <div className="max-w-md">
           <img
-            src="/asra-logo.png"
+            src="/asra-logo-white.png"
             alt="ASRA Real Estate Consulting Services Logo"
             className="h-[70px] w-auto mb-4"
           />
